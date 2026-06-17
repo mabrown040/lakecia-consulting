@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Variant 3: Cinematic Dark — Lakecia Gunter</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background: #0a0a0f;
+      color: #e0e0e0;
+      line-height: 1.6;
+    }
+    .hero {
+      min-height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url('../lakecia.jpg') center/cover;
+      filter: brightness(0.4) saturate(0.8);
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(135deg, rgba(255,107,157,0.3) 0%, rgba(10,10,15,0.9) 100%);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      max-width: 800px;
+      padding: 40px;
+    }
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 0.85rem;
+      color: #ff6b9d;
+      margin-bottom: 30px;
+      font-weight: 600;
+    }
+    h1 {
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      font-weight: 300;
+      line-height: 1.2;
+      margin-bottom: 30px;
+      color: #fff;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      color: #b0b0b0;
+      margin-bottom: 40px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .btn {
+      display: inline-block;
+      padding: 18px 40px;
+      background: transparent;
+      border: 2px solid #ff6b9d;
+      color: #ff6b9d;
+      text-decoration: none;
+      font-weight: 600;
+      letter-spacing: 1px;
+      transition: all 0.3s;
+    }
+    .btn:hover {
+      background: #ff6b9d;
+      color: #0a0a0f;
+    }
+    .section {
+      padding: 100px 40px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .section h2 {
+      font-size: 2.5rem;
+      font-weight: 300;
+      color: #fff;
+      margin-bottom: 30px;
+    }
+    .section p {
+      font-size: 1.1rem;
+      color: #a0a0a0;
+      margin-bottom: 20px;
+      max-width: 700px;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      padding: 60px 40px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .service {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 40px;
+      border-radius: 12px;
+      transition: all 0.3s;
+    }
+    .service:hover {
+      border-color: #ff6b9d;
+      background: rgba(255,107,157,0.05);
+    }
+    .service h3 {
+      font-size: 1.3rem;
+      color: #fff;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+    .service p {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    .cta-section {
+      background: linear-gradient(135deg, rgba(255,107,157,0.1) 0%, rgba(10,10,15,1) 100%);
+      padding: 100px 40px;
+      text-align: center;
+    }
+    .cta-section h2 {
+      font-size: 3rem;
+      font-weight: 300;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+    .cta-section p {
+      color: #888;
+      font-size: 1.1rem;
+      margin-bottom: 40px;
+    }
+    .cta-btn {
+      display: inline-block;
+      padding: 18px 40px;
+      background: #ff6b9d;
+      color: #0a0a0f;
+      text-decoration: none;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+    @media (max-width: 768px) {
+      .hero-content { padding: 20px; }
+      .section { padding: 60px 20px; }
+      .services { padding: 40px 20px; }
+      .cta-section { padding: 60px 20px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <div class="hero-content">
+      <p class="eyebrow">AI Strategy for Women Leaders</p>
+      <h1>AI is changing everything.<br>Don't get left behind.</h1>
+      <p>Former Microsoft CTO helping women leaders understand, adopt, and lead with AI. From boardroom strategy to hands-on implementation.</p>
+      <a href="#" class="btn">Book a Free Call</a>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Most AI consulting is built by men, for men, in language that doesn't land.</h2>
+    <p>I've sat in the rooms where AI decisions get made. I've watched women leaders get talked over, confused by jargon, and pushed to the sidelines of the most important technology shift in our lifetime.</p>
+    <p>That ends now. I help women executives understand AI, adopt it with confidence, and use it as a competitive advantage — not a source of anxiety.</p>
+  </div>
+
+  <div class="services">
+    <div class="service">
+      <h3>AI Strategy for Boards</h3>
+      <p>Help your board understand AI risk, opportunity, and governance in plain language.</p>
+    </div>
+    <div class="service">
+      <h3>Executive AI Coaching</h3>
+      <p>One-on-one coaching for women executives adopting AI. Build confidence, cut through hype.</p>
+    </div>
+    <div class="service">
+      <h3>AI Implementation Sprints</h3>
+      <p>2-4 week hands-on sprints to get your team using AI tools that actually move the needle.</p>
+    </div>
+    <div class="service">
+      <h3>Women's AI Leadership Circle</h3>
+      <p>Small cohort of women leaders navigating AI together. Monthly sessions, peer support.</p>
+    </div>
+  </div>
+
+  <div class="cta-section">
+    <h2>Ready to lead with AI?</h2>
+    <p>Book a free 30-minute strategy call. No pitch, just clarity.</p>
+    <a href="#" class="cta-btn">Book Your Call</a>
+  </div>
+</body>
+</html>

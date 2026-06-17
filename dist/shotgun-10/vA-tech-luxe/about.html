@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Lakecia Gunter</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --roar-pink: #ff6b9d;
+      --roar-deep: #e8558a;
+      --lux-gold: #d4af37;
+      --dark: #0a0a0f;
+      --dark-2: #13131f;
+      --text: #e8e6e3;
+      --text-dim: #a8a5a0;
+    }
+    body {
+      font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+      background: var(--dark);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 20px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(10,10,15,0.8);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .logo {
+      font-weight: 800;
+      font-size: 1.5rem;
+      background: linear-gradient(135deg, var(--roar-pink) 0%, var(--lux-gold) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-decoration: none;
+    }
+    .nav-links {
+      display: flex;
+      gap: 40px;
+    }
+    .nav-links a {
+      color: var(--text-dim);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    .nav-links a:hover {
+      color: var(--roar-pink);
+    }
+    .hero {
+      padding: 140px 60px 80px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .eyebrow {
+      display: inline-block;
+      padding: 8px 20px;
+      background: rgba(255,107,157,0.1);
+      border: 1px solid rgba(255,107,157,0.3);
+      border-radius: 30px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--roar-pink);
+      margin-bottom: 30px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 40px;
+      background: linear-gradient(135deg, #fff 0%, var(--roar-pink) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 60px 100px;
+    }
+    .content p {
+      font-size: 1.15rem;
+      color: var(--text-dim);
+      line-height: 1.8;
+      margin-bottom: 25px;
+    }
+    .content h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #fff;
+      margin: 60px 0 20px;
+    }
+    .timeline {
+      margin: 40px 0;
+    }
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      gap: 30px;
+      padding: 25px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .timeline-year {
+      font-weight: 700;
+      color: var(--lux-gold);
+      font-size: 0.9rem;
+    }
+    .timeline-content h3 {
+      font-size: 1.2rem;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    .timeline-content p {
+      font-size: 0.95rem;
+      color: var(--text-dim);
+      margin: 0;
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin: 60px 0;
+    }
+    .stat {
+      text-align: center;
+      padding: 30px;
+      background: var(--dark-2);
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+    .stat .number {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--roar-pink);
+      display: block;
+      margin-bottom: 10px;
+    }
+    .stat .label {
+      color: var(--text-dim);
+      font-size: 0.9rem;
+    }
+    .cta {
+      padding: 100px 60px;
+      background: linear-gradient(135deg, var(--dark-2) 0%, rgba(255,107,157,0.05) 100%);
+      text-align: center;
+    }
+    .cta h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+    .cta p {
+      color: var(--text-dim);
+      font-size: 1.1rem;
+      margin-bottom: 40px;
+    }
+    .cta-btn {
+      display: inline-block;
+      padding: 18px 40px;
+      background: linear-gradient(135deg, var(--roar-pink) 0%, var(--lux-gold) 100%);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      border-radius: 12px;
+    }
+    footer {
+      padding: 40px 60px;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    footer p {
+      color: var(--text-dim);
+      font-size: 0.9rem;
+    }
+    footer a {
+      color: var(--text-dim);
+      text-decoration: none;
+      margin-left: 30px;
+      transition: color 0.3s;
+    }
+    footer a:hover {
+      color: var(--roar-pink);
+    }
+    @media (max-width: 768px) {
+      nav { padding: 15px 20px; }
+      .nav-links { display: none; }
+      .hero { padding: 100px 20px 40px; }
+      h1 { font-size: 2.5rem; }
+      .content { padding: 0 20px 60px; }
+      .stats { grid-template-columns: 1fr; }
+      .timeline-item { grid-template-columns: 1fr; gap: 10px; }
+      .cta { padding: 60px 20px; }
+      footer { flex-direction: column; padding: 30px 20px; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="logo">Lakecia Gunter</a>
+    <div class="nav-links">
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="community.html">Community</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <span class="eyebrow">About</span>
+    <h1>25 years from DoD to Fortune 50. Now helping women lead with AI.</h1>
+  </section>
+
+  <section class="content">
+    <p>I started as a Digital Logic Designer for the Department of Defense. Fresh out of school, building technology for national security applications. That foundation taught me something critical: technology isn't about the tool. It's about the mission.</p>
+
+    <p>From there, I spent 18 years at Intel. Rose to Chief of Staff to the CEO. Learned how the world's largest semiconductor company made decisions at the highest level. Sat in rooms where billions of dollars moved on a single technical bet.</p>
+
+    <p>Then Microsoft. CTO of Global Partner Solutions. Built and scaled a $B+ AI partner ecosystem. Watched AI transform from an R&D curiosity to a board-level imperative. Led digital transformation initiatives that touched millions of users.</p>
+
+    <p>Today, I'm an Independent Director at IDEX Corporation (NYSE: IEX). Co-Founding Advisor at TechArena.ai. And host of ROAR with Lakecia Gunter, a podcast spotlighting leaders who are actually building things.</p>
+
+    <p>But here's what I kept seeing: women leaders getting left behind in the AI conversation. Talked over in meetings. Confused by jargon. Pushed to the sidelines of the most important technology shift in our lifetime.</p>
+
+    <p>That ends now. I help women executives understand AI, adopt it with confidence, and use it as a competitive advantage. Not a source of anxiety.</p>
+
+    <h2>Track Record</h2>
+    <div class="stats">
+      <div class="stat">
+        <span class="number">25+</span>
+        <span class="label">Years in Technology</span>
+      </div>
+      <div class="stat">
+        <span class="number">$1B+</span>
+        <span class="label">Platforms Built</span>
+      </div>
+      <div class="stat">
+        <span class="number">Fortune 50</span>
+        <span class="label">Executive Experience</span>
+      </div>
+    </div>
+
+    <h2>Career Timeline</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-year">2023</div>
+        <div class="timeline-content">
+          <h3>Co-Founding Advisor, TechArena.ai</h3>
+          <p>Helping companies navigate AI-driven technology change.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">2022</div>
+        <div class="timeline-content">
+          <h3>Independent Director, IDEX Corporation</h3>
+          <p>Strategic oversight and technology governance for NYSE-traded company.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">2021</div>
+        <div class="timeline-content">
+          <h3>CTO, Microsoft Global Partner Solutions</h3>
+          <p>Led $B+ AI partner ecosystem and digital transformation.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">2018</div>
+        <div class="timeline-content">
+          <h3>Chief of Staff to CEO, Intel</h3>
+          <p>Strategic advisor to CEO on technology and business priorities.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">1999</div>
+        <div class="timeline-content">
+          <h3>Digital Logic Designer, Department of Defense</h3>
+          <p>Started career building technology for national security.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Ready to work together?</h2>
+    <p>Book a free 30-minute strategy call. No pitch, just clarity.</p>
+    <a href="contact.html" class="cta-btn">Book Your Free Call →</a>
+  </section>
+
+  <footer>
+    <p>© 2024 Lakecia Gunter</p>
+    <div>
+      <a href="https://linkedin.com">LinkedIn</a>
+      <a href="index.html">Home</a>
+    </div>
+  </footer>
+</body>
+</html>

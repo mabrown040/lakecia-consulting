@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Lakecia Gunter</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --roar-pink: #ff6b9d;
+      --roar-deep: #e8558a;
+      --lux-gold: #d4af37;
+      --dark: #0a0a0f;
+      --dark-2: #13131f;
+      --text: #e8e6e3;
+      --text-dim: #a8a5a0;
+    }
+    body {
+      font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+      background: var(--dark);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 20px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(10,10,15,0.8);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .logo {
+      font-weight: 800;
+      font-size: 1.5rem;
+      background: linear-gradient(135deg, var(--roar-pink) 0%, var(--lux-gold) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-decoration: none;
+    }
+    .nav-links {
+      display: flex;
+      gap: 40px;
+    }
+    .nav-links a {
+      color: var(--text-dim);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    .nav-links a:hover {
+      color: var(--roar-pink);
+    }
+    .hero {
+      padding: 140px 60px 80px;
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .eyebrow {
+      display: inline-block;
+      padding: 8px 20px;
+      background: rgba(255,107,157,0.1);
+      border: 1px solid rgba(255,107,157,0.3);
+      border-radius: 30px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--roar-pink);
+      margin-bottom: 30px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      background: linear-gradient(135deg, #fff 0%, var(--roar-pink) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero > p {
+      font-size: 1.2rem;
+      color: var(--text-dim);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      padding: 0 60px 100px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .contact-info h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+    .contact-info p {
+      color: var(--text-dim);
+      margin-bottom: 30px;
+      line-height: 1.7;
+    }
+    .contact-method {
+      margin-bottom: 30px;
+    }
+    .contact-method h3 {
+      font-size: 1.1rem;
+      color: var(--lux-gold);
+      margin-bottom: 8px;
+    }
+    .contact-method p {
+      color: var(--text-dim);
+      margin: 0;
+    }
+    .form {
+      background: var(--dark-2);
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 20px;
+      padding: 50px;
+    }
+    .form-group {
+      margin-bottom: 25px;
+    }
+    .form-group label {
+      display: block;
+      color: var(--text-dim);
+      font-size: 0.9rem;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 14px 18px;
+      background: var(--dark);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      color: var(--text);
+      font-size: 1rem;
+      font-family: inherit;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: var(--roar-pink);
+    }
+    .form-group textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+    .submit-btn {
+      width: 100%;
+      padding: 18px;
+      background: linear-gradient(135deg, var(--roar-pink) 0%, var(--lux-gold) 100%);
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .submit-btn:hover {
+      transform: translateY(-2px);
+    }
+    .response-time {
+      text-align: center;
+      padding: 20px;
+      color: var(--text-dim);
+      font-size: 0.9rem;
+    }
+    footer {
+      padding: 40px 60px;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    footer p {
+      color: var(--text-dim);
+      font-size: 0.9rem;
+    }
+    footer a {
+      color: var(--text-dim);
+      text-decoration: none;
+      margin-left: 30px;
+      transition: color 0.3s;
+    }
+    footer a:hover {
+      color: var(--roar-pink);
+    }
+    @media (max-width: 768px) {
+      nav { padding: 15px 20px; }
+      .nav-links { display: none; }
+      .hero { padding: 100px 20px 40px; }
+      h1 { font-size: 2.5rem; }
+      .contact-grid { grid-template-columns: 1fr; padding: 0 20px 60px; }
+      .form { padding: 30px; }
+      footer { flex-direction: column; padding: 30px 20px; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="logo">Lakecia Gunter</a>
+    <div class="nav-links">
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="community.html">Community</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <span class="eyebrow">Contact</span>
+    <h1>Let's talk about your AI strategy.</h1>
+    <p>Book a free 30-minute call. No pitch, just clarity on your next steps.</p>
+  </section>
+
+  <section class="contact-grid">
+    <div class="contact-info">
+      <h2>Direct Contact</h2>
+      <p>I personally respond to every inquiry. No assistants, no gatekeepers. If you're a woman leader navigating AI, I want to hear from you.</p>
+      
+      <div class="contact-method">
+        <h3>Email</h3>
+        <p>hello@lakecia.com</p>
+      </div>
+      
+      <div class="contact-method">
+        <h3>LinkedIn</h3>
+        <p>linkedin.com/in/lakeciagunter</p>
+      </div>
+      
+      <div class="contact-method">
+        <h3>Podcast</h3>
+        <p>ROAR with Lakecia Gunter — available on all platforms</p>
+      </div>
+    </div>
+
+    <div class="form">
+      <div class="form-group">
+        <label>Your Name</label>
+        <input type="text" placeholder="Jane Smith">
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" placeholder="jane@company.com">
+      </div>
+      <div class="form-group">
+        <label>Company</label>
+        <input type="text" placeholder="Your organization">
+      </div>
+      <div class="form-group">
+        <label>What are you navigating?</label>
+        <select>
+          <option>AI Strategy for my Board</option>
+          <option>Executive AI Coaching</option>
+          <option>AI Implementation Sprint</option>
+          <option>Women's AI Leadership Circle</option>
+          <option>Speaking / Event</option>
+          <option>Something else</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Tell me about your situation</label>
+        <textarea placeholder="What's your biggest challenge with AI right now?"></textarea>
+      </div>
+      <button class="submit-btn">Book Your Free Call</button>
+      <p class="response-time">I respond within 48 hours. Usually same day.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2024 Lakecia Gunter</p>
+    <div>
+      <a href="https://linkedin.com">LinkedIn</a>
+      <a href="index.html">Home</a>
+    </div>
+  </footer>
+</body>
+</html>

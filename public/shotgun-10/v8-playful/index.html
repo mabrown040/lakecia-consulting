@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Variant 8: Warm & Playful — Lakecia Gunter</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background: #fff5f7;
+      color: #4a4540;
+      line-height: 1.6;
+    }
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 60px 20px;
+      position: relative;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -100px; right: -100px;
+      width: 400px; height: 400px;
+      background: #ffb6c1;
+      border-radius: 50%;
+      opacity: 0.3;
+      z-index: 0;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -50px; left: -50px;
+      width: 300px; height: 300px;
+      background: #ffd700;
+      border-radius: 50%;
+      opacity: 0.2;
+      z-index: 0;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+    }
+    .hero-img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: 0 auto 30px;
+      border: 4px solid #fff;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    .hero-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 0.85rem;
+      color: #ff6b9d;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+    h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      color: #2d2a26;
+    }
+    .hero p {
+      font-size: 1.1rem;
+      color: #6b6560;
+      margin-bottom: 30px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 14px 32px;
+      background: #ff6b9d;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 50px;
+      box-shadow: 0 4px 15px rgba(255,107,157,0.3);
+    }
+    .section {
+      padding: 80px 20px;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .section h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #2d2a26;
+      margin-bottom: 20px;
+    }
+    .section p {
+      color: #6b6560;
+      font-size: 1.05rem;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 0 20px 80px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .service {
+      background: #fff;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+    .service-icon {
+      width: 60px;
+      height: 60px;
+      background: #fff0f5;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 1.5rem;
+    }
+    .service h3 {
+      font-size: 1.2rem;
+      color: #2d2a26;
+      margin-bottom: 10px;
+    }
+    .service p {
+      color: #6b6560;
+      font-size: 0.95rem;
+    }
+    .cta {
+      background: #2d2a26;
+      color: #fff;
+      padding: 80px 20px;
+      text-align: center;
+      border-radius: 40px 40px 0 0;
+    }
+    .cta h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+    .cta p {
+      color: #aaa;
+      margin-bottom: 30px;
+    }
+    .cta-btn {
+      display: inline-block;
+      padding: 14px 32px;
+      background: #ff6b9d;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 50px;
+    }
+    @media (max-width: 768px) {
+      h1 { font-size: 2.2rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <div class="hero-content">
+      <div class="hero-img">
+        <img src="../lakecia.jpg" alt="Lakecia Gunter">
+      </div>
+      <p class="eyebrow">AI Strategy for Women Leaders</p>
+      <h1>AI is changing everything.<br>Don't get left behind.</h1>
+      <p>Former Microsoft CTO helping women leaders understand, adopt, and lead with AI.</p>
+      <a href="#" class="btn">Book a Free Call</a>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Most AI consulting is built by men, for men.</h2>
+    <p>I help women executives understand AI, adopt it with confidence, and use it as a competitive advantage — not a source of anxiety.</p>
+  </div>
+
+  <div class="services">
+    <div class="service">
+      <div class="service-icon">🎯</div>
+      <h3>AI Strategy for Boards</h3>
+      <p>Help your board understand AI risk, opportunity, and governance in plain language.</p>
+    </div>
+    <div class="service">
+      <div class="service-icon">👩‍💼</div>
+      <h3>Executive AI Coaching</h3>
+      <p>One-on-one coaching for women executives adopting AI. Build confidence, cut through hype.</p>
+    </div>
+    <div class="service">
+      <div class="service-icon">⚡</div>
+      <h3>AI Implementation Sprints</h3>
+      <p>2-4 week hands-on sprints to get your team using AI tools that actually move the needle.</p>
+    </div>
+    <div class="service">
+      <div class="service-icon">👥</div>
+      <h3>Women's AI Leadership Circle</h3>
+      <p>Small cohort of women leaders navigating AI together. Monthly sessions, peer support.</p>
+    </div>
+  </div>
+
+  <div class="cta">
+    <h2>Ready to lead with AI?</h2>
+    <p>Book a free 30-minute strategy call. No pitch, just clarity.</p>
+    <a href="#" class="cta-btn">Book Your Call</a>
+  </div>
+</body>
+</html>

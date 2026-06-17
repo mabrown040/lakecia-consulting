@@ -3,256 +3,200 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lakecia Gunter — Design Shotgun (10 Variants)</title>
+  <title>Lakecia Gunter — 12 Design Variants</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: #0f0f0f;
-      color: #fff;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background: #0a0a0f;
+      color: #e0e0e0;
+      line-height: 1.6;
       padding: 40px 20px;
     }
     h1 {
       font-size: 2.5rem;
+      font-weight: 800;
       margin-bottom: 10px;
-      font-weight: 700;
+      text-align: center;
+      background: linear-gradient(135deg, #ff6b9d 0%, #d4af37 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
     .subtitle {
+      text-align: center;
       color: #888;
-      margin-bottom: 40px;
+      margin-bottom: 50px;
       font-size: 1.1rem;
     }
-    .variants-grid {
+    .grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 24px;
+      gap: 20px;
+      max-width: 1400px;
+      margin: 0 auto;
     }
-    .variant-card {
-      background: #1a1a1a;
+    .card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
       border-radius: 16px;
-      overflow: hidden;
-      border: 2px solid #333;
-      transition: all 0.3s ease;
-      cursor: pointer;
+      padding: 30px;
+      transition: all 0.3s;
       text-decoration: none;
       color: inherit;
       display: block;
     }
-    .variant-card:hover {
-      border-color: #ff6b9d;
-      transform: translateY(-4px);
+    .card:hover {
+      border-color: rgba(255,107,157,0.3);
+      transform: translateY(-3px);
     }
-    .variant-preview {
-      height: 200px;
-      position: relative;
-      overflow: hidden;
-    }
-    .variant-preview img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .variant-info {
-      padding: 20px;
-    }
-    .variant-number {
+    .card-num {
       display: inline-block;
-      background: #ff6b9d;
-      color: #fff;
-      padding: 4px 12px;
+      padding: 6px 14px;
+      background: rgba(255,107,157,0.1);
+      color: #ff6b9d;
       border-radius: 20px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      margin-bottom: 12px;
-    }
-    .variant-name {
-      font-size: 1.3rem;
+      font-size: 0.8rem;
       font-weight: 700;
-      margin-bottom: 8px;
+      margin-bottom: 15px;
     }
-    .variant-desc {
-      color: #aaa;
-      font-size: 0.95rem;
+    .card h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+    .card .tone {
+      font-size: 0.85rem;
+      color: #d4af37;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+    .card p {
+      color: #888;
+      font-size: 0.9rem;
       line-height: 1.5;
     }
-    .variant-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 12px;
-    }
-    .variant-tag {
-      background: #333;
-      padding: 4px 10px;
-      border-radius: 12px;
+    .card .pages {
+      margin-top: 15px;
+      padding-top: 15px;
+      border-top: 1px solid rgba(255,255,255,0.05);
       font-size: 0.8rem;
-      color: #ccc;
+      color: #666;
+    }
+    .badge-new {
+      display: inline-block;
+      padding: 4px 10px;
+      background: #d4af37;
+      color: #0a0a0f;
+      border-radius: 10px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      margin-left: 10px;
+      text-transform: uppercase;
     }
   </style>
 </head>
 <body>
-  <h1>Design Shotgun — 10 Variants</h1>
-  <p class="subtitle">Lakecia Gunter AI Consulting for Women Leaders — Pick your favorite</p>
+  <h1>12 Design Variants</h1>
+  <p class="subtitle">Full multi-page sites. Each with unique emotional tone, content angle, and visual approach.</p>
   
-  <div class="variants-grid">
-    <a href="v1-editorial.html" class="variant-card">
-      <div class="variant-preview" style="background: linear-gradient(135deg, #f5f0eb 0%, #e8e0d8 100%); display: flex; align-items: center; justify-content: center;">
-        <span style="font-family: Georgia, serif; font-size: 3rem; color: #2d2a26; font-weight: bold;">Ed</span>
-      </div>
-      <div class="variant-info">
-        <span class="variant-number">01</span>
-        <div class="variant-name">Editorial Magazine</div>
-        <div class="variant-desc">Serif headlines, generous whitespace, pull quotes. Like a feature in Vogue Business.</div>
-        <div class="variant-tags">
-          <span class="variant-tag">Serif</span>
-          <span class="variant-tag">Whitespace</span>
-          <span class="variant-tag">Editorial</span>
-        </div>
-      </div>
+  <div class="grid">
+    <a href="v1-editorial/index.html" class="card">
+      <span class="card-num">01</span>
+      <h2>Editorial Magazine</h2>
+      <div class="tone">Tone: Sophisticated, authoritative</div>
+      <p>Serif headlines, editorial layout, pull quotes. Feels like a feature article in a premium publication.</p>
+      <div class="pages">Home, About, Services, Contact</div>
     </a>
-
-    <a href="v2-manifesto.html" class="variant-card">
-      <div class="variant-preview" style="background: #000; display: flex; align-items: center; justify-content: center;">
-        <span style="font-family: Impact, sans-serif; font-size: 3rem; color: #fff; text-transform: uppercase;">MANIFESTO</span>
-      </div>
-      <div class="variant-info">
-        <span class="variant-number">02</span>
-        <div class="variant-name">Bold Manifesto</div>
-        <div class="variant-desc">All-caps statements, high contrast, no decoration. Raw power and conviction.</div>
-        <div class="variant-tags">
-          <span class="variant-tag">Bold</span>
-          <span class="variant-tag">High Contrast</span>
-          <span class="variant-tag">Statement</span>
-        </div>
-      </div>
+    
+    <a href="v2-manifesto/index.html" class="card">
+      <span class="card-num">02</span>
+      <h2>Bold Manifesto</h2>
+      <div class="tone">Tone: Confrontational, urgent</div>
+      <p>All-caps, high contrast, raw power. No subtlety. Direct challenge to the status quo.</p>
+      <div class="pages">Home, Services, About, Contact</div>
     </a>
-
-    <a href="v3-cinematic.html" class="variant-card">
-      <div class="variant-preview" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); display: flex; align-items: center; justify-content: center;">
-        <span style="font-size: 3rem;">🎬</span>
-      </div>
-      <div class="variant-info">
-        <span class="variant-number">03</span>
-        <div class="variant-name">Cinematic Dark</div>
-        <div class="variant-desc">Full-bleed imagery, gradient overlays, dramatic scroll effects. Movie poster energy.</div>
-        <div class="variant-tags">
-          <span class="variant-tag">Dark</span>
-          <span class="variant-tag">Dramatic</span>
-          <span class="variant-tag">Gradient</span>
-        </div>
-      </div>
+    
+    <a href="v3-cinematic/index.html" class="card">
+      <span class="card-num">03</span>
+      <h2>Cinematic Dark</h2>
+      <div class="tone">Tone: Dramatic, immersive</div>
+      <p>Full-bleed imagery, gradient overlays, movie-like atmosphere. Emotional and atmospheric.</p>
+      <div class="pages">Home, About, Services, Contact</div>
     </a>
-
-    <a href="v4-minimal.html" class="variant-card">
-      <div class="variant-preview" style="background: #fff; display: flex; align-items: center; justify-content: center;">
-        <span style="font-family: 'Helvetica Neue', sans-serif; font-size: 3rem; color: #000; font-weight: 300; letter-spacing: -2px;">minimal</span>
-      </div>
-      <div class="variant-info">
-        <span class="variant-number">04</span>
-        <div class="variant-name">Swiss Minimal</div>
-        <div class="variant-desc">Grid systems, neutral colors, typography-focused. Clean as a Dieter Rams product.</div>
-        <div class="variant-tags">
-          <span class="variant-tag">Grid</span>
-          <span class="variant-tag">Neutral</span>
-          <span class="variant-tag">Typography</span>
-        </div>
-      </div>
+    
+    <a href="v4-minimal/index.html" class="card">
+      <span class="card-num">04</span>
+      <h2>Swiss Minimal</h2>
+      <div class="tone">Tone: Clinical, precise</div>
+      <p>Grid systems, neutral palette, typography-focused. Less is more. Let the work speak.</p>
+      <div class="pages">Home, About, Services, Contact</div>
     </a>
-
-    <a href="v5-brutalist.html" class="variant-card">
-      <div class="variant-preview" style="background: #ff0; display: flex; align-items: center; justify-content: center;">
-        <span style="font-family: monospace; font-size: 2.5rem; color: #000; font-weight: bold;">&lt;RAW/&gt;</span>
-      </div>
-      <div class="variant-info">
-        <span class="variant-number">05</span>
-        <div class="variant-name">Neo-Brutalist</div>
-        <div class="variant-desc">System fonts, harsh borders, unexpected layouts. Unpolished and unforgettable.</div>
-        <div class="variant-tags">
-          <span class="variant-tag">Raw</span>
-          <span class="variant-tag">System Fonts</span>
-          <span class="variant-tag">Unexpected</span>
-        </div>
-      </div>
+    
+    <a href="v5-brutalist/index.html" class="card">
+      <span class="card-num">05</span>
+      <h2>Neo-Brutalist</h2>
+      <div class="tone">Tone: Raw, unfiltered</div>
+      <p>Yellow/black, system fonts, harsh borders. Anti-design aesthetic. Unapologetic.</p>
+      <div class="pages">Home, About, Services, Contact</div>
     </a>
-
-    <a href="v6-luxury.html" class="variant-card">
-      <div class="variant-preview" style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2a26 100%); display: flex; align-items: center; justify-content: center;">
-        <span style="font-family: 'Playfair Display', serif; font-size: 3rem; color: #d4af37; font-style: italic;">Luxury</span>
-      </div>
-      <div class="variant-info">
-        <span class="variant-number">06</span>
-        <div class="variant-name">Executive Luxury</div>
-        <div class="variant-desc">Dark palette, gold accents, refined typography. Boardroom elegance meets modern edge.</div>
-        <div class="variant-tags">
-          <span class="variant-tag">Dark</span>
-          <span class="variant-tag">Gold</span>
-          <span class="variant-tag">Refined</span>
-        </div>
-      </div>
+    
+    <a href="v6-luxury/index.html" class="card">
+      <span class="card-num">06</span>
+      <h2>Executive Luxury</h2>
+      <div class="tone">Tone: Refined, exclusive</div>
+      <p>Dark palette, gold accents, boardroom elegance. Whispers wealth and authority.</p>
+      <div class="pages">Home, About, Services, Contact</div>
     </a>
-
-    <a href="v7-cv.html" class="variant-card">
-      <div class="variant-preview" style="background: #f8f9fa; display: flex; align-items: center; justify-content: center;">
-        <span style="font-family: 'Times New Roman', serif; font-size: 2.5rem; color: #333;">CV.</span>
-      </div>
-      <div class="variant-info">
-        <span class="variant-number">07</span>
-        <div class="variant-name">Credential Timeline</div>
-        <div class="variant-desc">Resume-style timeline, clean hierarchy, data-dense. Credentials front and center.</div>
-        <div class="variant-tags">
-          <span class="variant-tag">Timeline</span>
-          <span class="variant-tag">Credentials</span>
-          <span class="variant-tag">Data</span>
-        </div>
-      </div>
+    
+    <a href="v7-cv/index.html" class="card">
+      <span class="card-num">07</span>
+      <h2>Credential Timeline</h2>
+      <div class="tone">Tone: Factual, impressive</div>
+      <p>Resume-style, data-dense, credentials front. Proves authority through track record.</p>
+      <div class="pages">Home, CV, Services, Contact</div>
     </a>
-
-    <a href="v8-playful.html" class="variant-card">
-      <div class="variant-preview" style="background: linear-gradient(135deg, #ffe4e1 0%, #fff0f5 100%); display: flex; align-items: center; justify-content: center;">
-        <span style="font-size: 3rem;">✨</span>
-      </div>
-      <div class="variant-info">
-        <span class="variant-number">08</span>
-        <div class="variant-name">Warm & Playful</div>
-        <div class="variant-desc">Soft colors, rounded corners, friendly typography. Approachable but still professional.</div>
-        <div class="variant-tags">
-          <span class="variant-tag">Soft</span>
-          <span class="variant-tag">Rounded</span>
-          <span class="variant-tag">Friendly</span>
-        </div>
-      </div>
+    
+    <a href="v8-playful/index.html" class="card">
+      <span class="card-num">08</span>
+      <h2>Warm & Playful</h2>
+      <div class="tone">Tone: Friendly, approachable</div>
+      <p>Soft colors, rounded corners, friendly icons. Welcoming and non-intimidating.</p>
+      <div class="pages">Home, About, Services, Community, Contact</div>
     </a>
-
-    <a href="v9-zen.html" class="variant-card">
-      <div class="variant-preview" style="background: #f5f5f0; display: flex; align-items: center; justify-content: center;">
-        <span style="font-family: serif; font-size: 3rem; color: #8b8680; font-weight: 300;">zen</span>
-      </div>
-      <div class="variant-info">
-        <span class="variant-number">09</span>
-        <div class="variant-name">Zen Spacious</div>
-        <div class="variant-desc">Lots of whitespace, subtle colors, breathing room. Calm confidence without noise.</div>
-        <div class="variant-tags">
-          <span class="variant-tag">Whitespace</span>
-          <span class="variant-tag">Calm</span>
-          <span class="variant-tag">Breathing Room</span>
-        </div>
-      </div>
+    
+    <a href="v9-zen/index.html" class="card">
+      <span class="card-num">09</span>
+      <h2>Zen Spacious</h2>
+      <div class="tone">Tone: Calm, contemplative</div>
+      <p>Lots of whitespace, calm, breathing room. Let the visitor absorb at their own pace.</p>
+      <div class="pages">Home, About, Services, Contact</div>
     </a>
-
-    <a href="v10-modern.html" class="variant-card">
-      <div class="variant-preview" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center;">
-        <span style="font-family: sans-serif; font-size: 3rem; color: #fff; font-weight: 800;">MODERN</span>
-      </div>
-      <div class="variant-info">
-        <span class="variant-number">10</span>
-        <div class="variant-name">Tech Modern</div>
-        <div class="variant-desc">Gradient accents, glassmorphism, modern sans-serif. Silicon Valley meets feminine leadership.</div>
-        <div class="variant-tags">
-          <span class="variant-tag">Gradient</span>
-          <span class="variant-tag">Glass</span>
-          <span class="variant-tag">Tech</span>
-        </div>
-      </div>
+    
+    <a href="v10-modern/index.html" class="card">
+      <span class="card-num">10</span>
+      <h2>Tech Modern</h2>
+      <div class="tone">Tone: Innovative, forward-looking</div>
+      <p>Gradient accents, glassmorphism, Silicon Valley energy. Tech-native aesthetic.</p>
+      <div class="pages">Home, About, Services, Contact</div>
+    </a>
+    
+    <a href="vA-tech-luxe/index.html" class="card">
+      <span class="card-num">11</span>
+      <span class="badge-new">New</span>
+      <h2>Tech-Luxe Fusion</h2>
+      <div class="tone">Tone: Powerful, aspirational</div>
+      <p>Dark mode + ROAR pink + gold. Glassmorphism nav, floating badges, stats. Full emotional arc.</p>
+      <div class="pages">Home, About, Services, Community, Contact</div>
+    </a>
+    
+    <a href="vB-warm-community/index.html" class="card">
+      <span class="card-num">12</span>
+      <span class="badge-new">New</span>
+      <h2>Warm Community</h2>
+      <div class="tone">Tone: Intimate, supportive</div>
+      <p>Warm cream + serif. Community focus. "You're not alone in this." Emotional safety.</p>
+      <div class="pages">Home, About, Services, Community, Contact</div>
     </a>
   </div>
 </body>
