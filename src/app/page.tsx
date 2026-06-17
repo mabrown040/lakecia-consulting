@@ -176,24 +176,78 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* CTA — Conversion focused */}
       <section className="py-24 bg-[#2d2a26] text-[#fef7f0]">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6">
-            Ready to build something?
-          </h2>
-          <p className="text-lg text-[#a8a29e] mb-10 max-w-xl mx-auto">
-            Advisory, board, or just a conversation. I take a limited number of engagements each quarter.
-          </p>
-          <Link 
-            href="/contact" 
-            className="inline-flex items-center gap-2 px-8 py-4 bg-[#ff6b9d] text-white rounded-xl font-semibold hover:bg-[#e8558a] transition-colors"
-          >
-            Say hello
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </Link>
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Left — Value proposition */}
+            <div>
+              <p className="text-sm font-medium tracking-[0.2em] uppercase text-[#ff6b9d] mb-4">
+                Limited Engagements
+              </p>
+              <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                Let&apos;s talk about what you&apos;re building.
+              </h2>
+              <p className="text-lg text-[#a8a29e] mb-8 leading-relaxed">
+                I work with a small number of boards and leadership teams each quarter. 
+                If you need technology governance, strategic advisory, or executive coaching — 
+                let&apos;s see if it&apos;s a fit.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link 
+                  href="/contact" 
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#ff6b9d] text-white rounded-xl font-semibold hover:bg-[#e8558a] transition-colors text-center"
+                >
+                  Book a conversation
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </Link>
+                <Link 
+                  href="/advisory" 
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-[#a8a29e] text-[#fef7f0] rounded-xl font-medium hover:bg-[#fef7f0] hover:text-[#2d2a26] transition-colors text-center"
+                >
+                  See how I work
+                </Link>
+              </div>
+            </div>
+
+            {/* Right — Social proof + specifics */}
+            <div className="space-y-6">
+              <div className="bg-[#3d3833] rounded-2xl p-6">
+                <p className="text-sm text-[#a8a29e] uppercase tracking-wider mb-3">Current Board Roles</p>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 rounded-full bg-[#ff6b9d]" />
+                    <p className="text-[#fef7f0]">IDEX Corporation (NYSE) — Independent Director</p>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 rounded-full bg-[#ff6b9d]" />
+                    <p className="text-[#fef7f0]">Responsive.io — Board Advisor</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-[#3d3833] rounded-2xl p-6">
+                <p className="text-sm text-[#a8a29e] uppercase tracking-wider mb-3">Advisory Focus</p>
+                <div className="flex flex-wrap gap-2">
+                  {['AI Strategy', 'Board Governance', 'Digital Transformation', 'Partner Ecosystems', 'Executive Coaching'].map((tag) => (
+                    <span key={tag} className="px-3 py-1 bg-[#2d2a26] rounded-full text-sm text-[#fef7f0]">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="bg-[#3d3833] rounded-2xl p-6">
+                <p className="text-sm text-[#a8a29e] uppercase tracking-wider mb-3">Recent Experience</p>
+                <p className="text-[#fef7f0] leading-relaxed">
+                  CTO at Microsoft (Global Partner Solutions, $B+ P&L). Chief of Staff to CEO at Intel. 
+                  25 years from DoD digital logic to Fortune 50 boardrooms.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
