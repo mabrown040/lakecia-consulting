@@ -8,138 +8,138 @@ export default function Advisory() {
 
       {/* Hero */}
       <section className="pt-32 pb-16 px-6 lg:px-8 max-w-4xl mx-auto">
-        <p className="text-sm font-medium tracking-[0.2em] uppercase text-[#a8a29e] mb-4">Services</p>
+        <p className="text-sm font-medium tracking-[0.2em] uppercase text-[#a8a29e] mb-4">AI Advisory Services</p>
         <h1 className="font-serif text-5xl md:text-7xl font-bold text-[#2d2a26] leading-[1.05] mb-8">
-          How I help.
+          AI strategy that actually works for women leaders.
         </h1>
         <p className="text-xl text-[#6b6560] leading-relaxed max-w-2xl">
-          I work with a limited number of leadership teams and boards each quarter. Those who are serious about results, not headlines.
+          Most AI consulting is built by men, for men, in language that doesn't land. I help women leaders cut through the hype, understand what matters, and build AI into their leadership — not as a buzzword, but as a competitive advantage.
         </p>
       </section>
 
-      {/* Services */}
+      {/* AI Services */}
       <section className="px-6 lg:px-8 max-w-5xl mx-auto pb-24">
         <div className="grid md:grid-cols-2 gap-8">
-          {/* Board Advisory */}
+          {/* AI Strategy for Boards */}
           <div className="bg-white rounded-2xl p-10 shadow-sm">
             <div className="w-14 h-14 rounded-xl bg-[#ff6b9d]/10 flex items-center justify-center mb-6">
               <svg className="w-7 h-7 text-[#ff6b9d]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
               </svg>
             </div>
-            <h3 className="font-serif text-2xl font-bold text-[#2d2a26] mb-4">Board Advisory</h3>
+            <h3 className="font-serif text-2xl font-bold text-[#2d2a26] mb-4">AI Strategy for Boards</h3>
             <p className="text-[#6b6560] leading-relaxed mb-6">
-              Independent perspective on technology strategy, governance, and digital transformation. I bring operating experience to board discussions, not theory.
+              Help your board understand AI risk, opportunity, and governance in plain language. Translate technical complexity into strategic decisions directors can act on.
             </p>
             <ul className="space-y-2 text-sm text-[#6b6560]">
               <li className="flex items-start gap-2">
                 <span className="text-[#ff6b9d] mt-1">—</span>
-                Technology committee guidance
+                AI governance framework development
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-[#ff6b9d] mt-1">—</span>
-                AI and platform strategy review
+                Risk assessment and oversight
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-[#ff6b9d] mt-1">—</span>
-                Digital transformation oversight
+                Vendor and investment evaluation
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-[#ff6b9d] mt-1">—</span>
-                Partner ecosystem evaluation
+                Quarterly AI strategy reviews
               </li>
             </ul>
           </div>
 
-          {/* Executive Consulting */}
+          {/* Executive AI Coaching */}
           <div className="bg-white rounded-2xl p-10 shadow-sm">
             <div className="w-14 h-14 rounded-xl bg-[#ff6b9d]/10 flex items-center justify-center mb-6">
               <svg className="w-7 h-7 text-[#ff6b9d]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
               </svg>
             </div>
-            <h3 className="font-serif text-2xl font-bold text-[#2d2a26] mb-4">Executive Consulting</h3>
+            <h3 className="font-serif text-2xl font-bold text-[#2d2a26] mb-4">Executive AI Coaching</h3>
             <p className="text-[#6b6560] leading-relaxed mb-6">
-              Hands-on support for leadership teams navigating technology disruption. I help translate complex technology into clear strategic choices.
+              One-on-one coaching for women executives adopting AI. Build confidence, cut through vendor hype, and lead AI conversations with authority in any room.
             </p>
             <ul className="space-y-2 text-sm text-[#6b6560]">
               <li className="flex items-start gap-2">
                 <span className="text-[#ff6b9d] mt-1">—</span>
-                AI strategy and implementation
+                Personal AI fluency development
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-[#ff6b9d] mt-1">—</span>
-                Platform transformation planning
+                Team AI readiness assessment
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-[#ff6b9d] mt-1">—</span>
-                Partner ecosystem development
+                Vendor evaluation and selection
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-[#ff6b9d] mt-1">—</span>
-                New business acceleration
+                Leadership communication strategy
               </li>
             </ul>
           </div>
 
-          {/* Strategic Partnerships */}
+          {/* AI Implementation Sprints */}
           <div className="bg-white rounded-2xl p-10 shadow-sm">
             <div className="w-14 h-14 rounded-xl bg-[#ff6b9d]/10 flex items-center justify-center mb-6">
               <svg className="w-7 h-7 text-[#ff6b9d]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
               </svg>
             </div>
-            <h3 className="font-serif text-2xl font-bold text-[#2d2a26] mb-4">Strategic Partnerships</h3>
+            <h3 className="font-serif text-2xl font-bold text-[#2d2a26] mb-4">AI Implementation Sprints</h3>
             <p className="text-[#6b6560] leading-relaxed mb-6">
-              Building and scaling partner ecosystems that deliver measurable business impact. From co-selling to co-building, I know what works at global scale.
+              2-4 week hands-on sprints to get your team using AI tools that actually move the needle. Tool selection, workflow design, and team training — not theory, results.
             </p>
             <ul className="space-y-2 text-sm text-[#6b6560]">
               <li className="flex items-start gap-2">
                 <span className="text-[#ff6b9d] mt-1">—</span>
-                Partner ecosystem design
+                AI tool audit and selection
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-[#ff6b9d] mt-1">—</span>
-                Go-to-market strategy
+                Workflow redesign with AI
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-[#ff6b9d] mt-1">—</span>
-                Alliance management
+                Team training and adoption
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-[#ff6b9d] mt-1">—</span>
-                Revenue acceleration
+                ROI measurement framework
               </li>
             </ul>
           </div>
 
-          {/* Speaking */}
+          {/* Women's AI Leadership Circle */}
           <div className="bg-white rounded-2xl p-10 shadow-sm">
             <div className="w-14 h-14 rounded-xl bg-[#ff6b9d]/10 flex items-center justify-center mb-6">
               <svg className="w-7 h-7 text-[#ff6b9d]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
               </svg>
             </div>
-            <h3 className="font-serif text-2xl font-bold text-[#2d2a26] mb-4">Speaking</h3>
+            <h3 className="font-serif text-2xl font-bold text-[#2d2a26] mb-4">Women's AI Leadership Circle</h3>
             <p className="text-[#6b6560] leading-relaxed mb-6">
-              Keynotes and fireside chats on technology leadership, AI strategy, and navigating disruption. I bring candor, not canned talking points.
+              Small cohort of women leaders navigating AI together. Monthly sessions, peer support, and direct access to me. Build your network while you build your AI fluency.
             </p>
             <ul className="space-y-2 text-sm text-[#6b6560]">
               <li className="flex items-start gap-2">
                 <span className="text-[#ff6b9d] mt-1">—</span>
-                Keynote addresses
+                Monthly group sessions
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-[#ff6b9d] mt-1">—</span>
-                Board and executive briefings
+                Peer accountability and support
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-[#ff6b9d] mt-1">—</span>
-                Conference panels
+                Direct access to me between sessions
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-[#ff6b9d] mt-1">—</span>
-                Moderated conversations
+                Quarterly enrollment, 8-12 women
               </li>
             </ul>
           </div>
@@ -178,10 +178,10 @@ export default function Advisory() {
 
       {/* CTA */}
       <section className="py-24 px-6 lg:px-8 max-w-4xl mx-auto text-center">
-        <h2 className="font-serif text-4xl font-bold text-[#2d2a26] mb-6">Ready to work together?</h2>
-        <p className="text-lg text-[#6b6560] mb-10">I take a limited number of engagements each quarter. Let's see if we're a fit.</p>
+        <h2 className="font-serif text-4xl font-bold text-[#2d2a26] mb-6">Ready to lead with AI?</h2>
+        <p className="text-lg text-[#6b6560] mb-10">Book a free 30-minute AI strategy call. No pitch, just clarity on your next steps.</p>
         <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-[#2d2a26] text-white rounded-xl font-semibold hover:bg-[#3d3833] transition-colors">
-          Start a conversation
+          Book your free call
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
           </svg>

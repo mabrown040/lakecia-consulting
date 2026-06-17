@@ -15,23 +15,22 @@ export default function Home() {
             {/* Text side */}
             <div className="order-2 lg:order-1">
               <p className="text-sm font-medium tracking-[0.2em] uppercase text-[#a8a29e] mb-6">
-                Technology Leadership & Board Governance
+                AI Strategy for Women Leaders
               </p>
               <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-[#2d2a26] leading-[1.1] mb-8">
-                Building technology<br />
-                with <span className="text-[#ff6b9d]">heart</span> and<br />
-                strategy.
+                AI is changing everything.<br />
+                <span className="text-[#ff6b9d]">Don't get left behind.</span>
               </h1>
               <p className="text-lg text-[#3d3833] leading-relaxed max-w-lg mb-10">
-                25 years from digital logic at the Department of Defense to CTO at Microsoft. 
-                Now helping boards and leadership teams navigate what&apos;s next.
+                Former Microsoft CTO helping women leaders understand, adopt, and lead with AI. 
+                From boardroom strategy to hands-on implementation — built for women who want to win.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link 
-                  href="/about" 
+                  href="/advisory" 
                   className="inline-flex items-center gap-2 px-6 py-3 bg-[#2d2a26] text-white rounded-xl font-medium hover:bg-[#3d3833] transition-colors"
                 >
-                  Read my story
+                  See AI services
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
@@ -40,7 +39,7 @@ export default function Home() {
                   href="/contact" 
                   className="inline-flex items-center gap-2 px-6 py-3 border border-[#2d2a26] text-[#2d2a26] rounded-xl font-medium hover:bg-[#2d2a26] hover:text-white transition-colors"
                 >
-                  Get in touch
+                  Book a free call
                 </Link>
               </div>
             </div>
@@ -71,41 +70,34 @@ export default function Home() {
         </div>
       </section>
 
-      {/* What I'm Building - Playful cards */}
+      {/* AI Services — What I offer */}
       <section className="py-24 px-6 lg:px-8 max-w-7xl mx-auto">
-        <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#2d2a26] mb-16 text-center">
-          What I&apos;m building
+        <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#2d2a26] mb-6 text-center">
+          AI services built for women leaders
         </h2>
+        <p className="text-lg text-[#6b6560] text-center max-w-2xl mx-auto mb-16">
+          Not generic AI consulting. Strategy, implementation, and leadership coaching designed for women navigating corporate, board, and entrepreneurial growth.
+        </p>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="group bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all hover:-translate-y-1">
-            <div className="w-12 h-12 rounded-xl bg-[#ff6b9d]/10 flex items-center justify-center mb-6">
-              <svg className="w-6 h-6 text-[#ff6b9d]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-              </svg>
-            </div>
-            <h3 className="font-semibold text-lg text-[#2d2a26] mb-2">Board Governance</h3>
-            <p className="text-[#6b6560] text-sm leading-relaxed">Independent Director at IDEX Corporation (NYSE). Strategic oversight and technology stewardship.</p>
-          </div>
-
           <div className="group bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all hover:-translate-y-1">
             <div className="w-12 h-12 rounded-xl bg-[#ff6b9d]/10 flex items-center justify-center mb-6">
               <svg className="w-6 h-6 text-[#ff6b9d]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
               </svg>
             </div>
-            <h3 className="font-semibold text-lg text-[#2d2a26] mb-2">Strategic Advisory</h3>
-            <p className="text-[#6b6560] text-sm leading-relaxed">Co-Founding Advisor at TechArena.ai. Helping companies navigate technology-driven change.</p>
+            <h3 className="font-semibold text-lg text-[#2d2a26] mb-2">AI Strategy for Boards</h3>
+            <p className="text-[#6b6560] text-sm leading-relaxed">Help your board understand AI risk, opportunity, and governance. Translate technical complexity into strategic decisions.</p>
           </div>
 
           <div className="group bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all hover:-translate-y-1">
             <div className="w-12 h-12 rounded-xl bg-[#ff6b9d]/10 flex items-center justify-center mb-6">
               <svg className="w-6 h-6 text-[#ff6b9d]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
               </svg>
             </div>
-            <h3 className="font-semibold text-lg text-[#2d2a26] mb-2">ROAR Podcast</h3>
-            <p className="text-[#6b6560] text-sm leading-relaxed">Candid conversations with leaders navigating growth, transition, and opportunity.</p>
+            <h3 className="font-semibold text-lg text-[#2d2a26] mb-2">Executive AI Coaching</h3>
+            <p className="text-[#6b6560] text-sm leading-relaxed">One-on-one coaching for women executives adopting AI. Build confidence, cut through hype, and lead with authority.</p>
           </div>
 
           <div className="group bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all hover:-translate-y-1">
@@ -114,8 +106,18 @@ export default function Home() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
               </svg>
             </div>
-            <h3 className="font-semibold text-lg text-[#2d2a26] mb-2">Executive Coaching</h3>
-            <p className="text-[#6b6560] text-sm leading-relaxed">Working with a limited number of leadership teams each quarter. Serious results, not headlines.</p>
+            <h3 className="font-semibold text-lg text-[#2d2a26] mb-2">AI Implementation Sprints</h3>
+            <p className="text-[#6b6560] text-sm leading-relaxed">2-4 week hands-on sprints to get your team using AI tools that actually move the needle. Not theory. Results.</p>
+          </div>
+
+          <div className="group bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all hover:-translate-y-1">
+            <div className="w-12 h-12 rounded-xl bg-[#ff6b9d]/10 flex items-center justify-center mb-6">
+              <svg className="w-6 h-6 text-[#ff6b9d]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+              </svg>
+            </div>
+            <h3 className="font-semibold text-lg text-[#2d2a26] mb-2">Women&apos;s AI Leadership Circle</h3>
+            <p className="text-[#6b6560] text-sm leading-relaxed">Small cohort of women leaders navigating AI together. Monthly sessions, peer support, and direct access to me.</p>
           </div>
         </div>
       </section>
@@ -176,29 +178,27 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA — Conversion focused */}
+      {/* CTA — AI Conversion focused */}
       <section className="py-24 bg-[#2d2a26] text-[#fef7f0]">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Left — Value proposition */}
             <div>
               <p className="text-sm font-medium tracking-[0.2em] uppercase text-[#ff6b9d] mb-4">
-                Limited Engagements
+                Free 30-Minute AI Strategy Call
               </p>
               <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6 leading-tight">
-                Let&apos;s talk about what you&apos;re building.
+                Not sure where to start with AI? Let's map it out.
               </h2>
               <p className="text-lg text-[#a8a29e] mb-8 leading-relaxed">
-                I work with a small number of boards and leadership teams each quarter. 
-                If you need technology governance, strategic advisory, or executive coaching — 
-                let&apos;s see if it&apos;s a fit.
+                I'll help you identify your highest-impact AI opportunities, avoid common pitfalls, and build a roadmap that fits your timeline and budget. No pitch. Just clarity.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link 
                   href="/contact" 
                   className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#ff6b9d] text-white rounded-xl font-semibold hover:bg-[#e8558a] transition-colors text-center"
                 >
-                  Book a conversation
+                  Book your free call
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
@@ -207,7 +207,7 @@ export default function Home() {
                   href="/advisory" 
                   className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-[#a8a29e] text-[#fef7f0] rounded-xl font-medium hover:bg-[#fef7f0] hover:text-[#2d2a26] transition-colors text-center"
                 >
-                  See how I work
+                  See AI services
                 </Link>
               </div>
             </div>
@@ -215,23 +215,27 @@ export default function Home() {
             {/* Right — Social proof + specifics */}
             <div className="space-y-6">
               <div className="bg-[#3d3833] rounded-2xl p-6">
-                <p className="text-sm text-[#a8a29e] uppercase tracking-wider mb-3">Current Board Roles</p>
+                <p className="text-sm text-[#a8a29e] uppercase tracking-wider mb-3">Why me</p>
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-[#ff6b9d]" />
-                    <p className="text-[#fef7f0]">IDEX Corporation (NYSE) — Independent Director</p>
+                    <p className="text-[#fef7f0]">Former CTO at Microsoft — led $B+ AI partner ecosystem</p>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-[#ff6b9d]" />
-                    <p className="text-[#fef7f0]">Responsive.io — Board Advisor</p>
+                    <p className="text-[#fef7f0]">Board Director at IDEX — governance + AI risk oversight</p>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 rounded-full bg-[#ff6b9d]" />
+                    <p className="text-[#fef7f0]">25 years from DoD to Fortune 50 — I build what works</p>
                   </div>
                 </div>
               </div>
 
               <div className="bg-[#3d3833] rounded-2xl p-6">
-                <p className="text-sm text-[#a8a29e] uppercase tracking-wider mb-3">Advisory Focus</p>
+                <p className="text-sm text-[#a8a29e] uppercase tracking-wider mb-3">Who this is for</p>
                 <div className="flex flex-wrap gap-2">
-                  {['AI Strategy', 'Board Governance', 'Digital Transformation', 'Partner Ecosystems', 'Executive Coaching'].map((tag) => (
+                  {['Women Executives', 'Board Members', 'Entrepreneurs', 'Team Leaders', 'Career Pivoters'].map((tag) => (
                     <span key={tag} className="px-3 py-1 bg-[#2d2a26] rounded-full text-sm text-[#fef7f0]">
                       {tag}
                     </span>
@@ -240,10 +244,9 @@ export default function Home() {
               </div>
 
               <div className="bg-[#3d3833] rounded-2xl p-6">
-                <p className="text-sm text-[#a8a29e] uppercase tracking-wider mb-3">Recent Experience</p>
+                <p className="text-sm text-[#a8a29e] uppercase tracking-wider mb-3">What you get</p>
                 <p className="text-[#fef7f0] leading-relaxed">
-                  CTO at Microsoft (Global Partner Solutions, $B+ P&L). Chief of Staff to CEO at Intel. 
-                  25 years from DoD digital logic to Fortune 50 boardrooms.
+                  A clear AI roadmap tailored to your role, your company, and your goals. No jargon. No overwhelm. Just the 3-5 moves that will matter most in the next 12 months.
                 </p>
               </div>
             </div>
