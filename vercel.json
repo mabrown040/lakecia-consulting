@@ -2,6 +2,9 @@
   "version": 2,
   "routes": [
     { "handle": "filesystem" },
+    { "src": "/shotgun-12/([^/]+)/$", "dest": "/shotgun-12/$1/index.html" },
+    { "src": "/shotgun-12/([^/]+)$", "dest": "/shotgun-12/$1.html" },
+    { "src": "/shotgun-12/([^/]+)/(.+)", "dest": "/shotgun-12/$1/$2" },
     { "src": "/(.*)", "dest": "/$1.html" }
   ]
 }
