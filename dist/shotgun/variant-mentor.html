@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lakecia — AI Strategy Mentor</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a0f;
+            color: #e2e8f0;
+            line-height: 1.7;
+        }
+        
+        /* HERO */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 80px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+        .hero-text h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 24px;
+        }
+        .hero-text h1 .gradient {
+            background: linear-gradient(135deg, #a78bfa, #f472b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-text .lead {
+            font-size: 1.2rem;
+            color: #94a3b8;
+            margin-bottom: 32px;
+        }
+        .hero-text .cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 32px;
+            background: linear-gradient(135deg, #7c3aed, #db2777);
+            color: white;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-decoration: none;
+        }
+        .hero-photo {
+            position: relative;
+        }
+        .hero-photo img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 40px 80px rgba(124, 58, 237, 0.2);
+        }
+        .hero-photo .badge {
+            position: absolute;
+            bottom: -20px;
+            left: -20px;
+            background: #111118;
+            border: 1px solid #1e293b;
+            border-radius: 12px;
+            padding: 16px 24px;
+            font-size: 0.9rem;
+        }
+        .hero-photo .badge strong {
+            display: block;
+            color: #a78bfa;
+            font-size: 1.1rem;
+        }
+        
+        /* STORY */
+        .story {
+            padding: 100px 40px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .story h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+        .story p {
+            font-size: 1.1rem;
+            color: #94a3b8;
+            margin-bottom: 20px;
+        }
+        .story .quote {
+            border-left: 3px solid #a78bfa;
+            padding-left: 24px;
+            margin: 40px 0;
+            font-style: italic;
+            font-size: 1.2rem;
+            color: #f8fafc;
+        }
+        
+        /* SERVICES */
+        .services {
+            background: #111118;
+            padding: 100px 40px;
+        }
+        .services-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .services h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+        .service-card {
+            background: #0a0a0f;
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 32px;
+        }
+        .service-card h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .service-card p {
+            color: #94a3b8;
+            font-size: 0.95rem;
+            margin-bottom: 16px;
+        }
+        .service-card .price {
+            color: #a78bfa;
+            font-weight: 700;
+        }
+        
+        /* CONTACT */
+        .contact {
+            padding: 100px 40px;
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .contact h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+        .contact h2 .gradient {
+            background: linear-gradient(135deg, #a78bfa, #f472b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .contact p {
+            color: #94a3b8;
+            font-size: 1.1rem;
+            margin-bottom: 32px;
+        }
+        .contact .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 18px 36px;
+            background: linear-gradient(135deg, #7c3aed, #db2777);
+            color: white;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-grid { grid-template-columns: 1fr; }
+            .hero-text h1 { font-size: 2.5rem; }
+            .hero-photo { order: -1; }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="hero-grid">
+            <div class="hero-text">
+                <h1>
+                    AI is moving fast.
+                    <span class="gradient">Let's get you ready.</span>
+                </h1>
+                <p class="lead">
+                    I've spent 20 years building technology at the highest levels — Microsoft, Intel, 
+                    and now as an advisor to companies figuring out what AI means for them. I can help you too.
+                </p>
+                <a href="#contact" class="cta">Book a free call →</a>
+            </div>
+            <div class="hero-photo">
+                <img src="/lakecia.jpg" alt="Lakecia Gunter">
+                <div class="badge">
+                    <strong>20+ years</strong>
+                    Leading tech at scale
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="story">
+        <h2>Here's what I've learned.</h2>
+        <p>
+            Every company I talk to is in the same place. They know AI matters. They've read the headlines. 
+            They've probably bought a tool or two. But when I ask them "what's your AI strategy?" — 
+            I get blank stares.
+        </p>
+        <p>
+            That's not their fault. The market is designed to confuse you. Every vendor promises magic. 
+            Every consultant has a framework. And somehow, after all that money and time, nothing changes.
+        </p>
+        <div class="quote">
+            "I don't want to sell you AI. I want to help you figure out if AI should even be on your 
+            roadmap right now — and if so, where it actually moves the needle."
+        </div>
+        <p>
+            I work with a handful of companies each quarter. Not because I'm exclusive, but because 
+            this work requires attention. I need to understand your business, your constraints, 
+            your team. Then I give you a plan that makes sense for where you actually are.
+        </p>
+    </section>
+
+    <section class="services">
+        <div class="services-inner">
+            <h2>How we can work together</h2>
+            <div class="service-grid">
+                <div class="service-card">
+                    <h3>AI Strategy Sprint</h3>
+                    <p>Two weeks to get clarity. We assess, prioritize, and build your roadmap. You leave with a plan you can execute.</p>
+                    <div class="price">$25,000</div>
+                </div>
+                <div class="service-card">
+                    <h3>Executive Coaching</h3>
+                    <p>Monthly 1:1s for leaders who need to understand AI well enough to make decisions. No coding required.</p>
+                    <div class="price">$5,000/month</div>
+                </div>
+                <div class="service-card">
+                    <h3>Board Advisory</h3>
+                    <p>Ongoing guidance for leadership teams navigating AI investment and strategy decisions.</p>
+                    <div class="price">$10,000/month</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>
+            Ready when you are.
+            <span class="gradient">No pressure.</span>
+        </h2>
+        <p>
+            Book a 30-minute call. We'll talk about where you are, where you're trying to go, 
+            and whether I can help. If not, I'll point you to someone who can.
+        </p>
+        <a href="#" class="btn">Schedule a call →</a>
+    </section>
+</body>
+</html>

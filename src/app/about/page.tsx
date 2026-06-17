@@ -63,7 +63,9 @@ export default function About() {
           <p className="font-serif text-2xl md:text-3xl italic text-[#2d2a26] leading-relaxed mb-4">
             "I am known for helping executive teams and boards translate complex technology into clear strategic choices, particularly during periods of disruption, reinvention, and market transition."
           </p>
-          <cite className="text-sm text-[#a8a29e] not-italic tracking-widest uppercase">— On her approach to advisory work</cite>
+          <cite className="text-sm text-[#a8a29e] not-italic tracking-widest uppercase">
+            — On my approach to advisory work
+          </cite>
         </blockquote>
 
         <p className="text-lg text-[#3d3833] leading-[1.8] mb-8">

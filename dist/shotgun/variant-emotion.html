@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lakecia — Emotion Variant</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0f0f0f;
+            color: #fafafa;
+            line-height: 1.6;
+        }
+        
+        /* HERO — Full emotional */
+        .hero {
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, #1a0a2e 0%, #16213e 50%, #0f3460 100%);
+        }
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url('../lakecia.jpg') center/cover;
+            opacity: 0.15;
+            filter: blur(2px);
+        }
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(15,15,15,0.3) 0%, rgba(15,15,15,0.9) 70%, #0f0f0f 100%);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 900px;
+            padding: 40px;
+        }
+        .hero-eyebrow {
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #e879f9;
+            margin-bottom: 24px;
+        }
+        .hero h1 {
+            font-size: 4.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 24px;
+        }
+        .hero h1 .highlight {
+            background: linear-gradient(135deg, #e879f9, #f472b6, #fb7185);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-quote {
+            font-size: 1.4rem;
+            color: #e2e8f0;
+            font-style: italic;
+            line-height: 1.6;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 18px 36px;
+            background: linear-gradient(135deg, #e879f9, #f472b6);
+            color: white;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .hero-cta:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 60px rgba(232, 121, 249, 0.4);
+        }
+        .scroll-hint {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #64748b;
+            font-size: 0.85rem;
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(10px); }
+        }
+        
+        /* STORY SECTION */
+        .story-section {
+            padding: 120px 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .story-lead {
+            font-size: 2rem;
+            font-weight: 300;
+            color: #e2e8f0;
+            line-height: 1.5;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .story-lead strong {
+            font-weight: 700;
+            color: #e879f9;
+        }
+        .story-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-top: 60px;
+        }
+        .story-image {
+            position: relative;
+        }
+        .story-image img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 40px 80px rgba(0,0,0,0.5);
+        }
+        .story-image::before {
+            content: '';
+            position: absolute;
+            inset: -20px;
+            border: 2px solid rgba(232, 121, 249, 0.2);
+            border-radius: 30px;
+            z-index: -1;
+        }
+        .story-text {
+            font-size: 1.1rem;
+            color: #94a3b8;
+            line-height: 1.8;
+        }
+        .story-text p {
+            margin-bottom: 20px;
+        }
+        .story-text .pull-quote {
+            font-size: 1.3rem;
+            color: #e2e8f0;
+            font-style: italic;
+            border-left: 3px solid #e879f9;
+            padding-left: 20px;
+            margin: 30px 0;
+        }
+        
+        /* TRANSFORMATION SECTION */
+        .transform-section {
+            background: linear-gradient(135deg, #1a0a2e, #0f0f0f);
+            padding: 120px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        .transform-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(232, 121, 249, 0.05) 0%, transparent 50%);
+        }
+        .transform-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        .transform-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+        .transform-header h2 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+        .transform-header h2 .highlight {
+            background: linear-gradient(135deg, #e879f9, #f472b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .transform-header p {
+            font-size: 1.2rem;
+            color: #64748b;
+        }
+        .before-after {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        .before-after-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 20px;
+            padding: 40px;
+        }
+        .before-after-card.before {
+            border-color: rgba(239, 68, 68, 0.2);
+        }
+        .before-after-card.after {
+            border-color: rgba(232, 121, 249, 0.2);
+        }
+        .before-after-card .label {
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+        .before-after-card.before .label { color: #ef4444; }
+        .before-after-card.after .label { color: #e879f9; }
+        .before-after-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #fafafa;
+        }
+        .before-after-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        .before-after-card li {
+            padding: 8px 0;
+            padding-left: 24px;
+            position: relative;
+            color: #94a3b8;
+        }
+        .before-after-card.before li::before {
+            content: '✗';
+            position: absolute;
+            left: 0;
+            color: #ef4444;
+        }
+        .before-after-card.after li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #e879f9;
+        }
+        .arrow-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #e879f9;
+        }
+        
+        /* EMOTIONAL CTA */
+        .emotion-cta {
+            padding: 120px 40px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .emotion-cta h2 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 24px;
+        }
+        .emotion-cta h2 .highlight {
+            background: linear-gradient(135deg, #e879f9, #f472b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .emotion-cta p {
+            font-size: 1.2rem;
+            color: #94a3b8;
+            line-height: 1.7;
+            margin-bottom: 40px;
+        }
+        .emotion-cta .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 20px 40px;
+            background: transparent;
+            border: 2px solid #e879f9;
+            color: #e879f9;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .emotion-cta .cta-btn:hover {
+            background: #e879f9;
+            color: white;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .hero-quote { font-size: 1.1rem; }
+            .story-grid { grid-template-columns: 1fr; }
+            .before-after { grid-template-columns: 1fr; }
+            .arrow-divider { transform: rotate(90deg); padding: 20px 0; }
+            .transform-header h2 { font-size: 2rem; }
+            .emotion-cta h2 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-eyebrow">The Future Is Being Built Now</div>
+            <h1>
+                You Don't Need<br>
+                <span class="highlight">Another AI Consultant</span>
+            </h1>
+            <p class="hero-quote">
+                "You need someone who's been in the room where billion-dollar decisions get made. 
+                Someone who's shipped AI that touches a billion people. That's not theory — that's me."
+            </p>
+            <a href="#story" class="hero-cta">
+                Read My Story →
+            </a>
+        </div>
+        <div class="scroll-hint">↓ Scroll to explore</div>
+    </section>
+
+    <!-- STORY -->
+    <section class="story-section" id="story">
+        <p class="story-lead">
+            I started as the <strong>only woman of color</strong> in rooms full of engineers. 
+            Now I help leaders like you build the future — <strong>with wisdom that only comes from doing.</strong>
+        </p>
+        
+        <div class="story-grid">
+            <div class="story-image">
+                <img src="../lakecia.jpg" alt="Lakecia Gunter">
+            </div>
+            <div class="story-text">
+                <p>
+                    At Microsoft, I led the team that built Azure AI — the platform that now powers 
+                    millions of businesses worldwide. At Intel, I shaped the silicon-to-software strategy 
+                    that defines how AI runs on the chips in your devices.
+                </p>
+                <p>
+                    But the work that matters most to me now? Helping leaders like you navigate this 
+                    moment. Because AI isn't just a technology shift — it's a leadership test.
+                </p>
+                <div class="pull-quote">
+                    "The leaders who win won't be the ones with the best algorithms. They'll be the ones 
+                    who know how to lead people through transformation."
+                </div>
+                <p>
+                    I've been recognized as one of the Top 50 Black Business Women in America. But what 
+                    I'm most proud of? The founders who've gone from 'AI-confused' to 'AI-confident' 
+                    with my help.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRANSFORMATION -->
+    <section class="transform-section">
+        <div class="transform-content">
+            <div class="transform-header">
+                <h2>From <span class="highlight">Overwhelmed</span> to <span class="highlight">Clear</span></h2>
+                <p>What changes when you work with someone who's actually done this?</p>
+            </div>
+            
+            <div class="before-after">
+                <div class="before-after-card before">
+                    <div class="label">Before</div>
+                    <h3>Stuck in AI Confusion</h3>
+                    <ul>
+                        <li>Paralyzed by too many AI options</li>
+                        <li>Board asking questions you can't answer</li>
+                        <li>Team experimenting without strategy</li>
+                        <li>Competitors moving faster</li>
+                        <li>Budget going to tools, not outcomes</li>
+                    </ul>
+                </div>
+                
+                <div class="arrow-divider">→</div>
+                
+                <div class="before-after-card after">
+                    <div class="label">After</div>
+                    <h3>Clear AI Confidence</h3>
+                    <ul>
+                        <li>Prioritized roadmap with quick wins</li>
+                        <li>Board presentations that get approved</li>
+                        <li>Team aligned and executing</li>
+                        <li>Competitive advantage built</li>
+                        <li>Every dollar tied to business outcome</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EMOTIONAL CTA -->
+    <section class="emotion-cta" id="contact">
+        <h2>
+            Your AI Moment Is<br>
+            <span class="highlight">Happening Now</span>
+        </h2>
+        <p>
+            The question isn't whether AI will transform your industry. It's whether you'll lead 
+            that transformation or chase it. I've helped founders go from uncertain to unstoppable. 
+            Let me help you too.
+        </p>
+        <a href="#" class="cta-btn">
+            Let's Talk About Your Future →
+        </a>
+    </section>
+</body>
+</html>

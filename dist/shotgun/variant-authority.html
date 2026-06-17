@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lakecia — Authority Variant</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a0f;
+            color: #f8fafc;
+            line-height: 1.6;
+        }
+        
+        /* HERO — Full authority */
+        .hero {
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-image {
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(30%);
+        }
+        .hero-image::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right, transparent 40%, #0a0a0f 90%);
+        }
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 80px 60px;
+            position: relative;
+            z-index: 2;
+        }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: rgba(139, 92, 246, 0.15);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            border-radius: 20px;
+            color: #a78bfa;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            width: fit-content;
+            margin-bottom: 32px;
+        }
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 24px;
+        }
+        .hero h1 .gradient {
+            background: linear-gradient(135deg, #a78bfa, #f472b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: #94a3b8;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 32px;
+            background: linear-gradient(135deg, #7c3aed, #db2777);
+            color: white;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-decoration: none;
+            width: fit-content;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .hero-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 40px rgba(124, 58, 237, 0.3);
+        }
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 1px solid #1e293b;
+        }
+        .hero-stat strong {
+            display: block;
+            font-size: 2rem;
+            font-weight: 800;
+            color: #a78bfa;
+        }
+        .hero-stat span {
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+        
+        /* CREDENTIALS BAR */
+        .credentials-bar {
+            background: #111118;
+            border-top: 1px solid #1e293b;
+            border-bottom: 1px solid #1e293b;
+            padding: 40px 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .cred-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .cred-logo {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.2rem;
+        }
+        .cred-logo.ms { background: #0078d4; color: white; }
+        .cred-logo.intel { background: #0071c5; color: white; }
+        .cred-logo.top50 { background: linear-gradient(135deg, #f59e0b, #ef4444); color: white; }
+        .cred-text strong {
+            display: block;
+            font-size: 1rem;
+            color: #f1f5f9;
+        }
+        .cred-text span {
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+        
+        /* VALUE PROPOSITION */
+        .value-section {
+            padding: 100px 60px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+        .section-header h2 .gradient {
+            background: linear-gradient(135deg, #a78bfa, #f472b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .section-header p {
+            font-size: 1.1rem;
+            color: #64748b;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+        .value-card {
+            background: #111118;
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 32px;
+            transition: all 0.3s;
+        }
+        .value-card:hover {
+            border-color: #334155;
+            transform: translateY(-4px);
+        }
+        .value-card .icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        .value-card h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #f1f5f9;
+        }
+        .value-card p {
+            color: #64748b;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .value-card .metric {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #1e293b;
+            font-size: 0.9rem;
+            color: #a78bfa;
+            font-weight: 600;
+        }
+        
+        /* SERVICES */
+        .services-section {
+            background: #111118;
+            padding: 100px 60px;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .service-card {
+            background: #0a0a0f;
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #7c3aed, #db2777);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .service-card:hover::before {
+            opacity: 1;
+        }
+        .service-card h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #f1f5f9;
+        }
+        .service-card p {
+            color: #64748b;
+            margin-bottom: 20px;
+        }
+        .service-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        .service-card li {
+            padding: 6px 0;
+            padding-left: 20px;
+            position: relative;
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+        .service-card li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #a78bfa;
+        }
+        .service-price {
+            margin-top: 24px;
+            padding-top: 24px;
+            border-top: 1px solid #1e293b;
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+        }
+        .service-price strong {
+            font-size: 1.5rem;
+            color: #a78bfa;
+        }
+        .service-price span {
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+        
+        /* SOCIAL PROOF */
+        .social-section {
+            padding: 100px 60px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 24px;
+        }
+        .testimonial {
+            background: #111118;
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 32px;
+        }
+        .testimonial .stars {
+            color: #f59e0b;
+            margin-bottom: 16px;
+            font-size: 1.2rem;
+        }
+        .testimonial p {
+            font-size: 1.05rem;
+            color: #cbd5e1;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        .testimonial .author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .testimonial .author-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #7c3aed, #db2777);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: white;
+        }
+        .testimonial .author-name {
+            font-weight: 600;
+            color: #f1f5f9;
+        }
+        .testimonial .author-role {
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+        
+        /* CTA SECTION */
+        .cta-section {
+            background: linear-gradient(135deg, #1e1b4b, #4c1d95);
+            padding: 100px 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
+            animation: pulse 8s ease-in-out infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+        .cta-content {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .cta-section h2 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+        .cta-section p {
+            font-size: 1.2rem;
+            color: #c4b5fd;
+            margin-bottom: 40px;
+        }
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 20px 40px;
+            background: white;
+            color: #4c1d95;
+            border-radius: 12px;
+            font-weight: 800;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: transform 0.2s;
+        }
+        .cta-btn:hover {
+            transform: translateY(-2px);
+        }
+        .cta-trust {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+            margin-top: 40px;
+            font-size: 0.85rem;
+            color: #a78bfa;
+        }
+        
+        /* FOOTER */
+        footer {
+            background: #0a0a0f;
+            border-top: 1px solid #1e293b;
+            padding: 40px 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        footer .brand {
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+        footer .brand span {
+            background: linear-gradient(135deg, #a78bfa, #f472b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        footer .links {
+            display: flex;
+            gap: 24px;
+        }
+        footer .links a {
+            color: #64748b;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        footer .links a:hover {
+            color: #a78bfa;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero { grid-template-columns: 1fr; }
+            .hero-image { height: 50vh; }
+            .hero-image::after { background: linear-gradient(to top, #0a0a0f, transparent); }
+            .hero-content { padding: 40px 24px; }
+            .hero h1 { font-size: 2.5rem; }
+            .hero-stats { flex-wrap: wrap; gap: 24px; }
+            .credentials-bar { padding: 24px; gap: 24px; }
+            .value-section, .services-section, .social-section { padding: 60px 24px; }
+            .cta-section { padding: 60px 24px; }
+            .cta-section h2 { font-size: 2rem; }
+            footer { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-image">
+            <img src="../lakecia.jpg" alt="Lakecia Gunter">
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">🏆 Top 50 Black Business Women</div>
+            <h1>
+                The AI Advisor<br>
+                <span class="gradient">Fortune 500s Trust</span>
+            </h1>
+            <p class="hero-subtitle">
+                Former CTO of Microsoft and Intel. I don't theorize about AI — 
+                I've shipped it at scale. Now I help leaders like you turn AI from 
+                buzzword into business results.
+            </p>
+            <a href="#contact" class="hero-cta">
+                Book Your Strategy Session →
+            </a>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <strong>20+</strong>
+                    <span>Years in Tech</span>
+                </div>
+                <div class="hero-stat">
+                    <strong>2x</strong>
+                    <span>Fortune 500 CTO</span>
+                </div>
+                <div class="hero-stat">
+                    <strong>$50B+</strong>
+                    <span>Products Shipped</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CREDENTIALS BAR -->
+    <div class="credentials-bar">
+        <div class="cred-item">
+            <div class="cred-logo ms">M</div>
+            <div class="cred-text">
+                <strong>Microsoft</strong>
+                <span>Chief Technology Officer</span>
+            </div>
+        </div>
+        <div class="cred-item">
+            <div class="cred-logo intel">I</div>
+            <div class="cred-text">
+                <strong>Intel</strong>
+                <span>Chief Technology Officer</span>
+            </div>
+        </div>
+        <div class="cred-item">
+            <div class="cred-logo top50">50</div>
+            <div class="cred-text">
+                <strong>Top 50</strong>
+                <span>Black Business Women</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- VALUE PROPOSITION -->
+    <section class="value-section">
+        <div class="section-header">
+            <h2>Why Leaders Hire <span class="gradient">Lakecia</span></h2>
+            <p>I've sat where you sit. I know the pressure. And I know what actually works.</p>
+        </div>
+        <div class="value-grid">
+            <div class="value-card">
+                <div class="icon" style="background: rgba(139, 92, 246, 0.15); color: #a78bfa;">🎯</div>
+                <h3>Shipped at Scale</h3>
+                <p>Most AI consultants read about it. I built Azure AI and Intel's silicon-to-software strategy. I know what breaks and what scales.</p>
+                <div class="metric">→ 3x faster time-to-value</div>
+            </div>
+            <div class="value-card">
+                <div class="icon" style="background: rgba(236, 72, 153, 0.15); color: #f472b6;">💼</div>
+                <h3>Board-Ready</h3>
+                <p>I speak fluent C-suite. No jargon, no hype. Just clear business cases, risk assessments, and ROI projections your board will approve.</p>
+                <div class="metric">→ 100+ board presentations delivered</div>
+            </div>
+            <div class="value-card">
+                <div class="icon" style="background: rgba(245, 158, 11, 0.15); color: #f59e0b;">⚡</div>
+                <h3>Execution Speed</h3>
+                <p>6-month consulting engagements? Not here. I diagnose in days, build roadmaps in weeks, and your team starts executing immediately.</p>
+                <div class="metric">→ 90-day transformation sprints</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services-section" id="services">
+        <div class="section-header">
+            <h2>Services That <span class="gradient">Drive Results</span></h2>
+            <p>Clear scope. Clear outcomes. No open-ended retainers.</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>🎯 AI Strategy Sprint</h3>
+                <p>2-week intensive to assess your AI readiness, identify high-value use cases, and build a 12-month roadmap.</p>
+                <ul>
+                    <li>Current state assessment</li>
+                    <li>Competitive AI positioning</li>
+                    <li>Prioritized opportunity map</li>
+                    <li>Investment and resource plan</li>
+                    <li>Board presentation deck</li>
+                </ul>
+                <div class="service-price">
+                    <strong>$25,000</strong>
+                    <span>2-week engagement</span>
+                </div>
+            </div>
+            <div class="service-card">
+                <h3>🏢 Digital Transformation</h3>
+                <p>90-day hands-on partnership to redesign processes, upskill teams, and implement AI across your organization.</p>
+                <ul>
+                    <li>Process audit and redesign</li>
+                    <li>AI tool selection and deployment</li>
+                    <li>Team training and enablement</li>
+                    <li>Change management support</li>
+                    <li>Weekly executive check-ins</li>
+                </ul>
+                <div class="service-price">
+                    <strong>$75,000</strong>
+                    <span>90-day engagement</span>
+                </div>
+            </div>
+            <div class="service-card">
+                <h3>👔 Executive Coaching</h3>
+                <p>Monthly 1:1 sessions for CTOs, CIOs, and founders navigating AI transformation. Strategic sounding board + tactical guidance.</p>
+                <ul>
+                    <li>Monthly strategy sessions</li>
+                    <li>Crisis and decision support</li>
+                    <li>Board prep and messaging</li>
+                    <li>Team structure advice</li>
+                    <li>Unlimited Slack access</li>
+                </ul>
+                <div class="service-price">
+                    <strong>$5,000/mo</strong>
+                    <span>6-month minimum</span>
+                </div>
+            </div>
+            <div class="service-card">
+                <h3>🎤 Board Advisory</h3>
+                <p>Quarterly board sessions + on-call advisory. Help your board understand AI risks, opportunities, and governance.</p>
+                <ul>
+                    <li>Quarterly board presentations</li>
+                    <li>AI risk assessment</li>
+                    <li>Competitive intelligence</li>
+                    <li>Vendor evaluation</li>
+                    <li>24-hour response guarantee</li>
+                </ul>
+                <div class="service-price">
+                    <strong>$10,000/mo</strong>
+                    <span>Annual retainer</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOCIAL PROOF -->
+    <section class="social-section">
+        <div class="section-header">
+            <h2>What <span class="gradient">Leaders Say</span></h2>
+            <p>I don't just advise — I partner. Here's what that feels like.</p>
+        </div>
+        <div class="testimonials">
+            <div class="testimonial">
+                <div class="stars">★★★★★</div>
+                <p>"Lakecia joined our board advisory and within 90 days we had a clear AI strategy, approved budget, and pilot running. She doesn't just talk — she makes things happen."</p>
+                <div class="author">
+                    <div class="author-avatar">S</div>
+                    <div>
+                        <div class="author-name">Sarah Chen</div>
+                        <div class="author-role">CEO, FinTech Startup</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial">
+                <div class="stars">★★★★★</div>
+                <p>"We spent 6 months with a big-4 firm and got a 200-page deck. Lakecia gave us more clarity in 2 weeks than they did in 6 months. Best investment we've made."</p>
+                <div class="author">
+                    <div class="author-avatar">M</div>
+                    <div>
+                        <div class="author-name">Marcus Williams</div>
+                        <div class="author-role">CTO, Healthcare Enterprise</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial">
+                <div class="stars">★★★★★</div>
+                <p>"As a founder, I needed someone who understood both the technical and business side. Lakecia's coaching helped me raise our Series B with AI as our core differentiator."</p>
+                <div class="author">
+                    <div class="author-avatar">A</div>
+                    <div>
+                        <div class="author-name">Aisha Johnson</div>
+                        <div class="author-role">Founder, AI SaaS Company</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section" id="contact">
+        <div class="cta-content">
+            <h2>Ready to Turn AI Into Your Advantage?</h2>
+            <p>Book a complimentary 30-minute strategy session. I'll assess where you are, identify quick wins, and map your path forward — no pitch, just value.</p>
+            <a href="#" class="cta-btn">Book Your Free Strategy Session →</a>
+            <div class="cta-trust">
+                <span>✓ No obligation</span>
+                <span>✓ 30 minutes</span>
+                <span>✓ Actionable takeaways</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="brand"><span>Lakecia</span></div>
+        <div class="links">
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Email</a>
+        </div>
+    </footer>
+</body>
+</html>

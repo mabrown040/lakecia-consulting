@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lakecia — AI Strategy</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a0f;
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+        
+        /* HERO */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 80px 40px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            line-height: 1.05;
+            margin-bottom: 24px;
+            letter-spacing: -0.02em;
+        }
+        .hero h1 .highlight {
+            color: #a78bfa;
+        }
+        .hero p {
+            font-size: 1.25rem;
+            color: #94a3b8;
+            max-width: 600px;
+            margin-bottom: 40px;
+        }
+        .hero .cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 32px;
+            background: #a78bfa;
+            color: #0a0a0f;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-decoration: none;
+            width: fit-content;
+        }
+        .hero .cta:hover {
+            background: #c4b5fd;
+        }
+        
+        /* ABOUT */
+        .about {
+            padding: 100px 40px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .about-photo {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+        }
+        .about h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        .about p {
+            font-size: 1.1rem;
+            color: #94a3b8;
+            margin-bottom: 16px;
+        }
+        .about .credentials {
+            display: flex;
+            gap: 24px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+        .credential {
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+        .credential strong {
+            color: #f8fafc;
+            display: block;
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+        }
+        
+        /* SERVICES */
+        .services {
+            background: #111118;
+            padding: 100px 40px;
+        }
+        .services-inner {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .services h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 40px;
+        }
+        .service {
+            border-bottom: 1px solid #1e293b;
+            padding: 32px 0;
+        }
+        .service h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .service p {
+            color: #94a3b8;
+            font-size: 1rem;
+        }
+        .service .price {
+            color: #a78bfa;
+            font-weight: 700;
+            margin-top: 8px;
+            font-size: 0.95rem;
+        }
+        
+        /* CONTACT */
+        .contact {
+            padding: 100px 40px;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .contact h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+        .contact p {
+            color: #94a3b8;
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+        }
+        .contact .email {
+            font-size: 1.5rem;
+            color: #a78bfa;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .contact .email:hover {
+            color: #c4b5fd;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .hero { padding: 60px 20px; }
+            .about, .services, .contact { padding: 60px 20px; }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <h1>
+            You don't need<br>
+            another AI tool.<br>
+            You need a <span class="highlight">strategy</span>.
+        </h1>
+        <p>
+            I've built AI at Microsoft and Intel. Now I help companies figure out 
+            what to actually do with it. No hype. No 6-month engagements. Just a clear plan.
+        </p>
+        <a href="#contact" class="cta">Book a 30-minute call →</a>
+    </section>
+
+    <section class="about">
+        <img src="/lakecia.jpg" alt="Lakecia Gunter" class="about-photo">
+        <h2>Here's the thing.</h2>
+        <p>
+            Most companies are throwing money at AI tools without knowing why. 
+            They buy the platform. They hire the team. Then they sit there wondering 
+            why nothing's changing.
+        </p>
+        <p>
+            I've been on the inside. I was CTO at Microsoft, then Intel. I've seen 
+            what works and what doesn't. The difference between companies that get 
+            value from AI and companies that don't? It's not the tools. It's the strategy.
+        </p>
+        <p>
+            I work with leadership teams to cut through the noise. We figure out 
+            where AI actually moves the needle for your business. Then we build 
+            a plan you can execute in 90 days.
+        </p>
+        <div class="credentials">
+            <div class="credential">
+                <strong>Microsoft</strong>
+                CTO, AI Division
+            </div>
+            <div class="credential">
+                <strong>Intel</strong>
+                CTO, Data Center Group
+            </div>
+            <div class="credential">
+                <strong>Top 50</strong>
+                Black Business Women
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="services-inner">
+            <h2>What I do</h2>
+            <div class="service">
+                <h3>AI Strategy Sprint</h3>
+                <p>Two weeks. We assess where you are, find the highest-ROI opportunities, and build a 12-month roadmap. You get a board-ready deck and a plan you can start executing Monday.</p>
+                <div class="price">$25,000</div>
+            </div>
+            <div class="service">
+                <h3>Digital Transformation</h3>
+                <p>End-to-end transformation for companies ready to rebuild how they work. I stay with you through implementation, not just the planning.</p>
+                <div class="price">$75,000+</div>
+            </div>
+            <div class="service">
+                <h3>Executive Coaching</h3>
+                <p>For leaders who need to understand AI well enough to make decisions, not code it. Monthly 1:1s. Ask me anything.</p>
+                <div class="price">$5,000/month</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Let's talk.</h2>
+        <p>30 minutes. No pitch. Just me understanding what you're trying to solve.</p>
+        <a href="mailto:hello@lakecia.com" class="email">hello@lakecia.com</a>
+    </section>
+</body>
+</html>

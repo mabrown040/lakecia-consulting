@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lakecia — Funnel Variant</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a0f;
+            color: #f8fafc;
+            line-height: 1.6;
+        }
+        
+        /* STICKY HEADER */
+        .sticky-header {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            background: rgba(10, 10, 15, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid #1e293b;
+            padding: 16px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 1000;
+        }
+        .sticky-header .brand {
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+        .sticky-header .brand span {
+            background: linear-gradient(135deg, #a78bfa, #f472b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .sticky-header .cta-small {
+            padding: 10px 24px;
+            background: linear-gradient(135deg, #7c3aed, #db2777);
+            color: white;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-decoration: none;
+        }
+        
+        /* HERO — Funnel optimized */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 120px 40px 80px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            width: 100%;
+        }
+        .hero-left h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+        .hero-left h1 .gradient {
+            background: linear-gradient(135deg, #a78bfa, #f472b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-left .subhead {
+            font-size: 1.2rem;
+            color: #94a3b8;
+            margin-bottom: 32px;
+        }
+        .hero-left .benefits {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 32px;
+        }
+        .hero-left .benefits li {
+            padding: 8px 0;
+            padding-left: 28px;
+            position: relative;
+            color: #cbd5e1;
+        }
+        .hero-left .benefits li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #22c55e;
+            font-weight: 700;
+        }
+        .hero-cta-main {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 18px 36px;
+            background: linear-gradient(135deg, #7c3aed, #db2777);
+            color: white;
+            border-radius: 12px;
+            font-weight: 800;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .hero-cta-main:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 40px rgba(124, 58, 237, 0.3);
+        }
+        .hero-right {
+            position: relative;
+        }
+        .hero-form {
+            background: #111118;
+            border: 1px solid #1e293b;
+            border-radius: 20px;
+            padding: 40px;
+        }
+        .hero-form h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .hero-form p {
+            color: #64748b;
+            font-size: 0.95rem;
+            margin-bottom: 24px;
+        }
+        .form-group {
+            margin-bottom: 16px;
+        }
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #94a3b8;
+            margin-bottom: 6px;
+        }
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 12px 16px;
+            background: #0a0a0f;
+            border: 1px solid #1e293b;
+            border-radius: 10px;
+            color: #f8fafc;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        .form-group input:focus,
+        .form-group select:focus {
+            border-color: #7c3aed;
+        }
+        .form-submit {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #7c3aed, #db2777);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .form-submit:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
+        .form-trust {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 16px;
+            font-size: 0.8rem;
+            color: #475569;
+        }
+        
+        /* PROBLEM AGITATION */
+        .problem-section {
+            background: #111118;
+            padding: 100px 40px;
+        }
+        .problem-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .problem-content h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+        .problem-content h2 .gradient {
+            background: linear-gradient(135deg, #ef4444, #f59e0b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .problem-content .lead {
+            font-size: 1.2rem;
+            color: #94a3b8;
+            margin-bottom: 60px;
+        }
+        .pain-points {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+        }
+        .pain-point {
+            background: #0a0a0f;
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 32px;
+            text-align: left;
+        }
+        .pain-point .emoji {
+            font-size: 2rem;
+            margin-bottom: 16px;
+        }
+        .pain-point h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #f8fafc;
+        }
+        .pain-point p {
+            color: #64748b;
+            font-size: 0.95rem;
+        }
+        
+        /* SOLUTION */
+        .solution-section {
+            padding: 100px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .solution-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .solution-header h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+        .solution-header h2 .gradient {
+            background: linear-gradient(135deg, #a78bfa, #f472b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .solution-steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .solution-step {
+            background: #111118;
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 40px;
+            position: relative;
+        }
+        .solution-step .step-num {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #7c3aed, #db2777);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.2rem;
+            color: white;
+            margin-bottom: 20px;
+        }
+        .solution-step h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .solution-step p {
+            color: #64748b;
+            font-size: 0.95rem;
+        }
+        .solution-arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #7c3aed;
+            font-size: 2rem;
+        }
+        
+        /* OFFER STACK */
+        .offer-section {
+            background: linear-gradient(135deg, #1e1b4b, #312e81);
+            padding: 100px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        .offer-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 30% 50%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+        }
+        .offer-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        .offer-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #a78bfa;
+            margin-bottom: 24px;
+        }
+        .offer-content h2 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+        .offer-content .subtitle {
+            font-size: 1.2rem;
+            color: #c4b5fd;
+            margin-bottom: 40px;
+        }
+        .offer-box {
+            background: rgba(0,0,0,0.3);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            border-radius: 20px;
+            padding: 40px;
+        }
+        .offer-box h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+        .offer-items {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 32px;
+        }
+        .offer-items li {
+            padding: 12px 0;
+            padding-left: 32px;
+            position: relative;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            color: #e2e8f0;
+        }
+        .offer-items li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #22c55e;
+            font-weight: 700;
+        }
+        .offer-price {
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+        .offer-price .price {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #a78bfa;
+        }
+        .offer-price .was {
+            font-size: 1.5rem;
+            color: #64748b;
+            text-decoration: line-through;
+        }
+        .offer-price .note {
+            font-size: 0.9rem;
+            color: #94a3b8;
+        }
+        .offer-cta {
+            display: block;
+            width: 100%;
+            padding: 18px;
+            background: white;
+            color: #4c1d95;
+            border-radius: 12px;
+            font-weight: 800;
+            font-size: 1.1rem;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .offer-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .offer-guarantee {
+            text-align: center;
+            margin-top: 24px;
+            font-size: 0.9rem;
+            color: #a78bfa;
+        }
+        
+        /* FAQ */
+        .faq-section {
+            padding: 100px 40px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .faq-section h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .faq-section h2 .gradient {
+            background: linear-gradient(135deg, #a78bfa, #f472b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .faq-item {
+            background: #111118;
+            border: 1px solid #1e293b;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 16px;
+        }
+        .faq-item h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #f8fafc;
+        }
+        .faq-item p {
+            color: #64748b;
+            font-size: 0.95rem;
+        }
+        
+        /* FINAL CTA */
+        .final-cta {
+            background: #111118;
+            padding: 100px 40px;
+            text-align: center;
+        }
+        .final-cta h2 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+        .final-cta h2 .gradient {
+            background: linear-gradient(135deg, #a78bfa, #f472b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .final-cta p {
+            font-size: 1.2rem;
+            color: #94a3b8;
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+        .final-cta .big-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 20px 48px;
+            background: linear-gradient(135deg, #7c3aed, #db2777);
+            color: white;
+            border-radius: 12px;
+            font-weight: 800;
+            font-size: 1.2rem;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .final-cta .big-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 60px rgba(124, 58, 237, 0.4);
+        }
+        .urgency {
+            margin-top: 24px;
+            font-size: 0.9rem;
+            color: #f59e0b;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-grid { grid-template-columns: 1fr; }
+            .hero-left h1 { font-size: 2.5rem; }
+            .solution-steps { grid-template-columns: 1fr; }
+            .solution-arrow { transform: rotate(90deg); padding: 20px 0; }
+            .offer-content h2 { font-size: 2rem; }
+            .final-cta h2 { font-size: 2rem; }
+            .sticky-header { padding: 12px 20px; }
+            .sticky-header .cta-small { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <!-- STICKY HEADER -->
+    <header class="sticky-header">
+        <div class="brand"><span>Lakecia</span></div>
+        <a href="#offer" class="cta-small">Book Free Call →</a>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-grid">
+            <div class="hero-left">
+                <h1>
+                    Get a Clear AI Strategy
+                    <span class="gradient">In 14 Days</span>
+                </h1>
+                <p class="subhead">
+                    From the former CTO of Microsoft and Intel. No fluff, no 6-month engagements. 
+                    Just a practical roadmap your team can execute immediately.
+                </p>
+                <ul class="benefits">
+                    <li>Identify your highest-ROI AI opportunities</li>
+                    <li>Get board-ready investment plan</li>
+                    <li>Receive prioritized 12-month roadmap</li>
+                    <li>Start executing in weeks, not quarters</li>
+                </ul>
+                <a href="#offer" class="hero-cta-main">
+                    Book Your Free Strategy Call →
+                </a>
+            </div>
+            <div class="hero-right">
+                <div class="hero-form">
+                    <h3>Book Your Free Call</h3>
+                    <p>30 minutes. Zero obligation. Actionable takeaways.</p>
+                    <div class="form-group">
+                        <label>Your Name</label>
+                        <input type="text" placeholder="John Smith">
+                    </div>
+                    <div class="form-group">
+                        <label>Work Email</label>
+                        <input type="email" placeholder="john@company.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Company Size</label>
+                        <select>
+                            <option>1-50 employees</option>
+                            <option>51-200 employees</option>
+                            <option>201-1000 employees</option>
+                            <option>1000+ employees</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Biggest AI Challenge</label>
+                        <select>
+                            <option>Don't know where to start</option>
+                            <option>Board wants a plan</option>
+                            <option>Team lacks AI skills</option>
+                            <option>Need to compete faster</option>
+                        </select>
+                    </div>
+                    <button class="form-submit">Book My Free Call →</button>
+                    <div class="form-trust">
+                        <span>✓ No credit card</span>
+                        <span>✓ 30 minutes</span>
+                        <span>✓ Cancel anytime</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROBLEM -->
+    <section class="problem-section">
+        <div class="problem-content">
+            <h2>
+                Sound <span class="gradient">Familiar?</span>
+            </h2>
+            <p class="lead">
+                Most leaders I talk to are stuck in the same place. Here's what they tell me:
+            </p>
+            <div class="pain-points">
+                <div class="pain-point">
+                    <div class="emoji">😵‍💫</div>
+                    <h3>Overwhelmed by Options</h3>
+                    <p>"There are 1000 AI tools. I don't know which ones matter for my business."</p>
+                </div>
+                <div class="pain-point">
+                    <div class="emoji">📊</div>
+                    <h3>Board Pressure</h3>
+                    <p>"My board keeps asking about our AI strategy. I need answers, not more questions."</p>
+                </div>
+                <div class="pain-point">
+                    <div class="emoji">⏰</div>
+                    <h3>Moving Too Slow</h3>
+                    <p>"My competitors are using AI. We're still talking about it. I need to move fast."</p>
+                </div>
+                <div class="pain-point">
+                    <div class="emoji">💸</div>
+                    <h3>Wasted Budget</h3>
+                    <p>"We bought AI tools but nobody's using them. I need ROI, not experiments."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOLUTION -->
+    <section class="solution-section">
+        <div class="solution-header">
+            <h2>
+                Here's How We <span class="gradient">Fix It</span>
+            </h2>
+        </div>
+        <div class="solution-steps">
+            <div class="solution-step">
+                <div class="step-num">1</div>
+                <h3>Free Strategy Call</h3>
+                <p>30-minute diagnostic. I learn your business, your challenges, and your goals. You get immediate clarity.</p>
+            </div>
+            <div class="solution-arrow">→</div>
+            <div class="solution-step">
+                <div class="step-num">2</div>
+                <h3>AI Strategy Sprint</h3>
+                <p>2-week intensive. We assess, prioritize, and build your roadmap. Board-ready deck included.</p>
+            </div>
+            <div class="solution-arrow">→</div>
+            <div class="solution-step">
+                <div class="step-num">3</div>
+                <h3>Execute & Win</h3>
+                <p>Your team executes with my guidance. Weekly check-ins, course corrections, and measurable outcomes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- OFFER -->
+    <section class="offer-section" id="offer">
+        <div class="offer-content">
+            <div class="offer-badge">⚡ Limited Availability</div>
+            <h2>The AI Strategy Sprint</h2>
+            <p class="subtitle">Everything you need to go from "AI-confused" to "AI-confident"</p>
+            
+            <div class="offer-box">
+                <h3>What's Included:</h3>
+                <ul class="offer-items">
+                    <li>2-week intensive with Lakecia directly</li>
+                    <li>Current state AI readiness assessment</li>
+                    <li>Prioritized opportunity map (quick wins + long-term)</li>
+                    <li>12-month execution roadmap</li>
+                    <li>Investment and resource plan</li>
+                    <li>Board presentation deck</li>
+                    <li>30-day post-sprint check-in</li>
+                    <li>Direct Slack access for questions</li>
+                </ul>
+                <div class="offer-price">
+                    <span class="price">$25,000</span>
+                    <span class="was">$50,000</span>
+                    <span class="note">(introductory pricing)</span>
+                </div>
+                <a href="#" class="offer-cta">Book Your Free Strategy Call →</a>
+                <div class="offer-guarantee">
+                    ✓ 100% satisfaction guarantee. If you don't get value, I'll refund every dollar.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+        <h2>
+            Still Have <span class="gradient">Questions?</span>
+        </h2>
+        <div class="faq-item">
+            <h3>"What if we're just starting with AI?"</h3>
+            <p>Perfect. Most of my clients are exactly where you are. The Strategy Sprint is designed to take you from zero to clear roadmap — regardless of your current AI maturity.</p>
+        </div>
+        <div class="faq-item">
+            <h3>"How is this different from big-4 consulting?"</h3>
+            <p>Big-4 firms give you a 200-page deck and leave. I give you a roadmap and stay to help you execute. Plus, I've actually built AI products — they haven't.</p>
+        </div>
+        <div class="faq-item">
+            <h3>"What industries do you work with?"</h3>
+            <p>I've worked across tech, healthcare, finance, manufacturing, and retail. The principles are the same — the applications are what change.</p>
+        </div>
+        <div class="faq-item">
+            <h3>"What if my team doesn't have AI skills?"</h3>
+            <p>That's exactly why you need a strategy first. I'll help you identify build vs. buy decisions and create a talent plan that fits your budget.</p>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta">
+        <h2>
+            Your AI Strategy Won't
+            <span class="gradient">Build Itself</span>
+        </h2>
+        <p>
+            Every day you wait is a day your competitors pull ahead. Book your free call now 
+            and let's map your path to AI leadership.
+        </p>
+        <a href="#" class="big-btn">
+            Book Your Free Strategy Call →
+        </a>
+        <div class="urgency">
+            ⚠️ Only 3 Strategy Sprint slots available this quarter
+        </div>
+    </section>
+</body>
+</html>
