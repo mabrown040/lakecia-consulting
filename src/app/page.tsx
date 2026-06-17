@@ -168,13 +168,12 @@ export default function Home() {
               </div>
             </div>
             <div className="relative">
-              <div className="aspect-square rounded-2xl bg-gradient-to-br from-violet-600/20 to-fuchsia-600/20 border border-slate-800 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-violet-500 to-fuchsia-500 flex items-center justify-center text-4xl font-bold text-white mb-4">
-                    L
-                  </div>
-                  <p className="text-slate-500 text-sm">Photo placeholder</p>
-                </div>
+              <div className="aspect-[3/4] rounded-2xl overflow-hidden border-2 border-slate-700">
+                <img 
+                  src="/lakecia.jpg" 
+                  alt="Lakecia Gunter"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="absolute -bottom-6 -right-6 glass rounded-xl p-4 glow">
                 <div className="text-3xl font-bold gradient-text">20+</div>
