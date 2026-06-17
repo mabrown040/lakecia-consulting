@@ -1,20 +1,20 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "Lakecia | AI Strategy & Leadership Consulting",
-  description: "Former CTO of Microsoft and Intel. Top 50 Black Business Women in America. AI strategy, digital transformation, and leadership advisory for enterprises and founders.",
+  title: "Lakecia Gunter — Technology Leadership & Board Governance",
+  description: "25-year technology veteran. Former CTO at Microsoft, Chief of Staff to CEO at Intel. Board Director at IDEX Corporation. Strategic advisor helping leadership teams navigate AI, platform transformation, and digital disruption.",
 };
 
 export default function RootLayout({
@@ -24,9 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-slate-950 text-slate-50`}
-      >
+      <body className={`${inter.variable} ${playfair.variable} antialiased`}>
         {children}
       </body>
     </html>
