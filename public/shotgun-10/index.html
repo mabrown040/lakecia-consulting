@@ -1,256 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lakecia Gunter — 10 Design Variants</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #0a0a0f;
-            color: #e2e8f0;
-            line-height: 1.6;
-        }
-        .nav {
-            position: fixed;
-            top: 0; left: 0; right: 0;
-            background: rgba(10, 10, 15, 0.95);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid #1e293b;
-            padding: 16px 40px;
-            display: flex;
-            gap: 8px;
-            z-index: 1000;
-            overflow-x: auto;
-        }
-        .nav a {
-            padding: 8px 16px;
-            border-radius: 8px;
-            color: #94a3b8;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.85rem;
-            white-space: nowrap;
-            transition: all 0.2s;
-        }
-        .nav a:hover, .nav a.active {
-            background: #1e293b;
-            color: #f8fafc;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 100px 40px 60px;
-        }
-        .intro {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-        .intro h1 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 12px;
-        }
-        .intro h1 .gradient {
-            background: linear-gradient(135deg, #a78bfa, #f472b6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .intro p {
-            color: #64748b;
-            font-size: 1.1rem;
-        }
-        .variant-card {
-            background: #111118;
-            border: 1px solid #1e293b;
-            border-radius: 16px;
-            overflow: hidden;
-            margin-bottom: 40px;
-        }
-        .variant-header {
-            padding: 24px 32px;
-            border-bottom: 1px solid #1e293b;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .variant-header h2 {
-            font-size: 1.3rem;
-            font-weight: 700;
-        }
-        .variant-header .tag {
-            padding: 6px 14px;
-            background: #1e293b;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            color: #94a3b8;
-        }
-        .variant-frame {
-            height: 600px;
-            border: none;
-            width: 100%;
-            display: block;
-        }
-        .comparison {
-            background: #111118;
-            border: 1px solid #1e293b;
-            border-radius: 16px;
-            padding: 40px;
-            margin-top: 40px;
-        }
-        .comparison h2 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 24px;
-        }
-        .comparison table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 0.9rem;
-        }
-        .comparison th, .comparison td {
-            padding: 10px 12px;
-            text-align: left;
-            border-bottom: 1px solid #1e293b;
-        }
-        .comparison th {
-            font-weight: 700;
-            color: #94a3b8;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-        }
-        .comparison td {
-            color: #cbd5e1;
-        }
-        .comparison tr:hover td {
-            background: rgba(124, 58, 237, 0.05);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lakecia Gunter — Design Shotgun (10 Variants)</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0f0f0f;
+      color: #fff;
+      padding: 40px 20px;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+    .subtitle {
+      color: #888;
+      margin-bottom: 40px;
+      font-size: 1.1rem;
+    }
+    .variants-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 24px;
+    }
+    .variant-card {
+      background: #1a1a1a;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 2px solid #333;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    .variant-card:hover {
+      border-color: #ff6b9d;
+      transform: translateY(-4px);
+    }
+    .variant-preview {
+      height: 200px;
+      position: relative;
+      overflow: hidden;
+    }
+    .variant-preview img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .variant-info {
+      padding: 20px;
+    }
+    .variant-number {
+      display: inline-block;
+      background: #ff6b9d;
+      color: #fff;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .variant-name {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .variant-desc {
+      color: #aaa;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+    .variant-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 12px;
+    }
+    .variant-tag {
+      background: #333;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 0.8rem;
+      color: #ccc;
+    }
+  </style>
 </head>
 <body>
-    <nav class="nav">
-        <a href="#" class="active">Overview</a>
-        <a href="v1-editorial.html">1. Editorial</a>
-        <a href="v2-manifesto.html">2. Manifesto</a>
-        <a href="v3-cinematic.html">3. Cinematic</a>
-        <a href="v4-minimal.html">4. Minimal</a>
-        <a href="v5-brutalist.html">5. Brutalist</a>
-        <a href="v6-magazine.html">6. Magazine</a>
-        <a href="v7-cv.html">7. CV</a>
-        <a href="v8-darkmode.html">8. Dark Mode</a>
-        <a href="v9-playful.html">9. Playful</a>
-        <a href="v10-zen.html">10. Zen</a>
-    </nav>
-
-    <div class="container">
-        <div class="intro">
-            <h1>10 Design <span class="gradient">Variants</span></h1>
-            <p>Each with real bio content, human voice, and distinct personality. Click any variant to view full screen.</p>
+  <h1>Design Shotgun — 10 Variants</h1>
+  <p class="subtitle">Lakecia Gunter AI Consulting for Women Leaders — Pick your favorite</p>
+  
+  <div class="variants-grid">
+    <a href="v1-editorial.html" class="variant-card">
+      <div class="variant-preview" style="background: linear-gradient(135deg, #f5f0eb 0%, #e8e0d8 100%); display: flex; align-items: center; justify-content: center;">
+        <span style="font-family: Georgia, serif; font-size: 3rem; color: #2d2a26; font-weight: bold;">Ed</span>
+      </div>
+      <div class="variant-info">
+        <span class="variant-number">01</span>
+        <div class="variant-name">Editorial Magazine</div>
+        <div class="variant-desc">Serif headlines, generous whitespace, pull quotes. Like a feature in Vogue Business.</div>
+        <div class="variant-tags">
+          <span class="variant-tag">Serif</span>
+          <span class="variant-tag">Whitespace</span>
+          <span class="variant-tag">Editorial</span>
         </div>
+      </div>
+    </a>
 
-        <div class="variant-card">
-            <div class="variant-header">
-                <h2>1. Editorial — "The Long Read"</h2>
-                <span class="tag">Newspaper-style, serif, authoritative</span>
-            </div>
-            <iframe class="variant-frame" src="v1-editorial.html"></iframe>
+    <a href="v2-manifesto.html" class="variant-card">
+      <div class="variant-preview" style="background: #000; display: flex; align-items: center; justify-content: center;">
+        <span style="font-family: Impact, sans-serif; font-size: 3rem; color: #fff; text-transform: uppercase;">MANIFESTO</span>
+      </div>
+      <div class="variant-info">
+        <span class="variant-number">02</span>
+        <div class="variant-name">Bold Manifesto</div>
+        <div class="variant-desc">All-caps statements, high contrast, no decoration. Raw power and conviction.</div>
+        <div class="variant-tags">
+          <span class="variant-tag">Bold</span>
+          <span class="variant-tag">High Contrast</span>
+          <span class="variant-tag">Statement</span>
         </div>
+      </div>
+    </a>
 
-        <div class="variant-card">
-            <div class="variant-header">
-                <h2>2. Manifesto — "The Declaration"</h2>
-                <span class="tag">Bold statements, high contrast, activist energy</span>
-            </div>
-            <iframe class="variant-frame" src="v2-manifesto.html"></iframe>
+    <a href="v3-cinematic.html" class="variant-card">
+      <div class="variant-preview" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); display: flex; align-items: center; justify-content: center;">
+        <span style="font-size: 3rem;">🎬</span>
+      </div>
+      <div class="variant-info">
+        <span class="variant-number">03</span>
+        <div class="variant-name">Cinematic Dark</div>
+        <div class="variant-desc">Full-bleed imagery, gradient overlays, dramatic scroll effects. Movie poster energy.</div>
+        <div class="variant-tags">
+          <span class="variant-tag">Dark</span>
+          <span class="variant-tag">Dramatic</span>
+          <span class="variant-tag">Gradient</span>
         </div>
+      </div>
+    </a>
 
-        <div class="variant-card">
-            <div class="variant-header">
-                <h2>3. Cinematic — "The Reveal"</h2>
-                <span class="tag">Full-bleed imagery, dramatic scroll, film-like</span>
-            </div>
-            <iframe class="variant-frame" src="v3-cinematic.html"></iframe>
+    <a href="v4-minimal.html" class="variant-card">
+      <div class="variant-preview" style="background: #fff; display: flex; align-items: center; justify-content: center;">
+        <span style="font-family: 'Helvetica Neue', sans-serif; font-size: 3rem; color: #000; font-weight: 300; letter-spacing: -2px;">minimal</span>
+      </div>
+      <div class="variant-info">
+        <span class="variant-number">04</span>
+        <div class="variant-name">Swiss Minimal</div>
+        <div class="variant-desc">Grid systems, neutral colors, typography-focused. Clean as a Dieter Rams product.</div>
+        <div class="variant-tags">
+          <span class="variant-tag">Grid</span>
+          <span class="variant-tag">Neutral</span>
+          <span class="variant-tag">Typography</span>
         </div>
+      </div>
+    </a>
 
-        <div class="variant-card">
-            <div class="variant-header">
-                <h2>4. Minimal — "The Essential"</h2>
-                <span class="tag">Whitespace, single column, only what matters</span>
-            </div>
-            <iframe class="variant-frame" src="v4-minimal.html"></iframe>
+    <a href="v5-brutalist.html" class="variant-card">
+      <div class="variant-preview" style="background: #ff0; display: flex; align-items: center; justify-content: center;">
+        <span style="font-family: monospace; font-size: 2.5rem; color: #000; font-weight: bold;">&lt;RAW/&gt;</span>
+      </div>
+      <div class="variant-info">
+        <span class="variant-number">05</span>
+        <div class="variant-name">Neo-Brutalist</div>
+        <div class="variant-desc">System fonts, harsh borders, unexpected layouts. Unpolished and unforgettable.</div>
+        <div class="variant-tags">
+          <span class="variant-tag">Raw</span>
+          <span class="variant-tag">System Fonts</span>
+          <span class="variant-tag">Unexpected</span>
         </div>
+      </div>
+    </a>
 
-        <div class="variant-card">
-            <div class="variant-header">
-                <h2>5. Brutalist — "The Unfiltered"</h2>
-                <span class="tag">Raw HTML energy, system fonts, no polish</span>
-            </div>
-            <iframe class="variant-frame" src="v5-brutalist.html"></iframe>
+    <a href="v6-luxury.html" class="variant-card">
+      <div class="variant-preview" style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2a26 100%); display: flex; align-items: center; justify-content: center;">
+        <span style="font-family: 'Playfair Display', serif; font-size: 3rem; color: #d4af37; font-style: italic;">Luxury</span>
+      </div>
+      <div class="variant-info">
+        <span class="variant-number">06</span>
+        <div class="variant-name">Executive Luxury</div>
+        <div class="variant-desc">Dark palette, gold accents, refined typography. Boardroom elegance meets modern edge.</div>
+        <div class="variant-tags">
+          <span class="variant-tag">Dark</span>
+          <span class="variant-tag">Gold</span>
+          <span class="variant-tag">Refined</span>
         </div>
+      </div>
+    </a>
 
-        <div class="variant-card">
-            <div class="variant-header">
-                <h2>6. Magazine — "The Feature"</h2>
-                <span class="tag">Large typography, pull quotes, editorial layout</span>
-            </div>
-            <iframe class="variant-frame" src="v6-magazine.html"></iframe>
+    <a href="v7-cv.html" class="variant-card">
+      <div class="variant-preview" style="background: #f8f9fa; display: flex; align-items: center; justify-content: center;">
+        <span style="font-family: 'Times New Roman', serif; font-size: 2.5rem; color: #333;">CV.</span>
+      </div>
+      <div class="variant-info">
+        <span class="variant-number">07</span>
+        <div class="variant-name">Credential Timeline</div>
+        <div class="variant-desc">Resume-style timeline, clean hierarchy, data-dense. Credentials front and center.</div>
+        <div class="variant-tags">
+          <span class="variant-tag">Timeline</span>
+          <span class="variant-tag">Credentials</span>
+          <span class="variant-tag">Data</span>
         </div>
+      </div>
+    </a>
 
-        <div class="variant-card">
-            <div class="variant-header">
-                <h2>7. CV — "The Track Record"</h2>
-                <span class="tag">Timeline, metrics, proof points, data-forward</span>
-            </div>
-            <iframe class="variant-frame" src="v7-cv.html"></iframe>
+    <a href="v8-playful.html" class="variant-card">
+      <div class="variant-preview" style="background: linear-gradient(135deg, #ffe4e1 0%, #fff0f5 100%); display: flex; align-items: center; justify-content: center;">
+        <span style="font-size: 3rem;">✨</span>
+      </div>
+      <div class="variant-info">
+        <span class="variant-number">08</span>
+        <div class="variant-name">Warm & Playful</div>
+        <div class="variant-desc">Soft colors, rounded corners, friendly typography. Approachable but still professional.</div>
+        <div class="variant-tags">
+          <span class="variant-tag">Soft</span>
+          <span class="variant-tag">Rounded</span>
+          <span class="variant-tag">Friendly</span>
         </div>
+      </div>
+    </a>
 
-        <div class="variant-card">
-            <div class="variant-header">
-                <h2>8. Dark Mode — "The Operator"</h2>
-                <span class="tag">Terminal aesthetic, monospace, hacker-chic</span>
-            </div>
-            <iframe class="variant-frame" src="v8-darkmode.html"></iframe>
+    <a href="v9-zen.html" class="variant-card">
+      <div class="variant-preview" style="background: #f5f5f0; display: flex; align-items: center; justify-content: center;">
+        <span style="font-family: serif; font-size: 3rem; color: #8b8680; font-weight: 300;">zen</span>
+      </div>
+      <div class="variant-info">
+        <span class="variant-number">09</span>
+        <div class="variant-name">Zen Spacious</div>
+        <div class="variant-desc">Lots of whitespace, subtle colors, breathing room. Calm confidence without noise.</div>
+        <div class="variant-tags">
+          <span class="variant-tag">Whitespace</span>
+          <span class="variant-tag">Calm</span>
+          <span class="variant-tag">Breathing Room</span>
         </div>
+      </div>
+    </a>
 
-        <div class="variant-card">
-            <div class="variant-header">
-                <h2>9. Playful — "The Human"</h2>
-                <span class="tag">Warm colors, rounded corners, approachable energy</span>
-            </div>
-            <iframe class="variant-frame" src="v9-playful.html"></iframe>
+    <a href="v10-modern.html" class="variant-card">
+      <div class="variant-preview" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center;">
+        <span style="font-family: sans-serif; font-size: 3rem; color: #fff; font-weight: 800;">MODERN</span>
+      </div>
+      <div class="variant-info">
+        <span class="variant-number">10</span>
+        <div class="variant-name">Tech Modern</div>
+        <div class="variant-desc">Gradient accents, glassmorphism, modern sans-serif. Silicon Valley meets feminine leadership.</div>
+        <div class="variant-tags">
+          <span class="variant-tag">Gradient</span>
+          <span class="variant-tag">Glass</span>
+          <span class="variant-tag">Tech</span>
         </div>
-
-        <div class="variant-card">
-            <div class="variant-header">
-                <h2>10. Zen — "The Calm"</h2>
-                <span class="tag">Soft gradients, breathing room, meditative pace</span>
-            </div>
-            <iframe class="variant-frame" src="v10-zen.html"></iframe>
-        </div>
-
-        <div class="comparison">
-            <h2>Quick Comparison</h2>
-            <table>
-                <tr>
-                    <th>Variant</th>
-                    <th>Feel</th>
-                    <th>Best For</th>
-                    <th>Key Trait</th>
-                </tr>
-                <tr><td>1. Editorial</td><td>NYT, The Atlantic</td><td>Board members, investors</td><td>Serif typography, long-form</td></tr>
-                <tr><td>2. Manifesto</td><td>Declaration, protest poster</td><td>Leaders who want bold</td><td>All-caps statements, red accents</td></tr>
-                <tr><td>3. Cinematic</td><td>Film opening, documentary</td><td>Story-forward brands</td><td>Full-bleed imagery, scroll drama</td></tr>
-                <tr><td>4. Minimal</td><td>Apple, Muji</td><td>Execs who value clarity</td><td>Extreme whitespace, single column</td></tr>
-                <tr><td>5. Brutalist</td><td>Raw, honest, unpolished</td><td>Engineers, developers</td><td>System fonts, borders, no gradients</td></tr>
-                <tr><td>6. Magazine</td><td>Vogue, GQ feature</td><td>High-profile personal brand</td><td>Large type, pull quotes, grids</td></tr>
-                <tr><td>7. CV</td><td>LinkedIn, resume</td><td>Hiring, partnerships</td><td>Timeline, metrics, proof</td></tr>
-                <tr><td>8. Dark Mode</td><td>Terminal, IDE, hacker</td><td>Technical audiences</td><td>Monospace, command-line aesthetic</td></tr>
-                <tr><td>9. Playful</td><td>Notion, Figma, warm</td><td>Startups, creative teams</td><td>Rounded, soft, approachable</td></tr>
-                <tr><td>10. Zen</td><td>Spa, meditation, calm</td><td>Coaching, wellness, boards</td><td>Soft gradients, breathing room</td></tr>
-            </table>
-        </div>
-    </div>
+      </div>
+    </a>
+  </div>
 </body>
 </html>

@@ -1,233 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lakecia Gunter — Manifesto</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&display=swap" rel="stylesheet">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Inter', sans-serif;
-            background: #000;
-            color: #fff;
-            line-height: 1.5;
-        }
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 80px 40px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        .hero .eyebrow {
-            font-size: 0.8rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            color: #ff3366;
-            margin-bottom: 40px;
-        }
-        .hero h1 {
-            font-size: clamp(3rem, 8vw, 7rem);
-            font-weight: 900;
-            line-height: 0.95;
-            text-transform: uppercase;
-            letter-spacing: -0.03em;
-            margin-bottom: 40px;
-        }
-        .hero h1 .red {
-            color: #ff3366;
-        }
-        .hero .lead {
-            font-size: 1.25rem;
-            color: #888;
-            max-width: 600px;
-            line-height: 1.6;
-        }
-        .section {
-            padding: 120px 40px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        .section.red {
-            background: #ff3366;
-            color: #000;
-            max-width: 100%;
-        }
-        .section.red .inner {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        .section h2 {
-            font-size: clamp(2rem, 5vw, 4rem);
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: -0.02em;
-            line-height: 1.1;
-            margin-bottom: 40px;
-        }
-        .section p {
-            font-size: 1.15rem;
-            color: #888;
-            max-width: 700px;
-            line-height: 1.7;
-            margin-bottom: 24px;
-        }
-        .section.red p {
-            color: #000;
-            font-weight: 500;
-        }
-        .beliefs {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            margin-top: 60px;
-        }
-        .belief {
-            border-top: 4px solid #ff3366;
-            padding-top: 24px;
-        }
-        .belief h3 {
-            font-size: 1.1rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            margin-bottom: 12px;
-            letter-spacing: 0.02em;
-        }
-        .belief p {
-            font-size: 1rem;
-            color: #888;
-            margin: 0;
-        }
-        .track-record {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 40px;
-            margin-top: 60px;
-            text-align: center;
-        }
-        .stat .num {
-            font-size: 3rem;
-            font-weight: 900;
-            color: #ff3366;
-            display: block;
-        }
-        .stat .label {
-            font-size: 0.8rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: #888;
-            margin-top: 8px;
-        }
-        .cta-section {
-            padding: 120px 40px;
-            text-align: center;
-        }
-        .cta-section h2 {
-            font-size: clamp(2rem, 5vw, 4rem);
-            font-weight: 900;
-            text-transform: uppercase;
-            margin-bottom: 24px;
-        }
-        .cta-section p {
-            color: #888;
-            font-size: 1.1rem;
-            margin-bottom: 40px;
-        }
-        .cta-section a {
-            display: inline-block;
-            padding: 20px 48px;
-            background: #fff;
-            color: #000;
-            text-decoration: none;
-            font-weight: 800;
-            font-size: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-        @media (max-width: 768px) {
-            .track-record { grid-template-columns: repeat(2, 1fr); }
-            .hero { padding: 60px 20px; }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Variant 2: Bold Manifesto — Lakecia Gunter</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background: #000;
+      color: #fff;
+      line-height: 1.1;
+    }
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 60px;
+      position: relative;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url('../lakecia.jpg') center/cover;
+      opacity: 0.3;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+    }
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      font-size: 0.9rem;
+      color: #ff6b9d;
+      margin-bottom: 30px;
+      font-weight: 700;
+    }
+    h1 {
+      font-size: clamp(3rem, 8vw, 7rem);
+      font-weight: 900;
+      text-transform: uppercase;
+      line-height: 0.95;
+      margin-bottom: 40px;
+    }
+    .highlight {
+      color: #ff6b9d;
+    }
+    .sub {
+      font-size: 1.5rem;
+      font-weight: 300;
+      line-height: 1.4;
+      max-width: 600px;
+      margin-bottom: 50px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 20px 50px;
+      background: #ff6b9d;
+      color: #000;
+      text-decoration: none;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 1rem;
+    }
+    .section {
+      padding: 100px 60px;
+      max-width: 900px;
+    }
+    .section h2 {
+      font-size: 3rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+    .section p {
+      font-size: 1.3rem;
+      line-height: 1.6;
+      color: #aaa;
+      margin-bottom: 20px;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2px;
+      background: #333;
+      margin: 60px;
+    }
+    .service {
+      background: #000;
+      padding: 40px;
+    }
+    .service h3 {
+      font-size: 1.5rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+    .service p {
+      color: #888;
+      line-height: 1.5;
+    }
+    .cta-section {
+      background: #ff6b9d;
+      color: #000;
+      padding: 100px 60px;
+      text-align: center;
+    }
+    .cta-section h2 {
+      font-size: 4rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .cta-section p {
+      font-size: 1.3rem;
+      margin-bottom: 40px;
+    }
+    .cta-btn {
+      display: inline-block;
+      padding: 20px 50px;
+      background: #000;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    @media (max-width: 768px) {
+      .hero { padding: 40px 20px; }
+      .section { padding: 60px 20px; }
+      .services { grid-template-columns: 1fr; margin: 40px 20px; }
+      .cta-section { padding: 60px 20px; }
+      .cta-section h2 { font-size: 2.5rem; }
+    }
+  </style>
 </head>
 <body>
-    <section class="hero">
-        <div class="eyebrow">Lakecia Gunter — Technology Leadership</div>
-        <h1>
-            Technology<br>
-            <span class="red">without</span><br>
-            strategy is<br>
-            just noise.
-        </h1>
-        <p class="lead">
-            25 years. From digital logic at the Department of Defense to Chief of Staff 
-            to the CEO at Intel to CTO of Global Partner Solutions at Microsoft. Now 
-            advising boards and founding companies. This is what I've learned.
-        </p>
-    </section>
+  <div class="hero">
+    <div class="hero-content">
+      <p class="eyebrow">AI Strategy for Women Leaders</p>
+      <h1>AI IS CHANGING EVERYTHING.<br><span class="highlight">DON'T GET LEFT BEHIND.</span></h1>
+      <p class="sub">Former Microsoft CTO. 25 years from DoD to Fortune 50. Now helping women leaders win with AI.</p>
+      <a href="#" class="btn">Book Free Call</a>
+    </div>
+  </div>
 
-    <section class="section red">
-        <div class="inner">
-            <h2>I believe</h2>
-            <div class="beliefs">
-                <div class="belief">
-                    <h3>Execution beats vision</h3>
-                    <p>Everyone has a strategy deck. Few have the discipline to see it through. I've built multi-billion-dollar platforms. The difference is always execution.</p>
-                </div>
-                <div class="belief">
-                    <h3>Partnerships are the multiplier</h3>
-                    <p>No company wins alone. At Microsoft, I led global partner ecosystems that drove measurable business impact at scale. The right partner strategy changes everything.</p>
-                </div>
-                <div class="belief">
-                    <h3>Boards need operators</h3>
-                    <p>As an independent director at IDEX Corporation and advisor to Responsive.io, I bring operating experience to governance. Theory doesn't survive first contact with quarterly earnings.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <div class="section">
+    <h2>Most AI Consulting Is Built By Men. For Men.</h2>
+    <p>I've sat in the rooms where AI decisions get made. I've watched women leaders get talked over, confused by jargon, and pushed to the sidelines of the most important technology shift in our lifetime.</p>
+    <p>That ends now. I help women executives understand AI, adopt it with confidence, and use it as a competitive advantage — not a source of anxiety.</p>
+  </div>
 
-    <section class="section">
-        <h2>The track record</h2>
-        <div class="track-record">
-            <div class="stat">
-                <span class="num">25</span>
-                <div class="label">Years in technology</div>
-            </div>
-            <div class="stat">
-                <span class="num">3</span>
-                <div class="label">Fortune 50 companies</div>
-            </div>
-            <div class="stat">
-                <span class="num">$B+</span>
-                <div class="label">Platforms led</div>
-            </div>
-            <div class="stat">
-                <span class="num">2</span>
-                <div class="label">Board seats</div>
-            </div>
-        </div>
-        <p style="margin-top: 60px;">
-            I started as a digital logic designer and program manager at the Department of Defense. 
-            That foundation — understanding systems at their most fundamental level — has shaped every 
-            leadership role since. From DoD to Intel Chief of Staff to Microsoft CTO, I've operated 
-            at every level of enterprise scale.
-        </p>
-        <p>
-            Today, I help executive teams and boards translate complex technology into clear strategic 
-            choices. I'm also the founder and host of ROAR with Lakecia Gunter, spotlighting candid 
-            conversations with leaders navigating growth, transition, and opportunity.
-        </p>
-    </section>
+  <div class="services">
+    <div class="service">
+      <h3>AI Strategy for Boards</h3>
+      <p>Help your board understand AI risk, opportunity, and governance in plain language.</p>
+    </div>
+    <div class="service">
+      <h3>Executive AI Coaching</h3>
+      <p>One-on-one coaching for women executives adopting AI. Build confidence, cut through hype.</p>
+    </div>
+    <div class="service">
+      <h3>AI Implementation Sprints</h3>
+      <p>2-4 week hands-on sprints to get your team using AI tools that actually move the needle.</p>
+    </div>
+    <div class="service">
+      <h3>Women's AI Leadership Circle</h3>
+      <p>Small cohort of women leaders navigating AI together. Monthly sessions, peer support.</p>
+    </div>
+  </div>
 
-    <section class="cta-section">
-        <h2>Let's build something.</h2>
-        <p>Advisory, board, or partnership. I take a limited number of engagements each quarter.</p>
-        <a href="mailto:hello@lakecia.com">Get in Touch</a>
-    </section>
+  <div class="cta-section">
+    <h2>Ready to Lead?</h2>
+    <p>Book a free 30-minute AI strategy call. No pitch, just clarity.</p>
+    <a href="#" class="cta-btn">Book Your Call</a>
+  </div>
 </body>
 </html>
