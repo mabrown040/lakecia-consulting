@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import Nav from "./components/Nav";
 
 export default function Home() {
@@ -12,12 +11,10 @@ export default function Home() {
       {/* Hero - Cinematic full-bleed with warm playful overlay */}
       <section className="relative min-h-screen flex items-end">
         <div className="absolute inset-0">
-          <Image
+          <img
             src="/lakecia.jpg"
             alt="Lakecia Gunter"
-            fill
-            className="object-cover object-center"
-            priority
+            className="absolute inset-0 w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#fef7f0] via-[#fef7f0]/60 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#fef7f0]/80 to-transparent" />

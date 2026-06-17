@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import Nav from "../components/Nav";
 
 export default function About() {
@@ -21,11 +20,10 @@ export default function About() {
       {/* Featured Image */}
       <section className="px-6 lg:px-8 max-w-5xl mx-auto mb-16">
         <div className="relative aspect-[16/9] rounded-2xl overflow-hidden">
-          <Image
+          <img
             src="/lakecia.jpg"
             alt="Lakecia Gunter"
-            fill
-            className="object-cover"
+            className="absolute inset-0 w-full h-full object-cover"
           />
         </div>
         <p className="text-sm text-[#a8a29e] mt-4 italic">Photography by Staff | Interview by Editorial</p>
