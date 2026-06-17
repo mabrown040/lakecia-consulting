@@ -1,27 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
+import Nav from "../components/Nav";
 
 export default function About() {
   return (
     <main className="min-h-screen bg-[#fef7f0]">
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-[#fef7f0]/90 backdrop-blur-md border-b border-[#e5ddd4]">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            <Link href="/" className="font-serif text-xl font-bold text-[#2d2a26]">
-              Lakecia Gunter
-            </Link>
-            <div className="hidden md:flex items-center gap-1">
-              <Link href="/" className="px-4 py-2 rounded-full text-sm font-medium text-[#6b6560] hover:bg-white transition-colors">Home</Link>
-              <Link href="/about" className="px-4 py-2 rounded-full text-sm font-medium text-[#2d2a26] bg-white">About</Link>
-              <Link href="/work" className="px-4 py-2 rounded-full text-sm font-medium text-[#6b6560] hover:bg-white transition-colors">Work</Link>
-              <Link href="/advisory" className="px-4 py-2 rounded-full text-sm font-medium text-[#6b6560] hover:bg-white transition-colors">Advisory</Link>
-              <Link href="/roar" className="px-4 py-2 rounded-full text-sm font-medium text-[#6b6560] hover:bg-white transition-colors">ROAR</Link>
-              <Link href="/contact" className="ml-2 px-5 py-2 rounded-full text-sm font-medium bg-[#2d2a26] text-white hover:bg-[#3d3833] transition-colors">Contact</Link>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Nav />
 
       {/* Hero Header */}
       <section className="pt-32 pb-16 px-6 lg:px-8 max-w-4xl mx-auto">
