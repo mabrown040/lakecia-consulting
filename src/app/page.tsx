@@ -8,48 +8,57 @@ export default function Home() {
     <main className="min-h-screen bg-[#fef7f0]">
       <Nav />
 
-      {/* Hero - Cinematic full-bleed with warm playful overlay */}
-      <section className="relative min-h-screen flex items-end">
-        <div className="absolute inset-0">
-          <img
-            src="/lakecia.jpg"
-            alt="Lakecia Gunter"
-            className="absolute inset-0 w-full h-full object-cover object-center"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#fef7f0] via-[#fef7f0]/60 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#fef7f0]/80 to-transparent" />
-        </div>
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pb-24 pt-32">
-          <div className="max-w-2xl">
-            <p className="text-sm font-medium tracking-[0.2em] uppercase text-[#a8a29e] mb-6">
-              Technology Leadership & Board Governance
-            </p>
-            <h1 className="font-serif text-5xl md:text-7xl font-bold text-[#2d2a26] leading-[1.1] mb-8">
-              Building technology<br />
-              with <span className="text-[#ff6b9d]">heart</span> and<br />
-              strategy.
-            </h1>
-            <p className="text-lg text-[#3d3833] leading-relaxed max-w-lg mb-10">
-              25 years from digital logic at the Department of Defense to CTO at Microsoft. 
-              Now helping boards and leadership teams navigate what&apos;s next.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Link 
-                href="/about" 
-                className="inline-flex items-center gap-2 px-6 py-3 bg-[#2d2a26] text-white rounded-xl font-medium hover:bg-[#3d3833] transition-colors"
-              >
-                Read my story
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </Link>
-              <Link 
-                href="/contact" 
-                className="inline-flex items-center gap-2 px-6 py-3 border border-[#2d2a26] text-[#2d2a26] rounded-xl font-medium hover:bg-[#2d2a26] hover:text-white transition-colors"
-              >
-                Get in touch
-              </Link>
+      {/* Hero - Side-by-side layout: text left, image right */}
+      <section className="relative min-h-screen flex items-center bg-[#fef7f0]">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-32 w-full">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Text side */}
+            <div className="order-2 lg:order-1">
+              <p className="text-sm font-medium tracking-[0.2em] uppercase text-[#a8a29e] mb-6">
+                Technology Leadership & Board Governance
+              </p>
+              <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-[#2d2a26] leading-[1.1] mb-8">
+                Building technology<br />
+                with <span className="text-[#ff6b9d]">heart</span> and<br />
+                strategy.
+              </h1>
+              <p className="text-lg text-[#3d3833] leading-relaxed max-w-lg mb-10">
+                25 years from digital logic at the Department of Defense to CTO at Microsoft. 
+                Now helping boards and leadership teams navigate what&apos;s next.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Link 
+                  href="/about" 
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-[#2d2a26] text-white rounded-xl font-medium hover:bg-[#3d3833] transition-colors"
+                >
+                  Read my story
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </Link>
+                <Link 
+                  href="/contact" 
+                  className="inline-flex items-center gap-2 px-6 py-3 border border-[#2d2a26] text-[#2d2a26] rounded-xl font-medium hover:bg-[#2d2a26] hover:text-white transition-colors"
+                >
+                  Get in touch
+                </Link>
+              </div>
+            </div>
+
+            {/* Image side - contained, not full-bleed */}
+            <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
+              <div className="relative w-72 h-72 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem]">
+                <div className="absolute inset-0 rounded-3xl overflow-hidden shadow-2xl">
+                  <img
+                    src="/lakecia.jpg"
+                    alt="Lakecia Gunter"
+                    className="w-full h-full object-cover object-top"
+                  />
+                </div>
+                {/* Decorative accent */}
+                <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-[#ff6b9d] rounded-2xl -z-10" />
+                <div className="absolute -top-4 -left-4 w-16 h-16 bg-[#2d2a26] rounded-xl -z-10 opacity-20" />
+              </div>
             </div>
           </div>
         </div>
