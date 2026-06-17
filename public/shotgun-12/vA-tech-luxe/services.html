@@ -1,272 +1,30 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services — Lakecia Gunter</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    :root {
-      --roar-pink: #ff6b9d;
-      --roar-deep: #e8558a;
-      --lux-gold: #d4af37;
-      --dark: #0a0a0f;
-      --dark-2: #13131f;
-      --text: #e8e6e3;
-      --text-dim: #a8a5a0;
-    }
-    body {
-      font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
-      background: var(--dark);
-      color: var(--text);
-      line-height: 1.6;
-    }
-    nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      padding: 20px 60px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: rgba(10,10,15,0.8);
-      backdrop-filter: blur(20px);
-      border-bottom: 1px solid rgba(255,255,255,0.05);
-    }
-    .logo {
-      font-weight: 800;
-      font-size: 1.5rem;
-      background: linear-gradient(135deg, var(--roar-pink) 0%, var(--lux-gold) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-decoration: none;
-    }
-    .nav-links {
-      display: flex;
-      gap: 40px;
-    }
-    .nav-links a {
-      color: var(--text-dim);
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-    .nav-links a:hover {
-      color: var(--roar-pink);
-    }
-    .hero {
-      padding: 140px 60px 80px;
-      max-width: 1000px;
-      margin: 0 auto;
-      text-align: center;
-    }
-    .eyebrow {
-      display: inline-block;
-      padding: 8px 20px;
-      background: rgba(255,107,157,0.1);
-      border: 1px solid rgba(255,107,157,0.3);
-      border-radius: 30px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: var(--roar-pink);
-      margin-bottom: 30px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-    }
-    h1 {
-      font-size: 3.5rem;
-      font-weight: 800;
-      line-height: 1.2;
-      margin-bottom: 20px;
-      background: linear-gradient(135deg, #fff 0%, var(--roar-pink) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .hero > p {
-      font-size: 1.2rem;
-      color: var(--text-dim);
-      max-width: 600px;
-      margin: 0 auto;
-    }
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 30px;
-      padding: 0 60px 100px;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-    .service-card {
-      background: var(--dark-2);
-      border: 1px solid rgba(255,255,255,0.05);
-      border-radius: 20px;
-      padding: 50px;
-      transition: all 0.4s;
-      position: relative;
-      overflow: hidden;
-    }
-    .service-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 3px;
-      background: linear-gradient(90deg, var(--roar-pink) 0%, var(--lux-gold) 100%);
-      transform: scaleX(0);
-      transition: transform 0.4s;
-      transform-origin: left;
-    }
-    .service-card:hover::before {
-      transform: scaleX(1);
-    }
-    .service-card:hover {
-      border-color: rgba(255,107,157,0.2);
-      transform: translateY(-5px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-    }
-    .service-icon {
-      width: 60px;
-      height: 60px;
-      background: linear-gradient(135deg, rgba(255,107,157,0.1) 0%, rgba(212,175,55,0.1) 100%);
-      border-radius: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 25px;
-      font-size: 1.5rem;
-    }
-    .service-card h3 {
-      font-size: 1.4rem;
-      font-weight: 700;
-      margin-bottom: 15px;
-      color: #fff;
-    }
-    .service-card p {
-      color: var(--text-dim);
-      line-height: 1.7;
-      margin-bottom: 20px;
-    }
-    .service-tag {
-      display: inline-block;
-      padding: 6px 14px;
-      background: rgba(255,107,157,0.1);
-      color: var(--roar-pink);
-      border-radius: 20px;
-      font-size: 0.8rem;
-      font-weight: 600;
-    }
-    .cta {
-      padding: 100px 60px;
-      text-align: center;
-      background: linear-gradient(135deg, var(--dark-2) 0%, rgba(255,107,157,0.05) 100%);
-    }
-    .cta h2 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: #fff;
-      margin-bottom: 20px;
-    }
-    .cta p {
-      color: var(--text-dim);
-      font-size: 1.1rem;
-      margin-bottom: 40px;
-    }
-    .cta-btn {
-      display: inline-block;
-      padding: 18px 40px;
-      background: linear-gradient(135deg, var(--roar-pink) 0%, var(--lux-gold) 100%);
-      color: #fff;
-      text-decoration: none;
-      font-weight: 700;
-      border-radius: 12px;
-    }
-    footer {
-      padding: 40px 60px;
-      border-top: 1px solid rgba(255,255,255,0.05);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    footer p {
-      color: var(--text-dim);
-      font-size: 0.9rem;
-    }
-    footer a {
-      color: var(--text-dim);
-      text-decoration: none;
-      margin-left: 30px;
-      transition: color 0.3s;
-    }
-    footer a:hover {
-      color: var(--roar-pink);
-    }
-    @media (max-width: 768px) {
-      nav { padding: 15px 20px; }
-      .nav-links { display: none; }
-      .hero { padding: 100px 20px 40px; }
-      h1 { font-size: 2.5rem; }
-      .services-grid { grid-template-columns: 1fr; padding: 0 20px 60px; }
-      .cta { padding: 60px 20px; }
-      footer { flex-direction: column; padding: 30px 20px; }
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Services — Tech-Luxe</title>
+<meta name="description" content="ROAR-level power for high-stakes AI decisions.">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav>
-    <a href="index.html" class="logo">Lakecia Gunter</a>
-    <div class="nav-links">
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="community.html">Community</a>
-      <a href="contact.html">Contact</a>
-    </div>
-  </nav>
-
-  <section class="hero">
-    <span class="eyebrow">Services</span>
-    <h1>AI Services Built for Women Leaders</h1>
-    <p>Not generic consulting. Strategy, implementation, and coaching designed for women navigating corporate, board, and entrepreneurial growth.</p>
-  </section>
-
-  <section class="services-grid">
-    <div class="service-card">
-      <div class="service-icon">🎯</div>
-      <h3>AI Strategy for Boards</h3>
-      <p>Help your board understand AI risk, opportunity, and governance in plain language. Translate technical complexity into strategic decisions.</p>
-      <span class="service-tag">Quarterly Engagement</span>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">👩‍💼</div>
-      <h3>Executive AI Coaching</h3>
-      <p>One-on-one coaching for women executives adopting AI. Build confidence, cut through vendor hype, and lead with authority.</p>
-      <span class="service-tag">6-Month Program</span>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">⚡</div>
-      <h3>AI Implementation Sprints</h3>
-      <p>2-4 week hands-on sprints to get your team using AI tools that actually move the needle. Not theory. Results.</p>
-      <span class="service-tag">2-4 Week Sprint</span>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">👥</div>
-      <h3>Women's AI Leadership Circle</h3>
-      <p>Small cohort of women leaders navigating AI together. Monthly sessions, peer support, and direct access to me.</p>
-      <span class="service-tag">8-12 Women</span>
-    </div>
-  </section>
-
-  <section class="cta">
-    <h2>Not sure which service fits?</h2>
-    <p>Book a free call and we'll figure it out together. No pressure, no obligation.</p>
-    <a href="contact.html" class="cta-btn">Book Your Free Call →</a>
-  </section>
-
-  <footer>
-    <p>© 2024 Lakecia Gunter</p>
-    <div>
-      <a href="https://linkedin.com">LinkedIn</a>
-      <a href="index.html">Home</a>
-    </div>
-  </footer>
+<nav><div class="nav-inner"><div class="brand">Lakecia Gunter · Tech-Luxe Fusion</div><div class="links"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="community.html">Community</a><a href="contact.html">Contact</a></div></div></nav>
+<main>
+<header class="hero">
+  <div>
+    <div class="eyebrow">Private advisory · Variant 11</div>
+    <h1>High-touch AI counsel for women carrying consequential decisions.</h1>
+    <p class="lead">Engagements are discreet, direct, and designed for moments when the stakes are too high for generic consulting.</p>
+    <a class="button" href="contact.html">Design the advisory experience.</a>
+  </div>
+</header>
+<section class="section"><h2>Executive AI Counsel</h2><p>Private advisory for founders, executives, and board leaders who need a trusted technical and strategic sounding board.</p></section>
+<section class="section"><h2>Power Briefings</h2><p>Board and C-suite briefings that make AI strategy feel clear, financially literate, and leader-owned.</p></section>
+<section class="section"><h2>Enterprise AI Positioning</h2><p>A narrative and roadmap that connects AI investments to market position, operating leverage, risk posture, and customer trust.</p></section>
+<section class="cards"><article class="card"><h3>Discretion</h3><p>A private room for sensitive decisions.</p></article>
+<article class="card"><h3>Precision</h3><p>Focused recommendations, not decks for the sake of decks.</p></article>
+<article class="card"><h3>Presence</h3><p>Language that helps you lead with authority.</p></article></section>
+<section class="cta"><p>Dark, elegant, unapologetically executive.</p><h2>Design the advisory experience.</h2><p>Power / Precision / Presence · hello@lakeciagunter.com</p><a class="button" href="contact.html">Contact Lakecia</a></section>
+</main>
 </body>
 </html>
