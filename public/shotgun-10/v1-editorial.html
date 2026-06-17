@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lakecia Gunter — Editorial</title>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Crimson Text', Georgia, serif;
+            background: #fafaf9;
+            color: #1c1917;
+            line-height: 1.7;
+            font-size: 18px;
+        }
+        .header {
+            border-bottom: 1px solid #e7e5e4;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header .logo {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+            letter-spacing: -0.02em;
+        }
+        .header .nav {
+            display: flex;
+            gap: 32px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        .header .nav a {
+            color: #78716c;
+            text-decoration: none;
+        }
+        .header .nav a:hover {
+            color: #1c1917;
+        }
+        .hero {
+            max-width: 720px;
+            margin: 80px auto;
+            padding: 0 40px;
+        }
+        .hero .eyebrow {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #78716c;
+            margin-bottom: 24px;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 32px;
+            letter-spacing: -0.02em;
+        }
+        .hero .lead {
+            font-size: 1.25rem;
+            color: #44403c;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+        .hero .byline {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            color: #a8a29e;
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+        .hero .byline .dot {
+            width: 4px;
+            height: 4px;
+            background: #d6d3d1;
+            border-radius: 50%;
+        }
+        .content {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 40px 80px;
+        }
+        .content p {
+            margin-bottom: 28px;
+            font-size: 1.15rem;
+            line-height: 1.8;
+        }
+        .content .drop-cap::first-letter {
+            float: left;
+            font-size: 4rem;
+            line-height: 0.8;
+            padding-right: 12px;
+            padding-top: 8px;
+            font-weight: 700;
+            color: #1c1917;
+        }
+        .pull-quote {
+            border-left: 3px solid #1c1917;
+            padding-left: 32px;
+            margin: 48px 0;
+            font-style: italic;
+            font-size: 1.3rem;
+            line-height: 1.5;
+            color: #44403c;
+        }
+        .pull-quote cite {
+            display: block;
+            margin-top: 16px;
+            font-style: normal;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            color: #a8a29e;
+        }
+        .photo {
+            margin: 48px 0;
+        }
+        .photo img {
+            width: 100%;
+            border-radius: 4px;
+        }
+        .photo .caption {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.8rem;
+            color: #a8a29e;
+            margin-top: 12px;
+        }
+        .section-header {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #78716c;
+            margin: 64px 0 32px;
+            padding-top: 32px;
+            border-top: 1px solid #e7e5e4;
+        }
+        .credentials {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            margin: 48px 0;
+            padding: 32px 0;
+            border-top: 1px solid #e7e5e4;
+            border-bottom: 1px solid #e7e5e4;
+        }
+        .credential h3 {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #78716c;
+            margin-bottom: 8px;
+        }
+        .credential p {
+            font-size: 1rem;
+            margin: 0;
+        }
+        .cta {
+            background: #1c1917;
+            color: #fafaf9;
+            padding: 80px 40px;
+            text-align: center;
+            margin-top: 80px;
+        }
+        .cta h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        .cta p {
+            font-size: 1.1rem;
+            opacity: 0.7;
+            margin-bottom: 32px;
+        }
+        .cta a {
+            display: inline-block;
+            padding: 16px 32px;
+            background: #fafaf9;
+            color: #1c1917;
+            text-decoration: none;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border-radius: 4px;
+        }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .credentials { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Lakecia Gunter</div>
+        <nav class="nav">
+            <a href="#">About</a>
+            <a href="#">Advisory</a>
+            <a href="#">ROAR</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="eyebrow">Technology Leadership & Board Governance</div>
+        <h1>From Digital Logic to Boardroom Strategy</h1>
+        <p class="lead">A 25-year technology veteran on building enterprise innovation, profitable growth, and AI strategy at global scale.</p>
+        <div class="byline">
+            <span>Board Director, IDEX Corporation</span>
+            <span class="dot"></span>
+            <span>Former CTO, Microsoft Global Partner Solutions</span>
+            <span class="dot"></span>
+            <span>Former Chief of Staff to CEO, Intel</span>
+        </div>
+    </section>
+
+    <div class="content">
+        <p class="drop-cap">I began my career as a digital logic designer and program manager at the Department of Defense. That foundation — understanding how systems work at their most fundamental level — has shaped every leadership role since. From those early days working on critical government systems, I moved into the private sector, eventually serving as Chief of Staff to the CEO at Intel, where I saw firsthand how technology strategy and business strategy must converge.</p>
+
+        <p>Most recently, as Chief Technology Officer for Global Partner Solutions at Microsoft, I shaped technical vision and partner-led growth at global scale. I led multi-billion-dollar platforms and global partner ecosystems, working at every level of enterprise scale. The work wasn't about technology for its own sake. It was about driving measurable business impact through strategic partnerships and platform transformation.</p>
+
+        <div class="pull-quote">
+            "I'm known for helping executive teams and boards translate complex technology into clear strategic choices, particularly during periods of disruption, reinvention, and market transition."
+            <cite>— On her approach to advisory work</cite>
+        </div>
+
+        <p>My perspective is grounded in enterprise stewardship, long-term value creation, and effective governance. This isn't theoretical. I currently serve as an independent director on the Board of IDEX Corporation, a publicly traded company, and as a board advisor to Responsive.io, a private-equity-backed software company. These roles keep me connected to the real challenges of governance and strategic oversight.</p>
+
+        <div class="photo">
+            <img src="/lakecia.jpg" alt="Lakecia Gunter">
+            <div class="caption">Lakecia Gunter, photographed at TechArena Advisory</div>
+        </div>
+
+        <div class="section-header">Current Work</div>
+
+        <p>In addition to board service, I'm the founder and host of ROAR with Lakecia Gunter, a podcast spotlighting candid conversations with leaders navigating growth, transition, and opportunity. The show reflects my belief that the most valuable insights come from honest dialogue, not polished presentations.</p>
+
+        <p>I'm also a Co-Founding Advisor at TechArena.ai, where I work with companies navigating technology-driven change with discipline, foresight, and accountability. The focus is on practical outcomes, not theoretical frameworks.</p>
+
+        <div class="credentials">
+            <div class="credential">
+                <h3>Operating Experience</h3>
+                <p>Microsoft CTO, Global Partner Solutions. Intel Chief of Staff to CEO. DoD digital logic designer.</p>
+            </div>
+            <div class="credential">
+                <h3>Board Service</h3>
+                <p>Independent Director, IDEX Corporation (NYSE). Board Advisor, Responsive.io.</p>
+            </div>
+            <div class="credential">
+                <h3>Recognition</h3>
+                <p>Top 50 Black Business Women in America. 25-year technology industry veteran.</p>
+            </div>
+        </div>
+
+        <p>My advisory work spans artificial intelligence, global partner strategy, platform transformation, and new-business acceleration. I work with leadership teams who are serious about results, not headlines. If you're navigating a technology transition and need perspective from someone who's operated at scale, let's talk.</p>
+    </div>
+
+    <section class="cta">
+        <h2>Advisory & Board Inquiries</h2>
+        <p>I take a limited number of advisory engagements each quarter.</p>
+        <a href="mailto:hello@lakecia.com">Get in Touch</a>
+    </section>
+</body>
+</html>

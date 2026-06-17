@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lakecia Gunter — Cinematic</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #000;
+            color: #fff;
+            line-height: 1.6;
+        }
+        .hero {
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            padding: 80px;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 50%, rgba(0,0,0,0.95) 100%);
+            z-index: 1;
+        }
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background: url('/lakecia.jpg') center/cover;
+            filter: grayscale(30%) contrast(1.1);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+        }
+        .hero .eyebrow {
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: rgba(255,255,255,0.6);
+            margin-bottom: 24px;
+        }
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            font-weight: 300;
+            line-height: 1.1;
+            margin-bottom: 24px;
+        }
+        .hero h1 strong {
+            font-weight: 800;
+        }
+        .hero .scroll {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: rgba(255,255,255,0.5);
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(10px); }
+        }
+        .section {
+            padding: 120px 80px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .section p {
+            font-size: 1.25rem;
+            font-weight: 300;
+            line-height: 1.8;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 32px;
+        }
+        .section p.lead {
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: #fff;
+        }
+        .chapter {
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            color: rgba(255,255,255,0.4);
+            margin-bottom: 40px;
+            padding-top: 80px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        .timeline {
+            padding: 120px 80px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .timeline-item {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+            padding-bottom: 60px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .timeline-item .year {
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: rgba(255,255,255,0.5);
+        }
+        .timeline-item h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        .timeline-item p {
+            font-size: 1rem;
+            color: rgba(255,255,255,0.6);
+            line-height: 1.7;
+        }
+        .cta {
+            padding: 160px 80px;
+            text-align: center;
+            background: linear-gradient(to bottom, #000, #111);
+        }
+        .cta h2 {
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            font-weight: 300;
+            margin-bottom: 24px;
+        }
+        .cta h2 strong {
+            font-weight: 800;
+        }
+        .cta p {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 40px;
+        }
+        .cta a {
+            display: inline-block;
+            padding: 18px 40px;
+            border: 1px solid rgba(255,255,255,0.3);
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            transition: all 0.3s;
+        }
+        .cta a:hover {
+            background: #fff;
+            color: #000;
+        }
+        @media (max-width: 768px) {
+            .hero { padding: 40px; }
+            .section { padding: 80px 40px; }
+            .timeline { padding: 80px 40px; }
+            .timeline-item { grid-template-columns: 1fr; gap: 16px; }
+            .cta { padding: 100px 40px; }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <div class="eyebrow">A 25-Year Journey</div>
+            <h1>From <strong>defense systems</strong> to <strong>boardrooms</strong> to <strong>building the future</strong></h1>
+        </div>
+        <div class="scroll">Scroll ↓</div>
+    </section>
+
+    <section class="section">
+        <p class="lead">I started as a digital logic designer and program manager at the Department of Defense. Understanding how systems work at their most fundamental level — that's been the foundation of everything since.</p>
+        
+        <p>From those early days, I moved into the private sector. I served as Chief of Staff to the CEO at Intel. I shaped technical vision and partner-led growth at global scale as CTO for Global Partner Solutions at Microsoft, leading multi-billion-dollar platforms and global partner ecosystems.</p>
+        
+        <p>Today, I help executive teams and boards translate complex technology into clear strategic choices. My perspective is grounded in enterprise stewardship, long-term value creation, and effective governance.</p>
+    </section>
+
+    <section class="timeline">
+        <div class="chapter">The Timeline</div>
+        
+        <div class="timeline-item">
+            <div class="year">Early Career</div>
+            <div>
+                <h3>Department of Defense</h3>
+                <p>Digital logic designer and program manager. The foundation — understanding systems at their most fundamental level before moving to enterprise scale.</p>
+            </div>
+        </div>
+        
+        <div class="timeline-item">
+            <div class="year">Intel</div>
+            <div>
+                <h3>Chief of Staff to the CEO</h3>
+                <p>Saw firsthand how technology strategy and business strategy must converge at the highest levels of a Fortune 50 company.</p>
+            </div>
+        </div>
+        
+        <div class="timeline-item">
+            <div class="year">Microsoft</div>
+            <div>
+                <h3>CTO, Global Partner Solutions</h3>
+                <p>Led multi-billion-dollar platforms and global partner ecosystems. Shaped technical vision and partner-led growth at every level of enterprise scale.</p>
+            </div>
+        </div>
+        
+        <div class="timeline-item">
+            <div class="year">Today</div>
+            <div>
+                <h3>Board Director & Advisor</h3>
+                <p>Independent Director at IDEX Corporation (NYSE). Board Advisor at Responsive.io. Co-Founding Advisor at TechArena.ai. Founder and host of ROAR with Lakecia Gunter.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <h2>Let's write the <strong>next chapter</strong></h2>
+        <p>Advisory, board service, or strategic partnership</p>
+        <a href="mailto:hello@lakecia.com">Get in Touch</a>
+    </section>
+</body>
+</html>
