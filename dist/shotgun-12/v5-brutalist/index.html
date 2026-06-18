@@ -16,12 +16,15 @@
   .nav-links{display:flex;gap:24px}
   .nav-links a{text-decoration:underline}
   .nav-links a:hover{text-decoration:none}
-  .menu-toggle{display:none;background:none;border:none;font-size:28px;cursor:pointer;font-weight:700}
+  /* Mobile-first: hamburger visible, nav hidden */
+  .menu-toggle{display:block;background:none;border:none;font-size:28px;cursor:pointer;padding:8px;color:var(--black)}
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--yellow);padding:20px 28px;flex-direction:column;gap:16px;z-index:100;border-bottom:4px solid var(--black)}
+  .nav-links.active{display:flex}
   
-  @media(max-width:860px){
-    .menu-toggle{display:block}
-    .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--yellow);padding:20px;border-bottom:4px solid var(--black);flex-direction:column;gap:16px;z-index:100}
-    .nav-links.active{display:flex}
+  /* Desktop: show nav links, hide hamburger */
+  @media(min-width:861px){
+    .menu-toggle{display:none}
+    .nav-links{display:flex !important;position:static;flex-direction:row;padding:0;border:none;background:transparent}
   }
   
   .hero{padding:40px 20px;border-bottom:4px solid var(--black)}
@@ -48,7 +51,7 @@
   
   .footer{padding:20px;display:flex;justify-content:space-between;font-size:14px;font-weight:700;text-transform:uppercase;border-top:4px solid var(--black)}
   
-  @media(max-width:860px){
+  
     .services-grid{grid-template-columns:1fr}
     .footer{flex-direction:column;gap:8px}
   }

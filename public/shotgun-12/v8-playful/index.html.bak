@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Playful — Lakecia Gunter</title>
+<style>
+  :root{--pink:#ff8fab;--coral:#ff6b6b;--cream:#fff5f5;--warm:#fff0f3;--text:#4a4a4a;--soft:#888888}
+  *{box-sizing:border-box;margin:0}
+  body{background:var(--cream);color:var(--text);font-family:'Segoe UI',system-ui,sans-serif;line-height:1.6;font-size:17px}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block;border-radius:20px}
+  
+  .nav{display:flex;justify-content:space-between;align-items:center;padding:20px 32px;font-size:15px;font-weight:600;position:relative;background:var(--warm)}
+  .brand{font-size:20px;font-weight:800;color:var(--coral);letter-spacing:-.02em}
+  .nav-links{display:flex;gap:28px}
+  .nav-links a{padding:8px 16px;border-radius:12px;transition:all .3s}
+  .nav-links a:hover{background:var(--pink);color:#fff}
+  .menu-toggle{display:block !important;background:none;border:none;font-size:28px;cursor:pointer;color:var(--coral)}
+  
+  
+    .menu-toggle{display:block}
+    .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--warm);padding:20px 32px;flex-direction:column;gap:12px;z-index:100;border-radius:0 0 20px 20px}
+    .nav-links.active{display:flex}
+    .nav-links a:hover{background:var(--pink);color:#fff}
+  }
+  
+  .hero{padding:60px 32px;max-width:1200px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+  .hero-badge{display:inline-block;background:var(--pink);color:#fff;padding:8px 20px;border-radius:20px;font-size:13px;font-weight:700;margin-bottom:20px}
+  .hero h1{font-size:clamp(36px,5vw,64px);font-weight:800;line-height:1.1;letter-spacing:-.03em;margin-bottom:24px;color:var(--coral)}
+  .hero p{font-size:19px;color:var(--soft);line-height:1.7;margin-bottom:32px;max-width:500px}
+  .hero img{width:100%;height:480px;object-fit:cover;border-radius:24px;box-shadow:0 20px 60px rgba(255,107,107,.2)}
+  .button{display:inline-block;background:var(--coral);color:#fff;padding:16px 32px;font-weight:700;font-size:16px;border-radius:16px;cursor:pointer;border:none;box-shadow:0 8px 24px rgba(255,107,107,.3);transition:all .3s}
+  .button:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(255,107,107,.4)}
+  
+  .section{padding:80px 32px;max-width:1200px;margin:auto}
+  .section h2{font-size:28px;font-weight:800;margin-bottom:16px;color:var(--coral)}
+  .section > p{font-size:18px;color:var(--soft);max-width:700px;margin-bottom:48px}
+  
+  .features{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+  .feature-card{background:#fff;padding:40px 32px;border-radius:24px;box-shadow:0 8px 32px rgba(0,0,0,.06);transition:all .3s}
+  .feature-card:hover{transform:translateY(-8px);box-shadow:0 16px 48px rgba(0,0,0,.1)}
+  .feature-icon{width:60px;height:60px;background:var(--warm);border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:28px;margin-bottom:20px}
+  .feature-card h3{font-size:20px;font-weight:700;margin-bottom:12px;color:var(--text)}
+  .feature-card p{font-size:15px;color:var(--soft);line-height:1.6}
+  
+  .testimonial{background:var(--warm);padding:60px 32px;border-radius:24px;margin:60px 0;text-align:center}
+  .testimonial blockquote{font-size:22px;font-weight:600;line-height:1.5;color:var(--coral);max-width:700px;margin:auto}
+  .testimonial cite{display:block;margin-top:20px;font-size:15px;color:var(--soft);font-style:normal}
+  
+  .cta-section{padding:80px 32px;text-align:center;background:linear-gradient(135deg,var(--coral),var(--pink));border-radius:24px;margin:40px auto;max-width:1200px}
+  .cta-section h2{font-size:clamp(32px,4vw,48px);font-weight:800;color:#fff;margin-bottom:16px}
+  .cta-section p{font-size:18px;color:rgba(255,255,255,.85);margin-bottom:32px;max-width:600px;margin-left:auto;margin-right:auto}
+  .cta-section .button{background:#fff;color:var(--coral);box-shadow:0 8px 24px rgba(0,0,0,.2)}
+  .cta-section .button:hover{background:var(--warm)}
+  
+  .footer{padding:40px 32px;display:flex;justify-content:space-between;align-items:center;font-size:15px;color:var(--soft);max-width:1200px;margin:auto}
+  
+  
+    .hero{grid-template-columns:1fr;gap:40px}
+    .features{grid-template-columns:1fr}
+    .footer{flex-direction:column;gap:12px;text-align:center}
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="/shotgun-12/v8-playful/" class="brand">Lakecia Gunter</a>
+  <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('active')">&#9776;</button>
+  <div class="nav-links">
+    <a href="/shotgun-12/v8-playful/">Home</a>
+    <a href="/shotgun-12/v8-playful/about/">About</a>
+    <a href="/shotgun-12/v8-playful/services/">Services</a>
+    <a href="/shotgun-12/v8-playful/contact/">Contact</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div>
+    <span class="hero-badge">AI Strategy for Women Leaders</span>
+    <h1>AI doesn't have to be scary. Let's figure it out together.</h1>
+    <p>Hi, I'm Lakecia — former Microsoft CTO, Intel executive, and now your partner in making AI feel doable, not overwhelming. I've spent 25 years in tech so you don't have to feel lost in this moment.</p>
+    <a href="/shotgun-12/v8-playful/contact/" class="button">Let's chat!</a>
+  </div>
+  <div>
+    <img src="../../lakecia.jpg" alt="Lakecia Gunter">
+  </div>
+</section>
+
+<section class="section">
+  <h2>Here's the thing...</h2>
+  <p>Most AI advice is built by people who've never sat in your chair. It's full of jargon, hype, and pressure. I'm here to change that — one conversation at a time.</p>
+  
+  <div class="features">
+    <div class="feature-card">
+      <div class="feature-icon">&#127919;</div>
+      <h3>Board Sessions</h3>
+      <p>Help your board understand AI in plain English. No technobabble, just clarity.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">&#128131;</div>
+      <h3>1:1 Coaching</h3>
+      <p>Private partnership to build your AI confidence. Go from "I don't get it" to "I've got this."</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">&#128640;</div>
+      <h3>Team Sprints</h3>
+      <p>Hands-on workshops that get your team using real AI tools. Fun, practical, and productive.</p>
+    </div>
+  </div>
+</section>
+
+<section class="testimonial">
+  <blockquote>"Lakecia has a gift for making the complex feel simple. She helped our board go from confused to confident in one session."</blockquote>
+  <cite>— Executive Director, Fortune 500 Company</cite>
+</section>
+
+<section class="cta-section">
+  <h2>Ready to feel confident about AI?</h2>
+  <p>Book a free 30-minute call. We'll talk about where you are, where you want to go, and how to get there — no pressure, no pitch.</p>
+  <a href="/shotgun-12/v8-playful/contact/" class="button">Book your free call</a>
+</section>
+
+<footer class="footer">
+  <span>Lakecia Gunter — AI made friendly</span>
+  <span><a href="/shotgun-12/v8-playful/contact/">Say hi</a></span>
+</footer>
+
+</body>
+</html>

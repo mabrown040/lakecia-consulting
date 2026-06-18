@@ -16,12 +16,15 @@
   .nav-links{display:flex;gap:32px}
   .nav-links a{opacity:.7;transition:opacity .3s}
   .nav-links a:hover{opacity:1}
-  .menu-toggle{display:none;background:none;border:none;font-size:28px;cursor:pointer;padding:8px;color:var(--light)}
+  /* Mobile-first: hamburger visible, nav hidden */
+  .menu-toggle{display:block;background:none;border:none;font-size:28px;cursor:pointer;padding:8px;color:var(--light)}
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--dark);padding:24px 32px;flex-direction:column;gap:20px;z-index:100;border-bottom:1px solid rgba(99,102,241,.2)}
+  .nav-links.active{display:flex}
   
-  @media(max-width:860px){
-    .menu-toggle{display:block}
-    .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--dark);padding:24px 32px;flex-direction:column;gap:20px;z-index:100;border-bottom:1px solid rgba(99,102,241,.2)}
-    .nav-links.active{display:flex}
+  /* Desktop: show nav links, hide hamburger */
+  @media(min-width:861px){
+    .menu-toggle{display:none}
+    .nav-links{display:flex !important;position:static;flex-direction:row;padding:0;border:none;background:transparent}
   }
   
   .hero{padding:80px 32px;max-width:1200px;margin:auto;display:grid;grid-template-columns:1.1fr .9fr;gap:80px;align-items:center}
@@ -54,7 +57,7 @@
   
   .footer{padding:40px 32px;display:flex;justify-content:space-between;align-items:center;font-size:14px;opacity:.4;max-width:1200px;margin:auto;border-top:1px solid rgba(99,102,241,.15)}
   
-  @media(max-width:860px){
+  
     .hero{grid-template-columns:1fr;gap:60px}
     .features{grid-template-columns:1fr}
     .stats{grid-template-columns:1fr 1fr}

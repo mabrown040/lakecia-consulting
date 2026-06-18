@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luxury — Lakecia Gunter</title>
+<style>
+  :root{--gold:#c9a84c;--black:#0a0a0a;--charcoal:#1a1a1a;--cream:#f5f0e8;--muted:#8a8278}
+  *{box-sizing:border-box;margin:0}
+  body{background:var(--black);color:var(--cream);font-family:'Times New Roman',Georgia,serif;line-height:1.6;font-size:18px}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  
+  .nav{display:flex;justify-content:space-between;align-items:center;padding:28px 40px;font-size:13px;letter-spacing:.15em;text-transform:uppercase;position:relative;border-bottom:1px solid rgba(201,168,76,.2)}
+  .brand{font-size:16px;letter-spacing:.2em;color:var(--gold)}
+  .nav-links{display:flex;gap:40px}
+  .nav-links a{opacity:.6;transition:opacity .3s}
+  .nav-links a:hover{opacity:1}
+  .menu-toggle{display:block !important;background:none;border:none;font-size:28px;cursor:pointer;padding:8px;color:var(--cream)}
+  
+  
+    .menu-toggle{display:block}
+    .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--charcoal);padding:28px 40px;flex-direction:column;gap:20px;z-index:100;border-bottom:1px solid rgba(201,168,76,.2)}
+    .nav-links.active{display:flex}
+  }
+  
+  .hero{padding:100px 40px 80px;max-width:1200px;margin:auto;display:grid;grid-template-columns:1.1fr .9fr;gap:100px;align-items:center}
+  .hero-label{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:24px}
+  .hero h1{font-size:clamp(36px,5vw,68px);font-weight:400;line-height:1.1;letter-spacing:.02em;margin-bottom:28px}
+  .hero p{font-size:20px;color:var(--muted);line-height:1.7;margin-bottom:36px;max-width:520px}
+  .hero img{width:100%;height:520px;object-fit:cover;filter:grayscale(30%) contrast(1.1)}
+  .button{display:inline-block;border:1px solid var(--gold);color:var(--gold);padding:16px 36px;font-size:13px;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;background:transparent;transition:all .3s}
+  .button:hover{background:var(--gold);color:var(--black)}
+  
+  .section{padding:100px 40px;max-width:1200px;margin:auto;border-top:1px solid rgba(201,168,76,.15)}
+  .section h2{font-size:14px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:60px}
+  .philosophy{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+  .philosophy h3{font-size:clamp(28px,3vw,42px);font-weight:400;line-height:1.2;margin-bottom:24px}
+  .philosophy p{font-size:18px;color:var(--muted);line-height:1.8}
+  
+  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+  .service-card{border:1px solid rgba(201,168,76,.2);padding:48px 40px;transition:all .4s}
+  .service-card:hover{border-color:var(--gold)}
+  .service-card h3{font-size:22px;font-weight:400;margin-bottom:16px;color:var(--gold)}
+  .service-card p{font-size:16px;color:var(--muted);line-height:1.7}
+  
+  .cta-section{padding:120px 40px;text-align:center;background:linear-gradient(180deg,var(--black) 0%,var(--charcoal) 100%)}
+  .cta-section h2{font-size:clamp(32px,4vw,56px);font-weight:400;letter-spacing:.02em;margin-bottom:20px}
+  .cta-section p{font-size:20px;color:var(--muted);margin-bottom:40px;max-width:600px;margin-left:auto;margin-right:auto}
+  
+  .footer{padding:40px;display:flex;justify-content:space-between;align-items:center;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);max-width:1200px;margin:auto;border-top:1px solid rgba(201,168,76,.15)}
+  
+  
+    .hero{grid-template-columns:1fr;gap:60px}
+    .philosophy{grid-template-columns:1fr}
+    .services-grid{grid-template-columns:1fr}
+    .footer{flex-direction:column;gap:16px;text-align:center}
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="/shotgun-12/v6-luxury/" class="brand">Lakecia Gunter</a>
+  <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('active')">&#9776;</button>
+  <div class="nav-links">
+    <a href="/shotgun-12/v6-luxury/">Home</a>
+    <a href="/shotgun-12/v6-luxury/about/">About</a>
+    <a href="/shotgun-12/v6-luxury/services/">Services</a>
+    <a href="/shotgun-12/v6-luxury/contact/">Contact</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div>
+    <div class="hero-label">Executive Advisory</div>
+    <h1>Discretion. Judgment. Authority.</h1>
+    <p>For women leaders who have already proven themselves, and now need to navigate AI with the same confidence they bring to every other boardroom decision.</p>
+    <a href="/shotgun-12/v6-luxury/contact/" class="button">Arrange a private consultation</a>
+  </div>
+  <div>
+    <img src="../../lakecia.jpg" alt="Lakecia Gunter">
+  </div>
+</section>
+
+<section class="section">
+  <h2>Philosophy</h2>
+  <div class="philosophy">
+    <div>
+      <h3>The most valuable advice is never announced.</h3>
+    </div>
+    <div>
+      <p>Twenty-five years inside the world's most demanding institutions — from the Department of Defense to Microsoft, from Intel's C-suite to the boardroom of a publicly traded company. I have learned that the leaders who matter most are not the ones who speak loudest. They are the ones who know which questions to ask, and when.</p>
+      <p style="margin-top:20px">My work is private, bespoke, and focused on a single outcome: helping you lead through this technological moment with the authority you have already earned.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Services</h2>
+  <div class="services-grid">
+    <div class="service-card">
+      <h3>Board Advisory</h3>
+      <p>Private counsel for boards and executive committees. Translate AI risk into governance language that directors understand and can act upon.</p>
+    </div>
+    <div class="service-card">
+      <h3>Executive Partnership</h3>
+      <p>One-on-one guidance for women navigating AI adoption. Build confidence through judgment, not jargon. Discretion assured.</p>
+    </div>
+    <div class="service-card">
+      <h3>Strategic Implementation</h3>
+      <p>Hands-on engagement to move from strategy to execution. Real tools, real teams, measurable outcomes.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <h2>The conversation begins when you are ready.</h2>
+  <p>Book a free 30-minute consultation. No pitch, no pressure — just clarity about where you stand and what comes next.</p>
+  <a href="/shotgun-12/v6-luxury/contact/" class="button">Schedule your consultation</a>
+</section>
+
+<footer class="footer">
+  <span>Lakecia Gunter — Executive Advisory</span>
+  <span><a href="/shotgun-12/v6-luxury/contact/">Contact</a></span>
+</footer>
+
+</body>
+</html>

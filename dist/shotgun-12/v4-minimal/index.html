@@ -16,12 +16,15 @@
   .nav-links{display:flex;gap:32px}
   .nav-links a{color:var(--gray);transition:color .2s}
   .nav-links a:hover{color:var(--black)}
-  .menu-toggle{display:none;background:none;border:none;font-size:28px;cursor:pointer;padding:8px}
+    /* Mobile-first: hamburger visible, nav hidden */
+  .menu-toggle{display:block;background:none;border:none;font-size:28px;cursor:pointer;padding:8px}
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--white);padding:24px 32px;flex-direction:column;gap:20px;z-index:100;border-bottom:1px solid var(--line)}
+  .nav-links.active{display:flex}
   
-  @media(max-width:860px){
-    .menu-toggle{display:block}
-    .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--white);padding:24px 32px;flex-direction:column;gap:20px;z-index:100;border-bottom:1px solid var(--line)}
-    .nav-links.active{display:flex}
+  /* Desktop: show nav links, hide hamburger */
+  @media(min-width:861px){
+    .menu-toggle{display:none}
+    .nav-links{display:flex !important;position:static;flex-direction:row;padding:0;border:none;background:transparent}
   }
   
   .hero{padding:80px 32px 60px;max-width:1200px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
@@ -48,7 +51,7 @@
   
   .footer{padding:32px;display:flex;justify-content:space-between;align-items:center;font-size:14px;color:var(--gray);max-width:1200px;margin:auto;border-top:1px solid var(--line)}
   
-  @media(max-width:860px){
+  
     .hero{grid-template-columns:1fr;gap:40px}
     .data-grid{grid-template-columns:1fr 1fr}
     .services-list{grid-template-columns:1fr}
