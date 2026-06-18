@@ -1,29 +1,142 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Lakecia Gunter — Tech-Luxe AI Advisory</title>
-<meta name="description" content="ROAR-level power for high-stakes AI decisions.">
-<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tech-Luxe — Lakecia Gunter</title>
+<style>
+  :root{--pink:#ff6b9d;--deep:#e8558a;--gold:#d4af37;--dark:#0a0a0a;--charcoal:#1a1a1a;--light:#f5f0e8}
+  *{box-sizing:border-box;margin:0}
+  body{background:var(--dark);color:var(--light);font-family:'Segoe UI',system-ui,sans-serif;line-height:1.6;font-size:16px}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block;border-radius:8px}
+  
+  .nav{display:flex;justify-content:space-between;align-items:center;padding:24px 40px;font-size:13px;letter-spacing:.12em;text-transform:uppercase;position:relative;background:rgba(10,10,10,.9);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,107,157,.15)}
+  .brand{font-size:16px;font-weight:700;letter-spacing:.15em;color:var(--gold)}
+  .nav-links{display:flex;gap:40px}
+  .nav-links a{opacity:.7;transition:opacity .3s}
+  .nav-links a:hover{opacity:1}
+  .menu-toggle{display:none;background:none;border:none;font-size:24px;cursor:pointer;color:var(--light)}
+  
+  @media(max-width:768px){
+    .menu-toggle{display:block}
+    .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--charcoal);padding:24px 40px;flex-direction:column;gap:20px;z-index:100;border-bottom:1px solid rgba(255,107,157,.15)}
+    .nav-links.active{display:flex}
+  }
+  
+  .hero{padding:80px 40px;max-width:1200px;margin:auto;display:grid;grid-template-columns:1.1fr .9fr;gap:80px;align-items:center}
+  .hero-label{font-size:12px;letter-spacing:.2em;text-transform:uppercase;background:linear-gradient(135deg,var(--pink),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:700;margin-bottom:20px}
+  .hero h1{font-size:clamp(36px,5vw,64px);font-weight:700;line-height:1.1;letter-spacing:-.03em;margin-bottom:24px}
+  .hero h1 span{background:linear-gradient(135deg,var(--pink),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+  .hero p{font-size:18px;opacity:.7;line-height:1.7;margin-bottom:32px;max-width:520px}
+  .hero img{width:100%;height:480px;object-fit:cover;border-radius:12px;box-shadow:0 20px 60px rgba(255,107,157,.2)}
+  .button{display:inline-block;background:linear-gradient(135deg,var(--pink),var(--deep));color:#fff;padding:16px 36px;font-weight:700;font-size:14px;letter-spacing:.04em;border-radius:8px;cursor:pointer;border:none;box-shadow:0 8px 32px rgba(255,107,157,.4);transition:all .3s}
+  .button:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(255,107,157,.5)}
+  
+  .section{padding:100px 40px;max-width:1200px;margin:auto;border-top:1px solid rgba(255,107,157,.1)}
+  .section h2{font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.15em;margin-bottom:48px;color:var(--gold)}
+  
+  .features{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+  .feature-card{background:linear-gradient(135deg,rgba(255,107,157,.05),rgba(212,175,55,.05));border:1px solid rgba(255,107,157,.15);padding:40px;border-radius:12px;transition:all .4s}
+  .feature-card:hover{border-color:rgba(255,107,157,.3);transform:translateY(-4px);box-shadow:0 20px 40px rgba(255,107,157,.1)}
+  .feature-icon{width:56px;height:56px;background:linear-gradient(135deg,var(--pink),var(--gold));border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:20px}
+  .feature-card h3{font-size:20px;font-weight:600;margin-bottom:12px;color:var(--light)}
+  .feature-card p{font-size:15px;opacity:.6;line-height:1.7}
+  
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:40px;padding:60px 0;border-top:1px solid rgba(255,107,157,.1);border-bottom:1px solid rgba(255,107,157,.1);margin:60px 0}
+  .stat h3{font-size:clamp(32px,4vw,48px);font-weight:700;background:linear-gradient(135deg,var(--pink),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:8px}
+  .stat p{font-size:14px;opacity:.5}
+  
+  .cta-section{padding:100px 40px;text-align:center;background:linear-gradient(180deg,var(--dark) 0%,var(--charcoal) 100%);border-radius:16px;margin:40px auto;max-width:1200px;border:1px solid rgba(255,107,157,.1)}
+  .cta-section h2{font-size:clamp(32px,4vw,56px);font-weight:700;margin-bottom:20px}
+  .cta-section p{font-size:18px;opacity:.6;margin-bottom:36px;max-width:600px;margin-left:auto;margin-right:auto}
+  .cta-section .button{font-size:16px;padding:18px 40px}
+  
+  .footer{padding:40px 40px;display:flex;justify-content:space-between;align-items:center;font-size:13px;letter-spacing:.1em;text-transform:uppercase;opacity:.4;max-width:1200px;margin:auto;border-top:1px solid rgba(255,107,157,.1)}
+  
+  @media(max-width:768px){
+    .hero{grid-template-columns:1fr;gap:60px}
+    .features{grid-template-columns:1fr}
+    .stats{grid-template-columns:1fr 1fr}
+    .footer{flex-direction:column;gap:12px;text-align:center}
+  }
+</style>
 </head>
 <body>
-<nav><div class="nav-inner"><div class="brand">Lakecia Gunter · Tech-Luxe Fusion</div><div class="links"><a href="index/">Home</a><a href="about/">About</a><a href="services/">Services</a><a href="community/">Community</a><a href="contact/">Contact</a></div></div></nav>
-<main>
-<header class="hero">
-  <div>
-    <div class="eyebrow">ROAR advisory · Variant 11</div>
-    <h1>Enter the AI <em>room</em> with power, precision, and a point of view.</h1>
-    <p class="lead">Lakecia Gunter equips women leaders to command the AI conversation—from board strategy to enterprise execution—with technical depth and unmistakable presence.</p>
-    <a class="button" href="contact/">Claim the room.</a>
+
+<nav class="nav">
+  <a href="/shotgun-12/v11-tech-luxe/" class="brand">Lakecia Gunter</a>
+  <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('active')">&#9776;</button>
+  <div class="nav-links">
+    <a href="/shotgun-12/v11-tech-luxe/">Home</a>
+    <a href="/shotgun-12/v11-tech-luxe/about/">About</a>
+    <a href="/shotgun-12/v11-tech-luxe/services/">Services</a>
+    <a href="/shotgun-12/v11-tech-luxe/contact/">Contact</a>
   </div>
-</header>
-<section class="section"><h2>Not softer. Sharper.</h2><p>This is advisory for leaders who are done shrinking the question. We look directly at opportunity, risk, money, talent, governance, and influence.</p></section>
-<section class="section"><h2>Luxury is clarity</h2><p>The premium experience is not polish for its own sake. It is the relief of having a seasoned operator translate complexity into confident action.</p></section>
-<section class="cards"><article class="card"><h3>Authority</h3><p>Former Microsoft CTO and Intel CEO Chief of Staff.</p></article>
-<article class="card"><h3>Scale</h3><p>$1B+ platform experience.</p></article>
-<article class="card"><h3>ROAR</h3><p>A voice for women who lead out loud.</p></article></section>
-<section class="cta"><p>Dark, elegant, unapologetically executive.</p><h2>Claim the room.</h2><p>Power / Precision / Presence · hello@lakeciagunter.com</p><a class="button" href="contact/">Contact Lakecia</a></section>
-</main>
+</nav>
+
+<section class="hero">
+  <div>
+    <div class="hero-label">AI Strategy for Women Leaders</div>
+    <h1>Power doesn't ask permission. <span>It builds fluency.</span></h1>
+    <p>Twenty-five years from DoD to Microsoft CTO to NYSE board director. I help women leaders turn AI from a threat into their most powerful strategic advantage.</p>
+    <a href="/shotgun-12/v11-tech-luxe/contact/" class="button">Claim your AI advantage</a>
+  </div>
+  <div>
+    <img src="../../lakecia.jpg" alt="Lakecia Gunter">
+  </div>
+</section>
+
+<section class="section">
+  <h2>The landscape</h2>
+  <div class="features">
+    <div class="feature-card">
+      <div class="feature-icon">&#9889;</div>
+      <h3>Board Authority</h3>
+      <p>Private sessions that transform board AI conversations from confusion to confidence. Translate technical complexity into governance power.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">&#128640;</div>
+      <h3>Executive Power</h3>
+      <p>One-on-one partnership to build your AI authority. Not just fluency — the judgment to make decisions that shape your organization's future.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">&#128187;</div>
+      <h3>Implementation Dominance</h3>
+      <p>Hands-on sprints that move from strategy to execution. Real tools, real teams, measurable outcomes that prove your leadership.</p>
+    </div>
+  </div>
+  
+  <div class="stats">
+    <div class="stat">
+      <h3>25+</h3>
+      <p>Years in tech leadership</p>
+    </div>
+    <div class="stat">
+      <h3>$1B+</h3>
+      <p>Platform scale managed</p>
+    </div>
+    <div class="stat">
+      <h3>NYSE</h3>
+      <p>Public company governance</p>
+    </div>
+    <div class="stat">
+      <h3>50</h3>
+      <p>Top Black Business Women</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <h2>The future belongs to those who build it.</h2>
+  <p>Book a free 30-minute strategy call. We'll assess your current position, identify the highest-leverage opportunities, and map your path to AI leadership.</p>
+  <a href="/shotgun-12/v11-tech-luxe/contact/" class="button">Build your advantage</a>
+</section>
+
+<footer class="footer">
+  <span>Lakecia Gunter — AI Strategy for Women Leaders</span>
+  <span><a href="/shotgun-12/v11-tech-luxe/contact/">Contact</a></span>
+</footer>
+
 </body>
 </html>

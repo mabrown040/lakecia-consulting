@@ -3,16 +3,127 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Variant 5: Brutalist — Lakecia Gunter</title>
+<title>Brutalist — Lakecia Gunter</title>
 <style>
-:root{--bg:#fff200;--ink:#050505;--pink:#ff6b9d;--deep:#e8558a;--paper:#fff9a6;}
-*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font-family:"Arial Black","Helvetica Neue",Arial,sans-serif;line-height:1.25;text-transform:none} a{color:inherit} .wrap{max-width:1240px;margin:auto;padding:28px} header{position:sticky;top:0;z-index:4;background:var(--bg);border-bottom:6px solid #000} .nav{display:flex;align-items:center;justify-content:space-between;gap:18px;max-width:1240px;margin:auto;padding:14px 28px}.brand{font-weight:900;letter-spacing:-1px;font-size:22px}.brand span{background:#000;color:var(--bg);padding:5px 8px}.links{display:flex;gap:8px;flex-wrap:wrap}.links a,.btn{background:var(--bg);border:4px solid #000;box-shadow:6px 6px 0 #000;text-decoration:none;padding:10px 14px;font-weight:900;text-transform:uppercase}.links a:hover,.btn:hover{transform:translate(3px,3px);box-shadow:3px 3px 0 #000}.hero{display:grid;grid-template-columns:1.08fr .92fr;gap:28px;align-items:stretch;padding:38px 28px 54px}.slab{border:7px solid #000;background:var(--paper);box-shadow:12px 12px 0 #000;padding:32px}.kicker{display:inline-block;background:#000;color:var(--bg);padding:8px 12px;margin-bottom:18px;font-size:14px;letter-spacing:.06em;text-transform:uppercase}h1{font-size:clamp(48px,8vw,104px);line-height:.88;letter-spacing:-5px;margin:0 0 24px;text-transform:uppercase}h2{font-size:clamp(34px,5vw,68px);line-height:.92;letter-spacing:-3px;text-transform:uppercase;margin:0 0 20px}h3{font-size:25px;margin:0 0 10px;text-transform:uppercase}.lead{font-family:"Courier New",monospace;font-size:22px;font-weight:800;max-width:760px}.plain{font-family:"Courier New",monospace;font-size:17px;font-weight:700}.hero img{width:100%;height:100%;min-height:520px;object-fit:cover;filter:grayscale(1) contrast(1.3);border:7px solid #000}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}.card{border:5px solid #000;background:#fff;box-shadow:8px 8px 0 #000;padding:24px}.card.hot{background:var(--pink)}.strip{background:#000;color:var(--bg);padding:26px 0;margin:34px 0}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.metric{border:3px solid var(--bg);padding:16px}.metric b{display:block;font-size:28px}.footer{border-top:7px solid #000;padding:30px 28px;background:var(--paper)}.form{display:grid;gap:12px}.input{border:4px solid #000;padding:16px;background:#fff;font:inherit;font-family:"Courier New",monospace}.note{background:#000;color:#fff;padding:18px;font-family:"Courier New",monospace}.roar{color:var(--deep)}@media(max-width:820px){.hero,.grid,.metrics{grid-template-columns:1fr}.nav{align-items:flex-start;flex-direction:column}h1{letter-spacing:-3px}.hero img{min-height:320px}}
+  :root{--yellow:#f7e019;--black:#0a0a0a;--white:#ffffff}
+  *{box-sizing:border-box;margin:0}
+  body{background:var(--yellow);color:var(--black);font-family:'Courier New',Courier,monospace;line-height:1.4;font-size:16px}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block;border:4px solid var(--black)}
+  
+  .nav{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;font-size:14px;font-weight:700;border-bottom:4px solid var(--black);position:relative}
+  .brand{font-size:18px;text-transform:uppercase;letter-spacing:.04em}
+  .nav-links{display:flex;gap:24px}
+  .nav-links a{text-decoration:underline}
+  .nav-links a:hover{text-decoration:none}
+  .menu-toggle{display:none;background:none;border:none;font-size:28px;cursor:pointer;font-weight:700}
+  
+  @media(max-width:768px){
+    .menu-toggle{display:block}
+    .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--yellow);padding:20px;border-bottom:4px solid var(--black);flex-direction:column;gap:16px;z-index:100}
+    .nav-links.active{display:flex}
+  }
+  
+  .hero{padding:40px 20px;border-bottom:4px solid var(--black)}
+  .hero h1{font-size:clamp(40px,9vw,100px);line-height:.85;font-weight:700;text-transform:uppercase;letter-spacing:-.02em;margin-bottom:20px}
+  .hero p{font-size:20px;font-weight:700;margin-bottom:28px;max-width:700px}
+  .button{display:inline-block;background:var(--black);color:var(--yellow);padding:16px 28px;font-weight:700;font-size:16px;text-transform:uppercase;border:4px solid var(--black);cursor:pointer}
+  .button:hover{background:var(--yellow);color:var(--black)}
+  
+  .section{padding:40px 20px;border-bottom:4px solid var(--black)}
+  .section h2{font-size:clamp(32px,6vw,64px);font-weight:700;text-transform:uppercase;line-height:.9;margin-bottom:24px}
+  .section p{font-size:18px;font-weight:700;margin-bottom:16px;max-width:800px}
+  .section p strong{font-weight:700;background:var(--black);color:var(--yellow);padding:2px 6px}
+  
+  .services-grid{display:grid;grid-template-columns:1fr 1fr;gap:0}
+  .service-box{border:4px solid var(--black);padding:32px;margin:-2px}
+  .service-box h3{font-size:24px;font-weight:700;text-transform:uppercase;margin-bottom:12px}
+  .service-box p{font-size:16px;font-weight:700}
+  
+  .cta-section{background:var(--black);color:var(--yellow);padding:60px 20px}
+  .cta-section h2{font-size:clamp(40px,8vw,90px);font-weight:700;text-transform:uppercase;line-height:.85;margin-bottom:20px}
+  .cta-section p{font-size:20px;font-weight:700;margin-bottom:32px;max-width:600px}
+  .cta-section .button{background:var(--yellow);color:var(--black);border-color:var(--yellow)}
+  .cta-section .button:hover{background:var(--black);color:var(--yellow)}
+  
+  .footer{padding:20px;display:flex;justify-content:space-between;font-size:14px;font-weight:700;text-transform:uppercase;border-top:4px solid var(--black)}
+  
+  @media(max-width:768px){
+    .services-grid{grid-template-columns:1fr}
+    .footer{flex-direction:column;gap:8px}
+  }
 </style>
 </head>
 <body>
-<div class="blob b1"></div><div class="blob b2"></div>
-<header><div class="nav"><div class="brand"><span>Lakecia</span> Gunter</div><nav class="links"><a href="index/">Home</a><a href="about/">About</a><a href="services/">Services</a><a href="contact/">Contact</a></nav></div></header>
-<main><section class="hero wrap"><div><div class="kicker sticker eyebrow">BRUTALIST</div><h1>STOP PRETENDING AI IS OPTIONAL.</h1><p class="lead summary">The rooms making AI decisions are still too male, too technical, and too comfortable with jargon. Lakecia Gunter cuts through it — boardroom truth, operator scars, no theater.</p><a class="btn" href="contact/">Start with a complimentary consult</a></div><div class="portrait photo"><img src="../../lakecia.jpg" alt="Lakecia Gunter"></div></section><section class="strip"><div class="wrap"><div class="metrics"><div class="metric"><b>25+</b>Years in technology</div><div class="metric"><b>$1B+</b>Platform experience</div><div class="metric"><b>NYSE</b>IDEX Director</div><div class="metric"><b>ROAR</b>Podcast host</div></div></div></section><section class="section wrap"><h2>AI without the corporate fog.</h2><div class="grid cardgrid"><article class="card"><h3>THE POINT</h3><p>Women leaders do not need another hype deck. They need a trusted operator who has shipped billion-dollar platforms, sat inside CEO-level decision loops, and can make AI usable without making people feel small.</p></article><article class="card"><h3>THE WORK</h3><p>AI strategy, governance, executive coaching, and practical adoption sprints for women executives and teams who are ready to move from “we should” to “we did.”</p></article></div></section></main>
-<footer class="footer">Lakecia Gunter — AI strategy and leadership advisory for women ready to lead the room. <span class="roar">ROAR</span></footer>
+
+<div class="wrap">
+  <nav class="nav">
+    <a href="/shotgun-12/v5-brutalist/" class="brand">LAKECIA GUNTER</a>
+    <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('active')">&#9776;</button>
+    <div class="nav-links">
+      <a href="/shotgun-12/v5-brutalist/">HOME</a>
+      <a href="/shotgun-12/v5-brutalist/about/">ABOUT</a>
+      <a href="/shotgun-12/v5-brutalist/services/">SERVICES</a>
+      <a href="/shotgun-12/v5-brutalist/contact/">CONTACT</a>
+    </div>
+  </nav>
+</div>
+
+<div class="wrap">
+  <header class="hero">
+    <h1>AI IS CHANGING EVERYTHING. DON'T GET LEFT BEHIND.</h1>
+    <p>Former Microsoft CTO. 25 years from DoD to Fortune 50. Now helping women leaders win with AI.</p>
+    <a href="/shotgun-12/v5-brutalist/contact/" class="button">BOOK FREE CALL</a>
+  </header>
+</div>
+
+<div class="wrap">
+  <section class="section">
+    <h2>MOST AI CONSULTING IS BUILT BY MEN. FOR MEN.</h2>
+    <p>They talk about <strong>prompt engineering</strong> like it's rocket science. They sell <strong>fear</strong> dressed up as strategy. They build tools for productivity, not <strong>power</strong>.</p>
+    <p>Women leaders don't need another dashboard. They need <strong>judgment</strong>. They need someone who has sat in the rooms where billion-dollar decisions get made and can translate that fluency into <strong>their</strong> context.</p>
+    <p>That's what I do. No jargon. No panic. Just <strong>clarity and leverage</strong>.</p>
+  </section>
+</div>
+
+<div class="wrap">
+  <section class="section">
+    <h2>WHAT I DO</h2>
+    <div class="services-grid">
+      <div class="service-box">
+        <h3>AI STRATEGY FOR BOARDS</h3>
+        <p>Help your board understand AI risk, opportunity, and governance in plain language they can act on.</p>
+      </div>
+      <div class="service-box">
+        <h3>EXECUTIVE AI COACHING</h3>
+        <p>One-on-one coaching for women executives adopting AI. Build confidence, cut through hype.</p>
+      </div>
+      <div class="service-box">
+        <h3>AI IMPLEMENTATION SPRINTS</h3>
+        <p>2-4 week hands-on sprints to get your team using AI tools that actually move the needle.</p>
+      </div>
+      <div class="service-box">
+        <h3>WOMEN'S AI LEADERSHIP CIRCLE</h3>
+        <p>Small cohort of women leaders navigating AI together. Monthly sessions, peer support.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="cta-section">
+  <div class="wrap">
+    <h2>READY TO LEAD?</h2>
+    <p>Book a free 30-minute AI strategy call. No pitch, just clarity.</p>
+    <a href="/shotgun-12/v5-brutalist/contact/" class="button">BOOK YOUR CALL</a>
+  </div>
+</div>
+
+<div class="wrap">
+  <footer class="footer">
+    <span>LAKECIA GUNTER / AI FOR WOMEN LEADERS</span>
+    <span><a href="/shotgun-12/v5-brutalist/contact/">CONTACT</a></span>
+  </footer>
+</div>
+
 </body>
 </html>

@@ -3,16 +3,195 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Variant 7: CV — Lakecia Gunter</title>
+<title>CV — Lakecia Gunter</title>
 <style>
-:root{--ink:#111827;--muted:#4b5563;--line:#d1d5db;--paper:#f8fafc;--white:#fff;--pink:#ff6b9d;--deep:#e8558a;--blue:#1f3a5f;}
-*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,Arial,sans-serif;line-height:1.52}.page{max-width:1120px;margin:24px auto;background:var(--white);border:1px solid var(--line);box-shadow:0 16px 50px rgba(17,24,39,.08)}header{border-bottom:3px solid var(--ink);padding:22px 30px}.top{display:flex;justify-content:space-between;gap:20px;align-items:flex-start}.brand{font-size:28px;font-weight:900;letter-spacing:-.04em}.role{color:var(--muted);font-size:14px;margin-top:4px}.links{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}.links a{border:1px solid var(--line);padding:8px 10px;text-decoration:none;color:var(--ink);font-size:12px;font-weight:800;text-transform:uppercase}.links a:hover{border-color:var(--pink);color:var(--deep)}main{padding:34px 30px}.kicker{font-size:12px;font-weight:900;letter-spacing:.18em;color:var(--deep);text-transform:uppercase;margin-bottom:12px}h1{font-size:clamp(36px,5vw,64px);line-height:1;margin:0 0 16px;letter-spacing:-.05em}h2{font-size:22px;border-bottom:2px solid var(--ink);padding-bottom:8px;margin:36px 0 16px;text-transform:uppercase;letter-spacing:.08em}h3{font-size:18px;margin:0}.summary{font-size:20px;max-width:850px}.grid{display:grid;grid-template-columns:1.2fr .8fr;gap:30px}.entry{display:grid;grid-template-columns:180px 1fr;gap:20px;border-bottom:1px solid var(--line);padding:18px 0}.date{font-weight:900;color:var(--blue);font-size:13px;text-transform:uppercase}.meta{color:var(--muted);font-size:14px}.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}.chip{background:#fff0f5;color:var(--deep);border:1px solid #ffd0df;padding:5px 8px;font-size:12px;font-weight:800}.metrics{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line)}.metric{padding:18px;border-right:1px solid var(--line)}.metric:last-child{border:0}.metric b{display:block;font-size:26px}.card{border:1px solid var(--line);padding:20px;margin-bottom:14px;background:#fcfcfd}.service{display:grid;grid-template-columns:220px 1fr;gap:20px;border-top:1px solid var(--line);padding:20px 0}.form{display:grid;gap:10px;max-width:650px}.input{border:1px solid var(--line);padding:13px;font:inherit;background:#fff}.btn{display:inline-block;background:var(--ink);color:#fff;text-decoration:none;padding:13px 18px;font-weight:900;text-transform:uppercase;font-size:13px}.footer{padding:20px 30px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}.roar{color:var(--deep);font-weight:900}@media(max-width:760px){.top,.grid,.entry,.service,.metrics{display:block}.links{justify-content:flex-start;margin-top:16px}.metric{border-right:0;border-bottom:1px solid var(--line)}}
+  :root{--pink:#ff6b9d;--deep:#e8558a;--ink:#1a1a1a;--paper:#fafafa;--muted:#666666;--line:#e0e0e0}
+  *{box-sizing:border-box;margin:0}
+  body{background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.5;font-size:16px}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  
+  .nav{display:flex;justify-content:space-between;align-items:center;padding:24px 32px;font-size:14px;position:relative;border-bottom:1px solid var(--line);background:var(--paper)}
+  .brand{font-weight:700;letter-spacing:-.01em}
+  .nav-links{display:flex;gap:32px}
+  .nav-links a{color:var(--muted);transition:color .2s}
+  .nav-links a:hover{color:var(--ink)}
+  .menu-toggle{display:none;background:none;border:none;font-size:24px;cursor:pointer}
+  
+  @media(max-width:768px){
+    .menu-toggle{display:block}
+    .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--paper);padding:24px 32px;flex-direction:column;gap:20px;z-index:100;border-bottom:1px solid var(--line)}
+    .nav-links.active{display:flex}
+  }
+  
+  .hero{padding:60px 32px;max-width:1200px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+  .hero h1{font-size:clamp(36px,5vw,64px);font-weight:700;letter-spacing:-.03em;line-height:1.1;margin-bottom:20px}
+  .hero p{font-size:18px;color:var(--muted);line-height:1.6;margin-bottom:28px}
+  .hero img{width:100%;height:480px;object-fit:cover;border-radius:4px}
+  .button{display:inline-block;background:var(--ink);color:var(--paper);padding:14px 28px;font-size:14px;font-weight:500;cursor:pointer;border:none;border-radius:4px}
+  .button:hover{background:var(--muted)}
+  
+  .timeline{padding:80px 32px;max-width:1200px;margin:auto}
+  .timeline h2{font-size:14px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;margin-bottom:48px;color:var(--muted)}
+  .timeline-item{display:grid;grid-template-columns:120px 1fr;gap:40px;padding:32px 0;border-bottom:1px solid var(--line)}
+  .timeline-item:first-child{padding-top:0}
+  .timeline-year{font-size:14px;font-weight:700;color:var(--deep);letter-spacing:.02em}
+  .timeline-content h3{font-size:20px;font-weight:600;margin-bottom:8px}
+  .timeline-content p{font-size:16px;color:var(--muted);line-height:1.6}
+  .timeline-content .org{font-size:14px;color:var(--deep);font-weight:600;margin-top:4px}
+  
+  .stats{padding:60px 32px;max-width:1200px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:40px;border-top:1px solid var(--line)}
+  .stat h3{font-size:40px;font-weight:700;letter-spacing:-.03em;margin-bottom:8px;color:var(--deep)}
+  .stat p{font-size:14px;color:var(--muted);line-height:1.5}
+  
+  .services{padding:80px 32px;max-width:1200px;margin:auto;border-top:1px solid var(--line)}
+  .services h2{font-size:14px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;margin-bottom:48px;color:var(--muted)}
+  .service-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+  .service-card{padding:32px;background:#fff;border-radius:4px;border:1px solid var(--line)}
+  .service-card h3{font-size:20px;font-weight:600;margin-bottom:12px}
+  .service-card p{font-size:15px;color:var(--muted);line-height:1.6}
+  
+  .cta-section{padding:80px 32px;text-align:center;background:var(--ink);color:var(--paper)}
+  .cta-section h2{font-size:clamp(32px,4vw,56px);font-weight:700;letter-spacing:-.03em;margin-bottom:16px}
+  .cta-section p{font-size:18px;color:#999;margin-bottom:32px}
+  .cta-section .button{background:var(--paper);color:var(--ink)}
+  .cta-section .button:hover{background:var(--deep);color:var(--paper)}
+  
+  .footer{padding:32px;display:flex;justify-content:space-between;align-items:center;font-size:14px;color:var(--muted);max-width:1200px;margin:auto;border-top:1px solid var(--line)}
+  
+  @media(max-width:768px){
+    .hero{grid-template-columns:1fr;gap:40px}
+    .stats{grid-template-columns:1fr 1fr}
+    .service-grid{grid-template-columns:1fr}
+    .timeline-item{grid-template-columns:80px 1fr;gap:24px}
+    .footer{flex-direction:column;gap:12px;text-align:center}
+  }
 </style>
 </head>
 <body>
-<div class="blob b1"></div><div class="blob b2"></div>
-<header><div class="nav"><div class="brand"><span>Lakecia</span> Gunter</div><nav class="links"><a href="index/">Home</a><a href="about/">About</a><a href="services/">Services</a><a href="contact/">Contact</a></nav></div></header>
-<main><section class="hero wrap"><div><div class="kicker sticker eyebrow">EXECUTIVE CREDENTIAL RECORD</div><h1>Lakecia Gunter: AI advisor with operator, board, and platform credibility.</h1><p class="lead summary">A credentials-forward view for organizations that need proof: 25 years in technology, CTO leadership at Microsoft, CEO-suite execution at Intel, DoD engineering foundations, public-company board service, and a consistent commitment to women leading in AI.</p><a class="btn" href="contact/">Start with a complimentary consult</a></div><div class="portrait photo"><img src="../../lakecia.jpg" alt="Lakecia Gunter"></div></section><section class="strip"><div class="wrap"><div class="metrics"><div class="metric"><b>25+</b>Years in technology</div><div class="metric"><b>$1B+</b>Platform experience</div><div class="metric"><b>NYSE</b>IDEX Director</div><div class="metric"><b>ROAR</b>Podcast host</div></div></div></section><section class="section wrap"><h2>Evidence before adjectives.</h2><div class="grid cardgrid"><article class="card"><h3>Scope of advisory</h3><p>AI strategy, governance, leadership coaching, and adoption programs for executives and teams.</p></article><article class="card"><h3>Positioning</h3><p>Data-dense, practical, decision-oriented. Lakecia turns credentials into usable judgment — not credential theater.</p></article></div></section></main>
-<footer class="footer">Lakecia Gunter — AI strategy and leadership advisory for women ready to lead the room. <span class="roar">ROAR</span></footer>
+
+<nav class="nav">
+  <a href="/shotgun-12/v7-cv/" class="brand">Lakecia Gunter</a>
+  <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('active')">&#9776;</button>
+  <div class="nav-links">
+    <a href="/shotgun-12/v7-cv/">Home</a>
+    <a href="/shotgun-12/v7-cv/about/">About</a>
+    <a href="/shotgun-12/v7-cv/services/">Services</a>
+    <a href="/shotgun-12/v7-cv/contact/">Contact</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div>
+    <h1>Lakecia Gunter</h1>
+    <p>Technology executive, board director, and advisor. Twenty-five years building and governing technology at enterprise scale. Now helping women leaders navigate AI with confidence and authority.</p>
+    <a href="/shotgun-12/v7-cv/contact/" class="button">Schedule a consultation</a>
+  </div>
+  <div>
+    <img src="../../lakecia.jpg" alt="Lakecia Gunter">
+  </div>
+</section>
+
+<section class="timeline">
+  <h2>Professional Timeline</h2>
+  
+  <div class="timeline-item">
+    <div class="timeline-year">2023</div>
+    <div class="timeline-content">
+      <h3>Co-Founding Advisor</h3>
+      <p>Helping companies navigate AI-driven technology change and strategic transformation.</p>
+      <div class="org">TechArena.ai</div>
+    </div>
+  </div>
+  
+  <div class="timeline-item">
+    <div class="timeline-year">2022</div>
+    <div class="timeline-content">
+      <h3>Independent Director</h3>
+      <p>Strategic oversight and technology governance for publicly traded company.</p>
+      <div class="org">IDEX Corporation (NYSE)</div>
+    </div>
+  </div>
+  
+  <div class="timeline-item">
+    <div class="timeline-year">2021</div>
+    <div class="timeline-content">
+      <h3>Chief Technology Officer</h3>
+      <p>Led $1B+ AI partner ecosystem and digital transformation initiatives.</p>
+      <div class="org">Microsoft Global Partner Solutions</div>
+    </div>
+  </div>
+  
+  <div class="timeline-item">
+    <div class="timeline-year">2018</div>
+    <div class="timeline-content">
+      <h3>Chief of Staff to CEO</h3>
+      <p>Strategic advisor to CEO on technology and business priorities.</p>
+      <div class="org">Intel Corporation</div>
+    </div>
+  </div>
+  
+  <div class="timeline-item">
+    <div class="timeline-year">1999</div>
+    <div class="timeline-content">
+      <h3>Digital Logic Designer</h3>
+      <p>Started career building technology for national security applications.</p>
+      <div class="org">Department of Defense</div>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="stat">
+    <h3>25+</h3>
+    <p>Years in technology leadership</p>
+  </div>
+  <div class="stat">
+    <h3>$1B+</h3>
+    <p>Platform scale managed</p>
+  </div>
+  <div class="stat">
+    <h3>NYSE</h3>
+    <p>Public company governance</p>
+  </div>
+  <div class="stat">
+    <h3>50</h3>
+    <p>Top Black Business Women US</p>
+  </div>
+</section>
+
+<section class="services">
+  <h2>Current Services</h2>
+  <div class="service-grid">
+    <div class="service-card">
+      <h3>Board AI Fluency</h3>
+      <p>Private sessions for boards and executive committees. Translate technical risk into governance language.</p>
+    </div>
+    <div class="service-card">
+      <h3>Executive Coaching</h3>
+      <p>One-on-one partnership for women navigating AI adoption. Build confidence through judgment.</p>
+    </div>
+    <div class="service-card">
+      <h3>Implementation Sprints</h3>
+      <p>Hands-on 2-4 week engagements. Move from strategy to execution with real tools.</p>
+    </div>
+    <div class="service-card">
+      <h3>Leadership Circle</h3>
+      <p>Small cohort of women leaders navigating AI together. Monthly sessions, peer support.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <h2>Ready to lead with AI?</h2>
+  <p>Book a free 30-minute strategy call. No pitch, just clarity.</p>
+  <a href="/shotgun-12/v7-cv/contact/" class="button">Book your call</a>
+</section>
+
+<footer class="footer">
+  <span>Lakecia Gunter — AI Strategy for Women Leaders</span>
+  <span><a href="/shotgun-12/v7-cv/contact/">Contact</a></span>
+</footer>
+
 </body>
 </html>

@@ -1,29 +1,150 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Lakecia Gunter — Calm AI Strategy for Women Leaders</title>
-<meta name="description" content="A calmer way to lead through AI.">
-<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zen — Lakecia Gunter</title>
+<style>
+  :root{--ink:#2c2c2c;--stone:#8a8680;--sand:#f7f5f0;--mist:#e8e4de;--deep:#1a1a1a}
+  *{box-sizing:border-box;margin:0}
+  body{background:var(--sand);color:var(--ink);font-family:'Helvetica Neue',Arial,sans-serif;line-height:1.8;font-size:18px;font-weight:300}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  
+  .nav{display:flex;justify-content:space-between;align-items:center;padding:40px 48px;font-size:14px;letter-spacing:.15em;text-transform:uppercase;position:relative}
+  .brand{font-weight:400;letter-spacing:.2em}
+  .nav-links{display:flex;gap:48px}
+  .nav-links a{color:var(--stone);transition:color .4s}
+  .nav-links a:hover{color:var(--ink)}
+  .menu-toggle{display:none;background:none;border:none;font-size:24px;cursor:pointer;color:var(--ink)}
+  
+  @media(max-width:768px){
+    .menu-toggle{display:block}
+    .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--sand);padding:40px 48px;flex-direction:column;gap:24px;z-index:100}
+    .nav-links.active{display:flex}
+  }
+  
+  .hero{padding:120px 48px 100px;max-width:1000px;margin:auto;text-align:center}
+  .hero-label{font-size:12px;letter-spacing:.25em;text-transform:uppercase;color:var(--stone);margin-bottom:40px}
+  .hero h1{font-size:clamp(32px,4vw,56px);font-weight:300;line-height:1.3;letter-spacing:.02em;margin-bottom:40px;max-width:800px;margin-left:auto;margin-right:auto}
+  .hero p{font-size:20px;color:var(--stone);line-height:1.8;max-width:600px;margin:auto;margin-bottom:48px}
+  .hero img{width:100%;max-width:600px;height:400px;object-fit:cover;margin:60px auto 0;border-radius:2px;opacity:.9}
+  .button{display:inline-block;border:1px solid var(--stone);color:var(--stone);padding:16px 40px;font-size:13px;letter-spacing:.15em;text-transform:uppercase;cursor:pointer;background:transparent;transition:all .4s}
+  .button:hover{border-color:var(--ink);color:var(--ink)}
+  
+  .section{padding:120px 48px;max-width:1000px;margin:auto;border-top:1px solid var(--mist)}
+  .section-header{text-align:center;margin-bottom:80px}
+  .section-header h2{font-size:28px;font-weight:300;line-height:1.4;margin-bottom:24px;letter-spacing:.02em}
+  .section-header p{font-size:18px;color:var(--stone);line-height:1.8;max-width:600px;margin:auto}
+  
+  .philosophy{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;margin-top:80px}
+  .philosophy h3{font-size:22px;font-weight:400;line-height:1.4;margin-bottom:20px;letter-spacing:.02em}
+  .philosophy p{font-size:17px;color:var(--stone);line-height:1.9}
+  
+  .services{display:grid;grid-template-columns:repeat(3,1fr);gap:60px;margin-top:80px}
+  .service{text-align:center;padding:40px 0}
+  .service h3{font-size:18px;font-weight:400;margin-bottom:16px;letter-spacing:.04em}
+  .service p{font-size:16px;color:var(--stone);line-height:1.8}
+  .service-line{width:40px;height:1px;background:var(--mist);margin:0 auto 24px}
+  
+  .quote{padding:160px 48px;text-align:center;max-width:800px;margin:auto}
+  .quote blockquote{font-size:24px;font-weight:300;line-height:1.6;font-style:italic;color:var(--stone)}
+  .quote cite{display:block;margin-top:40px;font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--stone);font-style:normal}
+  
+  .cta-section{padding:120px 48px;text-align:center;border-top:1px solid var(--mist)}
+  .cta-section h2{font-size:clamp(28px,3vw,44px);font-weight:300;line-height:1.3;margin-bottom:24px;letter-spacing:.02em}
+  .cta-section p{font-size:18px;color:var(--stone);margin-bottom:40px;max-width:500px;margin-left:auto;margin-right:auto}
+  
+  .footer{padding:48px;display:flex;justify-content:space-between;align-items:center;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--stone);max-width:1000px;margin:auto;border-top:1px solid var(--mist)}
+  
+  @media(max-width:768px){
+    .philosophy{grid-template-columns:1fr;gap:40px}
+    .services{grid-template-columns:1fr;gap:40px}
+    .footer{flex-direction:column;gap:16px;text-align:center}
+  }
+</style>
 </head>
 <body>
-<nav><div class="nav-inner"><div class="brand">Lakecia Gunter · Zen Spacious</div><div class="links"><a href="index/">Home</a><a href="about/">About</a><a href="services/">Services</a><a href="community/">Community</a><a href="contact/">Contact</a></div></div></nav>
-<main>
-<header class="hero">
-  <div>
-    <div class="eyebrow">Calm AI strategy · Variant 09</div>
-    <h1>Make the next technology decision from a steadier place.</h1>
-    <p class="lead">Lakecia Gunter helps women leaders turn AI pressure into clear priorities, wise governance, and practical moves their teams can actually carry.</p>
-    <a class="button" href="contact/">Begin with a quiet, focused conversation.</a>
+
+<nav class="nav">
+  <a href="/shotgun-12/v9-zen/" class="brand">Lakecia Gunter</a>
+  <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('active')">&#9776;</button>
+  <div class="nav-links">
+    <a href="/shotgun-12/v9-zen/">Home</a>
+    <a href="/shotgun-12/v9-zen/about/">About</a>
+    <a href="/shotgun-12/v9-zen/services/">Services</a>
+    <a href="/shotgun-12/v9-zen/contact/">Contact</a>
   </div>
-</header>
-<section class="section"><h2>A spacious advisory room</h2><p>This is not another breathless AI briefing. It is a working room for leaders who are carrying high-stakes decisions and need signal, sequencing, and a trusted operator beside them.</p></section>
-<section class="section"><h2>What changes after we work together</h2><p>You leave with a clearer point of view, a map of where AI belongs in the business, and language that brings the board, executive team, and technical leaders into the same conversation.</p></section>
-<section class="cards"><article class="card"><h3>Clarity</h3><p>Separate useful AI opportunities from noise.</p></article>
-<article class="card"><h3>Confidence</h3><p>Practice the conversations you need to lead.</p></article>
-<article class="card"><h3>Cadence</h3><p>Build a rhythm your team can sustain.</p></article></section>
-<section class="cta"><p>For women leaders who need clarity before momentum.</p><h2>Begin with a quiet, focused conversation.</h2><p>AI strategy with room to breathe · hello@lakeciagunter.com</p><a class="button" href="contact/">Contact Lakecia</a></section>
-</main>
+</nav>
+
+<section class="hero">
+  <div class="hero-label">AI Strategy for Women Leaders</div>
+  <h1>In the rush to adopt AI, the leaders who pause will be the ones who prevail.</h1>
+  <p>Twenty-five years of building technology inside the world's most demanding institutions has taught me that clarity comes not from speed, but from the courage to ask the right questions before acting.</p>
+  <a href="/shotgun-12/v9-zen/contact/" class="button">Begin with a conversation</a>
+  <img src="../../lakecia.jpg" alt="Lakecia Gunter">
+</section>
+
+<section class="section">
+  <div class="section-header">
+    <h2>The space between knowing and doing</h2>
+    <p>AI is not a race. It is a transformation that rewards the leaders who take time to understand what matters, what doesn't, and what comes next.</p>
+  </div>
+  
+  <div class="philosophy">
+    <div>
+      <h3>On judgment</h3>
+      <p>The most valuable skill in this moment is not technical fluency. It is the ability to separate signal from noise, to know which decisions require urgency and which require patience.</p>
+    </div>
+    <div>
+      <h3>On partnership</h3>
+      <p>I work with women leaders who have already proven their capability. My role is not to teach, but to clarify — to help you see the landscape clearly enough to trust your own judgment.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-header">
+    <h2>Services</h2>
+    <p>Each engagement begins with listening. The shape of our work together emerges from understanding where you are and what you need.</p>
+  </div>
+  
+  <div class="services">
+    <div class="service">
+      <div class="service-line"></div>
+      <h3>Board Fluency</h3>
+      <p>Private sessions for boards and executive committees. Translate technical complexity into governance clarity.</p>
+    </div>
+    <div class="service">
+      <div class="service-line"></div>
+      <h3>Executive Coaching</h3>
+      <p>One-on-one partnership for women navigating AI adoption. Build confidence through judgment, not jargon.</p>
+    </div>
+    <div class="service">
+      <div class="service-line"></div>
+      <h3>Implementation</h3>
+      <p>Hands-on engagement to move from understanding to action. Real tools, real teams, measured progress.</p>
+    </div>
+  </div>
+</section>
+
+<section class="quote">
+  <blockquote>
+    "The leaders who thrive in this moment will not be the ones who move fastest. They will be the ones who move with clarity."
+  </blockquote>
+  <cite>— Lakecia Gunter</cite>
+</section>
+
+<section class="cta-section">
+  <h2>When you are ready, the conversation awaits.</h2>
+  <p>Book a free 30-minute consultation. No pitch, no pressure — just space to think clearly about what comes next.</p>
+  <a href="/shotgun-12/v9-zen/contact/" class="button">Schedule your consultation</a>
+</section>
+
+<footer class="footer">
+  <span>Lakecia Gunter — AI Strategy for Women Leaders</span>
+  <span><a href="/shotgun-12/v9-zen/contact/">Contact</a></span>
+</footer>
+
 </body>
 </html>
