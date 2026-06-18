@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/shotgun-12/:path*",
+      "destination": "/shotgun-12/:path*.html"
+    }
+  ]
+}
