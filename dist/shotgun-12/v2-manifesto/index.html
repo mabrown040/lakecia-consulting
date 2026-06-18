@@ -16,11 +16,11 @@
   .brand{font-size:16px;letter-spacing:.06em}
   .nav-links{display:flex;gap:28px}
   .nav-links a:hover{text-decoration:underline}
-  .menu-toggle{display:none;background:none;border:none;font-size:24px;cursor:pointer}
+  .menu-toggle{display:none;background:none;border:none;font-size:28px;cursor:pointer;padding:8px}
   
-  @media(max-width:768px){
+  @media(max-width:860px){
     .menu-toggle{display:block}
-    .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--yellow);padding:20px 24px;flex-direction:column;gap:16px;z-index:100;border-top:3px solid var(--black)}
+    .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);padding:20px 28px;flex-direction:column;gap:16px;z-index:100}
     .nav-links.active{display:flex}
   }
   
@@ -50,7 +50,7 @@
   
   .footer{padding:24px 0;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;display:flex;justify-content:space-between}
   
-  @media(max-width:768px){
+  @media(max-width:860px){
     .service-grid{grid-template-columns:1fr}
     .footer{flex-direction:column;gap:8px}
   }

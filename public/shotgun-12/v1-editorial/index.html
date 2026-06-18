@@ -17,10 +17,10 @@
   .brand{font-weight:800;color:var(--deep);font-size:14px;letter-spacing:.08em}
   .nav-links{display:flex;gap:24px}
   .nav-links a:hover{color:var(--deep)}
-  .menu-toggle{display:none;background:none;border:none;font-size:24px;cursor:pointer;color:var(--ink)}
+  .menu-toggle{display:none;background:none;border:none;font-size:28px;cursor:pointer;color:var(--ink);padding:8px}
   
-  @media(max-width:768px){
-    .menu-toggle{display:block}
+  @media(max-width:860px){
+    .menu-toggle{display:block !important}
     .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);padding:20px 28px;flex-direction:column;gap:16px;z-index:100}
     .nav-links.active{display:flex}
   }
