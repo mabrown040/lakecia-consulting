@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Nav from "../components/Nav";
+import { PIVOT_CHECKOUT_URL, PIVOT_PRICE_LABEL } from "../../lib/pivot";
 
 export default function Contact() {
   return (
@@ -52,6 +53,7 @@ export default function Contact() {
                   <option value="board">Board Advisory / Governance</option>
                   <option value="strategy">Technology Strategy</option>
                   <option value="coaching">Executive Coaching</option>
+                  <option value="pivot">P.I.V.O.T. Blueprint™ enrollment</option>
                   <option value="speaking">Speaking / Podcast</option>
                   <option value="other">Something else</option>
                 </select>
@@ -127,6 +129,23 @@ export default function Contact() {
             </div>
 
             <div className="bg-white rounded-2xl p-8 shadow-sm">
+              <p className="text-sm text-[#a8a29e] uppercase tracking-wider mb-3">Buying the Blueprint</p>
+              <p className="text-[#2d2a26] leading-relaxed mb-4">
+                The P.I.V.O.T. Blueprint™ Program is {PIVOT_PRICE_LABEL}, one payment. Enroll on the
+                checkout page — self-pay or through an employer or sponsor.
+              </p>
+              <a
+                href={PIVOT_CHECKOUT_URL}
+                className="inline-flex items-center gap-2 text-[#2d2a26] font-medium hover:text-[#ff6b9d] transition-colors"
+              >
+                Complete purchase — {PIVOT_PRICE_LABEL}
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 shadow-sm">
               <p className="text-sm text-[#a8a29e] uppercase tracking-wider mb-3">Typical engagements</p>
               <div className="space-y-2">
                 <p className="text-[#2d2a26]">Board advisory (quarterly)</p>
@@ -161,6 +180,7 @@ export default function Contact() {
               <Link href="/about" className="text-[#6b6560] hover:text-[#2d2a26]">About</Link>
               <Link href="/work" className="text-[#6b6560] hover:text-[#2d2a26]">Work</Link>
               <Link href="/advisory" className="text-[#6b6560] hover:text-[#2d2a26]">Advisory</Link>
+              <Link href="/pivot" className="text-[#6b6560] hover:text-[#2d2a26]">PIVOT</Link>
               <Link href="/roar" className="text-[#6b6560] hover:text-[#2d2a26]">ROAR</Link>
             </div>
           </div>

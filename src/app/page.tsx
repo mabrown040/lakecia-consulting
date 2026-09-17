@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Nav from "./components/Nav";
+import { PIVOT_CHECKOUT_URL, PIVOT_PRICE_LABEL } from "../lib/pivot";
 
 export default function Home() {
   return (
@@ -178,6 +179,55 @@ export default function Home() {
         </div>
       </section>
 
+      {/* P.I.V.O.T. Blueprint — buy path */}
+      <section className="py-24 px-6 lg:px-8 max-w-7xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-12 items-center bg-white rounded-3xl p-10 md:p-14 shadow-sm">
+          <div>
+            <p className="text-sm font-medium tracking-[0.2em] uppercase text-[#a8a29e] mb-4">
+              The P.I.V.O.T. Blueprint™
+            </p>
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#2d2a26] mb-6">
+              Ready to enroll, not just raise your hand.
+            </h2>
+            <p className="text-lg text-[#6b6560] leading-relaxed mb-8">
+              The flagship program is {PIVOT_PRICE_LABEL}, one payment. Checkout
+              captures your enrollment details now — and takes card or PayPal
+              the moment those providers are live.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <a
+                href={PIVOT_CHECKOUT_URL}
+                className="inline-flex items-center gap-2 px-6 py-3 bg-[#2d2a26] text-white rounded-xl font-medium hover:bg-[#3d3833] transition-colors"
+              >
+                Enroll — {PIVOT_PRICE_LABEL}
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+              <Link
+                href="/pivot"
+                className="inline-flex items-center gap-2 px-6 py-3 border border-[#2d2a26] text-[#2d2a26] rounded-xl font-medium hover:bg-[#2d2a26] hover:text-white transition-colors"
+              >
+                See the program
+              </Link>
+            </div>
+          </div>
+          <div className="space-y-4">
+            {[
+              "Full program enrollment and member portal access",
+              "P.I.V.O.T. Readiness Reflection™ diagnostic",
+              "Guided coaching throughout the cohort",
+              "Self-pay or employer / sponsor billing",
+            ].map((item) => (
+              <div key={item} className="flex items-start gap-3">
+                <div className="w-2 h-2 rounded-full bg-[#ff6b9d] mt-2 shrink-0" />
+                <p className="text-[#3d3833]">{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA — AI Conversion focused */}
       <section className="py-24 bg-[#2d2a26] text-[#fef7f0]">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
@@ -282,6 +332,7 @@ export default function Home() {
               <Link href="/about" className="text-[#6b6560] hover:text-[#2d2a26]">About</Link>
               <Link href="/work" className="text-[#6b6560] hover:text-[#2d2a26]">Work</Link>
               <Link href="/advisory" className="text-[#6b6560] hover:text-[#2d2a26]">Advisory</Link>
+              <Link href="/pivot" className="text-[#6b6560] hover:text-[#2d2a26]">PIVOT</Link>
               <Link href="/roar" className="text-[#6b6560] hover:text-[#2d2a26]">ROAR</Link>
               <Link href="/contact" className="text-[#6b6560] hover:text-[#2d2a26]">Contact</Link>
             </div>

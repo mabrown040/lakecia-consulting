@@ -13,6 +13,7 @@ export default function Nav() {
     { href: "/about", label: "About" },
     { href: "/work", label: "Work" },
     { href: "/advisory", label: "Advisory" },
+    { href: "/pivot", label: "PIVOT" },
     { href: "/roar", label: "ROAR" },
   ];
 
